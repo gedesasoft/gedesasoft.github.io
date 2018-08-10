@@ -1,0 +1,845 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<SCRIPT LANGUAGE= "JavaScript">
+<!--
+/* Functies voor het berekenen van de afstand van een punt tot een rechte */
+function afstandwissen()
+{
+	document.afstand.afstanda.value=""
+	document.afstand.afstandb.value=""	
+	document.afstand.afstandc.value=""
+	document.afstand.afstandx1.value=""
+	document.afstand.afstandy1.value=""	
+	document.all.afstandantwoord.style.display= "none";
+}
+
+function oplafstand()
+{
+	afst_a = parseFloat(document.afstand.afstanda.value);
+	afst_b = parseFloat(document.afstand.afstandb.value);
+	afst_c = parseFloat(document.afstand.afstandc.value);
+	afst_x1 = parseFloat(document.afstand.afstandx1.value);
+	afst_y1 = parseFloat(document.afstand.afstandy1.value);		
+
+	distance = Math.abs(afst_a * afst_x1 + afst_b * afst_y1 + afst_c) / (Math.sqrt (Math.pow(afst_a,2) + Math.pow(afst_b,2)))   
+	document.afstand.afstandopl.value = distance
+	document.all.afstandantwoord.style.display= "";	
+}
+
+/* Functie voor het oplossen van de vierkantsvergelijkingen */
+function wissen()
+{
+	document.vgl.vgla.value=""
+	document.vgl.vglb.value=""	
+	document.vgl.vglc.value=""
+	document.all.Dneg.style.display= "none";
+	document.all.Dnul.style.display= "none";
+	document.all.Dpos.style.display= "none";
+		
+}
+
+function oplvierkantsvgl()
+{
+	coeffa = parseFloat(document.vgl.vgla.value);
+	coeffb = parseFloat(document.vgl.vglb.value);
+	coeffc = parseFloat(document.vgl.vglc.value);
+	
+	D = Math.pow(coeffb,2) - 4 * coeffa * coeffc
+	
+	if (D == 0)
+	{
+	opl = (0 - coeffb) / (2 * coeffa)
+	document.all.Dneg.style.display= "none";
+	document.all.Dnul.style.display= "";
+	document.all.Dpos.style.display= "none";
+	document.vgl.enigeopl.value = opl;
+	}
+
+	if (D < 0)
+	{
+	document.vgl.negdiscr.value = D
+	document.all.Dneg.style.display= "";
+	document.all.Dnul.style.display= "none";
+	document.all.Dpos.style.display= "none";
+	}
+
+	if (D > 0)
+	{
+	opl1 = (Math.sqrt(D) - coeffb) / (2 * coeffa)
+	opl2 = (0 - Math.sqrt(D) - coeffb) / (2 * coeffa)
+	document.vgl.posdiscr.value = D
+	document.all.Dneg.style.display= "none";
+	document.all.Dnul.style.display= "none";
+	document.all.Dpos.style.display= "";
+	document.vgl.oplx1.value = opl1
+	document.vgl.oplx2.value = opl2
+	}
+	
+
+}
+
+/* Declaratie variabelen */
+var controlegetal;
+
+/* Functie voor het omzetten van de ingegeven lengtes en hoekgroottes */ 
+function omzetbegin()
+{
+	a = parseFloat(document.driehoek.zijdea.value);
+	b = parseFloat(document.driehoek.zijdeb.value);
+	c = parseFloat(document.driehoek.zijdec.value);
+
+	if (document.driehoek.hoekAgr.value == '')
+	{
+	Agr = 0
+	}
+	else
+	{
+	Agr = parseFloat(document.driehoek.hoekAgr.value)
+	}
+	if (Agr != NaN)
+	{
+	A = Agr
+	}
+	
+	if (document.driehoek.hoekAmin.value == '')
+	{
+	Amin = 0
+	}
+	else
+	{
+	Amin = parseFloat(document.driehoek.hoekAmin.value) / 60
+	}
+	if (Amin != NaN)
+	{
+	A = A + Amin
+	}
+	
+	if (document.driehoek.hoekAsec.value == '')
+	{
+	Asec = 0
+	}
+	else
+	{
+	Asec = parseFloat(document.driehoek.hoekAsec.value) / 3600
+	}
+	if (Asec != NaN)
+	{
+	A = A + Asec
+	}
+	A = A * Math.PI / 180
+	
+	if (document.driehoek.hoekBgr.value == '')
+	{
+	Bgr = 0
+	}
+	else
+	{
+	Bgr = parseFloat(document.driehoek.hoekBgr.value)
+	}
+	if (Bgr != NaN)
+	{
+	B = Bgr
+	}
+	
+	if (document.driehoek.hoekBmin.value == '')
+	{
+	Bmin = 0
+	}
+	else
+	{
+	Bmin = parseFloat(document.driehoek.hoekBmin.value) / 60
+	}
+	if (Bmin != NaN)
+	{
+	B = B + Bmin
+	}
+	
+	if (document.driehoek.hoekBsec.value == '')
+	{
+	Bsec = 0
+	}
+	else
+	{
+	Bsec = parseFloat(document.driehoek.hoekBsec.value) / 3600
+	}
+	if (Bsec != NaN)
+	{
+	B = B + Bsec
+	}
+	B = B * Math.PI / 180
+	
+	if (document.driehoek.hoekCgr.value == '')
+	{
+	Cgr = 0
+	}
+	else
+	{
+	Cgr = parseFloat(document.driehoek.hoekCgr.value)
+	}
+	if (Cgr != NaN)
+	{
+	C = Cgr
+	}
+
+	if (document.driehoek.hoekCmin.value == '')
+	{
+	Cmin = 0
+	}
+	else
+	{
+	Cmin = parseFloat(document.driehoek.hoekCmin.value) / 60
+	}
+	if (Cmin != NaN)
+	{
+	C = C + Cmin
+	}
+	
+	if (document.driehoek.hoekCsec.value == '')
+	{
+	Csec = 0
+	}
+	else
+	{
+	Csec = parseFloat(document.driehoek.hoekCsec.value) / 3600
+	}
+	if (Csec != NaN)
+	{
+	C = C + Csec
+	}
+	C = C * Math.PI / 180
+}
+
+/* Functie voor het bepalen van de beginsituatie */
+function ingevuld()
+
+	{
+	controlegetal = 0
+	if (A > 0) 
+		{
+		controlegetal = controlegetal + 1
+		}
+	if (B > 0) 
+		{
+		controlegetal = controlegetal + 2
+		}
+	if (C > 0) 
+		{
+		controlegetal = controlegetal + 4
+		}
+	if (a > 0) 
+		{
+		controlegetal = controlegetal + 8
+		}
+	if (b > 0) 
+		{
+		controlegetal = controlegetal + 16
+		}
+	if (c > 0) 
+		{
+		controlegetal = controlegetal + 32
+		}
+	}
+
+/* Functies voor het berekenen met sinus- en cosinusregel*/
+function ABnaarC()
+{
+C = Math.PI - A - B
+}
+
+function ACnaarB()
+{
+B = Math.PI - A - C
+}
+
+function BCnaarA()
+{
+A = Math.PI - B - C
+}
+
+function ABbnaara()
+{
+a = Math.sin(A) * b / Math.sin(B)
+}
+
+function ABanaarb()
+{
+b = Math.sin(B) * a / Math.sin(A)
+}
+
+function ACanaarc()
+{
+c = Math.sin(C) * a / Math.sin(A)
+}
+
+function BCbnaarc()
+{
+c = Math.sin(C) * b / Math.sin(B)
+}
+
+function ACcnaara()
+{
+a = Math.sin(A) * c / Math.sin(C)
+}
+
+function AabnaarB()
+{
+B = Math.asin(Math.sin(A) * b / a)
+}
+
+function AacnaarC()
+{
+C = Math.asin(Math.sin(A) * c / a)
+}
+
+function BabnaarA()
+{
+A = Math.asin(Math.sin(B) * a / b)
+}
+
+function BbcnaarC()
+{
+C = Math.asin(Math.sin(B) * c / b)
+}
+
+function CbcnaarB()
+{
+B = Math.asin(Math.sin(C) * b / c)
+}
+
+function CacnaarA()
+{
+A = Math.asin(Math.sin(C) * a / c)
+}
+
+function Abcnaara()
+{
+a = Math.sqrt(b * b + c * c - 2 * b * c * Math.cos(A))
+}
+
+function Bacnaarb()
+{
+b = Math.sqrt(a * a + c * c - 2 * a * c * Math.cos(B))
+}
+
+function Cabnaarc()
+{
+c = Math.sqrt(b * b + a * a - 2 * b * a * Math.cos(C))
+}
+
+function abcnaarA()
+{
+A = Math.acos((b * b + c * c - a * a) / (2 * b * c))
+}
+
+function abcnaarB()
+{
+B = Math.acos((a * a + c * c - b * b) / (2 * a * c))
+}
+function abcnaarC()
+{
+C = Math.acos((b * b + a * a - c * c) / (2 * b * a))
+}
+
+/* Functie voor het omzetten naar uitvoer */
+function omzeteinde()
+{
+var afgeronda = Math.round(a * 10000) / 10000;
+document.driehoek.zijdea.value = afgeronda;
+var afgerondb = Math.round(b * 10000) / 10000;
+document.driehoek.zijdeb.value = afgerondb;
+var afgerondc = Math.round(c * 10000) / 10000;
+document.driehoek.zijdec.value = afgerondc;
+
+	var resultA = A * 180 / Math.PI
+		var Agrad = Math.floor(resultA);
+		var Amin = Math.floor((resultA - Agrad) * 60);
+		var Asec = Math.round((resultA - Agrad - Amin / 60) * 3600);
+		if (Asec == 60)
+		{
+		Asec = 0
+		Amin = Amin + 1
+		}
+		if (Amin == 60)
+		{
+		Amin = 0
+		Agrad = Agrad + 1
+		}
+		document.driehoek.hoekAmin.value = Amin;
+		document.driehoek.hoekAgr.value = Agrad;
+		document.driehoek.hoekAsec.value = Asec;
+
+	var resultB = B * 180 / Math.PI
+		var Bgrad = Math.floor(resultB);
+		var Bmin = Math.floor((resultB - Bgrad) * 60);
+		var Bsec = Math.round((resultB - Bgrad - Bmin / 60) * 3600);
+		if (Bsec == 60)
+		{
+		Bsec = 0
+		Bmin = Bmin + 1
+		}
+		if (Bmin == 60)
+		{
+		Bmin = 0
+		Bgrad = Bgrad + 1
+		}
+		document.driehoek.hoekBgr.value = Bgrad;
+		document.driehoek.hoekBmin.value = Bmin;
+		document.driehoek.hoekBsec.value = Bsec;
+
+	var resultC = C * 180 / Math.PI
+		var Cgrad = Math.floor(resultC);
+		var Cmin = Math.floor((resultC - Cgrad) * 60);
+		var Csec = Math.round((resultC - Cgrad - Cmin / 60) * 3600);
+		if (Csec == 60)
+		{
+		Csec = 0
+		Cmin = Cmin + 1
+		}
+		if (Cmin == 60)
+		{
+		Cmin = 0
+		Cgrad = Cgrad + 1
+		}
+		document.driehoek.hoekCgr.value = Cgrad;
+		document.driehoek.hoekCmin.value = Cmin;
+		document.driehoek.hoekCsec.value = Csec;
+}
+
+/* Functies voor controle invoer en berekening*/
+function gonio()
+{
+	if (controlegetal == 56)
+	{
+		if ((a > b + c) || (b > a + c) || (c > a + b))
+		alert('Ongeldige invoer: één der zijden is langer dan de som van de andere twee.')
+		else
+		{  
+		abcnaarA()
+		abcnaarB()
+		abcnaarC()
+		}
+	}  
+	
+	if (controlegetal == 52)
+	{
+	CbcnaarB()
+	BCnaarA()
+	ABbnaara()
+	}  
+
+	if (controlegetal == 42)
+	{
+	Bacnaarb()
+	abcnaarC()
+	BCnaarA()
+	}  
+
+	if (controlegetal == 49)
+	{
+	Abcnaara()
+	abcnaarB()
+	ABnaarC()
+	}  
+	
+	if (controlegetal == 25)
+	{
+	AabnaarB()
+	ABnaarC()
+	ACanaarc()
+	}  
+
+	if (controlegetal == 26)
+	{
+	BabnaarA()
+	ABnaarC()
+	ACanaarc()
+	}  
+
+	if (controlegetal == 28)
+	{
+	Cabnaarc()
+	abcnaarB()
+	BCnaarA()
+	}  
+
+	if (controlegetal == 41)
+	{
+	AacnaarC()
+	ACnaarB()
+	ABanaarb()
+	}  
+
+	if (controlegetal == 50)
+	{
+	BbcnaarC()
+	BCnaarA()
+	ABbnaara()
+	}  
+
+	if (controlegetal == 44)
+	{
+	CacnaarA()
+	ACnaarB()
+	ABanaarb()
+	}  
+
+	if (controlegetal == 11)
+	{
+	ABnaarC()
+	ABanaarb()
+	ACanaarc()
+	}  
+
+	if (controlegetal == 13)
+	{
+	ACnaarB()
+	ABanaarb()
+	ACanaarc()
+	}  
+
+	if (controlegetal == 14)
+	{
+	BCnaarA()
+	ABanaarb()
+	ACanaarc()
+	}  
+
+	if (controlegetal == 19)
+	{
+	ABnaarC()
+	BCbnaarc()
+	ABbnaara()
+	}  
+
+	if (controlegetal == 21)
+	{
+	ACnaarB()
+	BCbnaarc()
+	ABbnaara()
+	}  
+
+	if (controlegetal == 22)
+	{
+	BCnaarA()
+	BCbnaarc()
+	ABbnaara()
+	}  
+
+	if (controlegetal == 35)
+	{
+	ABnaarC()
+	ACcnaara()
+	ABanaarb()
+	}  
+
+	if (controlegetal == 37)
+	{
+	ACnaarB()
+	ACcnaara()
+	ABanaarb()
+	}  
+
+	if (controlegetal == 38)
+	{
+	BCnaarA()
+	ACcnaara()
+	ABanaarb()
+	}  
+
+}
+
+/* Functies voor starten berekening*/
+function bereken()
+{
+omzetbegin()
+ingevuld()
+gonio()
+omzeteinde()
+}
+
+
+// -->
+</SCRIPT>
+<link rel=stylesheet href="tabel.css" type="text/css"><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script src="info_pienter.js"></script></HEAD>
+
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Wiskundehoekje 4de jaar</FONT></A></CENTER></td>
+
+</TR>
+</TABLE>
+<BR>
+
+Belangrijke opmerking: om decimale getallen in te geven moet je een punt (.) typen als komma.</B><P>
+<CENTER><TABLE BORDER="0" CELLPADDING="4" CELLSPACING="1" WIDTH="90%">
+<TR><TD><FONT  SIZE="2">
+Onderwerpen</B></TD><TD><A class="keuze" HREF="#gonio">Driehoeksmeting in willekeurige driehoek</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#4kantsvgl">Vierkantsvergelijkingen</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#afstandberekenen">Afstand van een punt tot een rechte</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#cabrijava">Online applets</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#oef">Online oefeningen</A></TD></TR>
+</TABLE></CENTER><BR><BR>
+
+
+
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="gonio"><FONT SIZE="3" COLOR="#000000"
+>Driehoeksmeting</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+
+Geef drie waarden in (minstens één zijde) en bereken de andere drie. 
+<FORM NAME="driehoek">
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 ALIGN="CENTER">
+<TR>
+<TD ROWSPAN="7"><img src="images/3hoek.gif" border=0 width=320 height=240 alt="Willekeurige driehoek" align="middle"></TD>
+<TD align="right" width="40">a = </TD><TD><INPUT NAME="zijdea" TYPE="TEXT" SIZE="5"></TD>
+</TR>
+<TR><TD align="right" width="40">b = </TD><TD><INPUT NAME="zijdeb" TYPE="TEXT" SIZE="5"></TD></TR>
+<TR><TD align="right" width="40">c = </TD><TD><INPUT NAME="zijdec" TYPE="TEXT" SIZE="5"></TD></TR>
+<TR><TD align="right" width="40"><font face="Symbol">a</font> = </TD><TD><INPUT NAME="hoekAgr" TYPE="TEXT" SIZE="3">° <INPUT NAME="hoekAmin" TYPE="TEXT" SIZE="2">' <INPUT NAME="hoekAsec" TYPE="TEXT" SIZE="2">"<TD></TR>
+<TR><TD align="right" width="40"><font face="Symbol">b</font> = </TD><TD><INPUT NAME="hoekBgr" TYPE="TEXT" SIZE="3">° <INPUT NAME="hoekBmin" TYPE="TEXT" SIZE="2">' <INPUT NAME="hoekBsec" TYPE="TEXT" SIZE="2">"</TD></TR>
+<TR><TD align="right" width="40"><font face="Symbol">g</font> = </TD><TD><INPUT NAME="hoekCgr" TYPE="TEXT" SIZE="3">° <INPUT NAME="hoekCmin" TYPE="TEXT" SIZE="2">' <INPUT NAME="hoekCsec" TYPE="TEXT" SIZE="2">"</TD></TR>
+<TR><TD COLSPAN="2"><INPUT TYPE="BUTTON" VALUE="Bereken" onClick="bereken()">
+<INPUT TYPE="RESET" VALUE="Wissen"><p>
+Als in het resultaat NaN (Not A Number) verschijnt wijst dat op een ongeldige invoer.</TD></TR>
+</TD>
+</TR>
+</TABLE>
+</FORM>
+<P>
+<BR>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="4kantsvgl"><FONT SIZE="3" COLOR="#000000"
+>Vierkantsvergelijkingen:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+Geef de coëfficiënten van de vierkantsvergelijking en bereken de wortels.
+<FORM NAME="vgl">
+
+Vergelijking: <INPUT NAME="vgla" TYPE="TEXT" VALUE="" SIZE="3"> x<SUP>2</sup> + <INPUT NAME="vglb" TYPE="TEXT" VALUE="" SIZE="3"> x + <INPUT NAME="vglc" TYPE="TEXT" VALUE="" SIZE="3"> = 0   
+<DIV ID=Dneg STYLE="display:none">Discriminant = <INPUT NAME="negdiscr" TYPE="TEXT" VALUE="" SIZE="3"> , dus geen oplossingen.</DIV>
+<DIV ID=Dnul STYLE="display:none">Discriminant = 0 , dus één oplossing, nl. x =  <INPUT NAME="enigeopl" TYPE="TEXT" VALUE="" SIZE="6">.</DIV>
+<DIV ID=Dpos STYLE="display:none">Discriminant = <INPUT NAME="posdiscr" TYPE="TEXT" VALUE="" SIZE="3"> , dus twee oplossingen, nl. x<SUB>1</SUB> =  <INPUT NAME="oplx1" TYPE="TEXT" VALUE="" SIZE="6"> en x<SUB>2</SUB> =  <INPUT NAME="oplx2" TYPE="TEXT" VALUE="" SIZE="6"></DIV>
+<CENTER><P>
+
+<INPUT TYPE="BUTTON" VALUE="Bereken" onClick="oplvierkantsvgl()">
+<INPUT TYPE="BUTTON" VALUE="Wissen" onClick="wissen()">
+</CENTER></FORM>
+<P>
+<BR>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="afstandberekenen"><FONT SIZE="3" COLOR="#000000"
+>Afstand van een punt tot een rechte:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+Geef de coëfficiënten van de vergelijking van de rechte a en de coördinaten van het punt A in. Klik op "Bereken" om de afstand d(A,a) te vinden.
+<FORM NAME="afstand">
+
+Vergelijking van de rechte: a <-> <INPUT NAME="afstanda" TYPE="TEXT" VALUE="" SIZE="3">x + <INPUT NAME="afstandb" TYPE="TEXT" VALUE="" SIZE="3">y + <INPUT NAME="afstandc" TYPE="TEXT" VALUE="" SIZE="3"> = 0<P>
+Coördinaten van het punt: A ( <INPUT NAME="afstandx1" TYPE="TEXT" VALUE="" SIZE="3"> , <INPUT NAME="afstandy1" TYPE="TEXT" VALUE="" SIZE="3"> )<p>    
+<DIV ID=afstandantwoord STYLE="display:none">
+De afstand van het punt tot de rechte: d(A,a) = <INPUT NAME="afstandopl" TYPE="TEXT" VALUE="" SIZE="5"><p>
+</DIV>
+<CENTER>
+<INPUT TYPE="BUTTON" VALUE="Bereken" onClick="oplafstand()">
+<INPUT TYPE="BUTTON" VALUE="Wissen" onClick="afstandwissen()"><p>
+</CENTER>
+</FORM>
+<P>
+<BR>
+
+
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="cabrijava"><FONT SIZE="3" COLOR="#000000"
+>Online applets:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+Het inladen van de bestanden nodig voor deze toepassingen (148 kB) kan de eerste keer wel even duren. Bovendien werken deze toepassingen enkel onder moderne browsers (Internet Explorer 5 en hoger). Mochten deze applets niet werken op jouw PC (bv onder Windows XP), installeer dan de Java Virtual Machine die je kan downloaden bij <a href="http://java.sun.com/getjava/index.html" target="_blank">http://java.sun.com/</a>. <p>
+<CENTER><TABLE BORDER="0" CELLPADDING="4" CELLSPACING="1" WIDTH="90%">
+<TR><TD><A HREF="wiskoef/4gonio_tegengest_hoeken.htm" class="keuze">Goniometrische getallen van tegengestelde hoeken</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4gonio_supplem_hoeken.htm" class="keuze">Goniometrische getallen van supplementaire hoeken</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4gonio_antisupplem_hoeken.htm" class="keuze">Goniometrische getallen van antisupplementaire hoeken</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4gonio_complem_hoeken.htm" class="keuze">Goniometrische getallen van complementaire hoeken</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4gonio_anticomplem_hoeken.htm" class="keuze">Goniometrische getallen van anticomplementaire hoeken</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4hoeken_in_cirkel.htm" class="keuze">Middelpuntshoek en omtrekshoek</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4raaklijn_in_punt.htm" class="keuze">Raaklijn in een punt van een cirkel</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4raaklijn_uit_punt.htm" class="keuze">Raaklijn uit een punt buiten een cirkel</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4uitwendige_raaklijn.htm" class="keuze">Gemeenschappelijke uitwendige raaklijnen aan 2 cirkels</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4inwendige_raaklijn.htm" class="keuze">Gemeenschappelijke inwendige raaklijnen aan 2 cirkels</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4omgeschreven_cirkel.htm" class="keuze">Omgeschreven cirkel van een driehoek</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4ingeschreven_cirkel.htm" class="keuze">Ingeschreven cirkel van een driehoek</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4aangeschreven_cirkel.htm" class="keuze">Aangeschreven cirkel van een driehoek</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/4doorsnedes.htm" class="keuze">Doorsnedes van vlakken met ruimtelichamen</A> (CabriJava)</TD></TR>
+<TR height="10"><TD></TD></TR>
+<TR><TD><A HREF="wiskoef/4vgl_parabool.htm" class="keuze">Variaties op de kwadratische functie</A> (Java)</TD></TR>
+<TR><TD><A HREF="wiskoef/4opp_rechthoek.htm" class="keuze">Tweedegraadsfuncties: toepassing (oppervlakte rechthoek)</A> (Java)</TD></TR>
+<TR><TD><A HREF="wiskoef/4onderl_ligging_parabool_rechte.htm" class="keuze">Onderlinge ligging van rechte en parabool</A> (Java)</TD></TR>
+<TR><TD><A HREF="wiskoef/4onderl_ligging_2parabolen.htm" class="keuze">Onderlinge ligging van 2 parabolen</A> (Java)</TD></TR>
+<TR><TD><A HREF="wiskoef/4onderl_ligging_cirkel_rechte.htm" class="keuze">Onderlinge ligging van rechte en cirkel</A> (Java)</TD></TR>
+<TR><TD><A HREF="wiskoef/4graf_cirkel.htm" class="keuze">Grafiek van een cirkel</A> (Java)</TD></TR>
+<TR><TD><A HREF="wiskoef/4onderl_ligging_2cirkels.htm" class="keuze">Onderlinge ligging van twee cirkels</A> (Java)</TD></TR>
+<TR height="10"><TD></TD></TR>
+<TR><TD><A HREF="wiskoef/4rijen_intro.htm" class="keuze">Rekenkundige en meetkundige rij - Prijzengeld bij een quiz</A> (Javascript)</TD></TR>
+<TR><TD><A HREF="wiskoef/4pi.htm" class="keuze">Het getal <font face="symbol" size="+1">p</font></A> (Javascript)</TD></TR>
+<TR><TD><A HREF="wiskoef/4kansexp_muntstuk.htm" class="keuze">Kansrekening: experiment met 1 muntstuk</A> (Javascript)</TD></TR>
+<TR><TD><A HREF="wiskoef/4kansexp_4muntstukken.htm" class="keuze">Kansrekening: experiment met 4 muntstukken</A> (Javascript)</TD></TR>
+<TR><TD><A HREF="wiskoef/4kansexp_1dobbelsteen.htm" class="keuze">Kansrekening: experiment met 1 dobbelsteen</A> (Javascript)</TD></TR>
+<TR><TD><A HREF="wiskoef/4kansexp_2dobbelstenen.htm" class="keuze">Kansrekening: experiment met 2 dobbelstenen</A> (Javascript)</TD></TR>
+</TABLE></CENTER><BR>
+Op onze <a href="wisk_oef.htm#cabri_oef">"oefeningen en werkbladen"-pagina</a> kan je de Cabri-bestanden ook apart downloaden.
+<p><br>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="oef"><FONT SIZE="3" COLOR="#000000"
+>Online oefeningen:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+<CENTER><TABLE BORDER="0" CELLPADDING="4" CELLSPACING="1" WIDTH="90%">
+<TR><TD><A class="keuze" HREF="wiskoef/4parabool_tekenen_oef.htm">Grafiek van f(x) = a(x-<font face="symbol">a</font>)²+<font face="symbol">b</font> tekenen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4funct.htm">Parabool met gegeven vergelijking herkennen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4grafiek.htm">Voorschrift van tweedegraadsfuncties bepalen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4onvoll_vkv.htm">Onvolledige vierkantsvergelijkingen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4somproduct.htm">Wortels van een vierkantsvergelijking bepalen met som en product</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4coeffbep.htm">Coëfficiënten in een vierkantsvergelijking bepalen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4bikwadr.htm">Bikwadratische vergelijkingen oplossen
+</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4wederk.htm">Wederkerige vergelijkingen oplossen
+</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4verloop.htm">Volledig verloop van tweedegraadsfuncties</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4ongelijkh.htm">Ongelijkheden van de tweede graad (en hoger)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4stels_ongelijkh.htm">Stelsels van ongelijkheden</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4parabool.htm">Opstellen van de vergelijking van tweedegraadsfuncties</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4snijp_rechte_parab.htm">Onderlinge ligging van rechte en parabool</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4snijp_parabolen.htm">Onderlinge ligging van twee parabolen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4elem.htm">Voorschrift bij variaties op elementaire functies bepalen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4euclid_deling.htm">Euclidische deling </A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4kenm_deelb.htm">Kenmerken van deelbaarheid </A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4oif.htm">Veeltermen ontbinden in factoren </A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/5tekenv.htm">Tekenverloop van veeltermfuncties (2de en 3de graad) </A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4rijen_herkennen.htm">Rijen herkennen (RR - MR)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4somteken.htm">Sommatieteken (rijen)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4rijen.htm">Rekenkundige en meetkundige rijen </A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4rijen_vraagst.htm">Rekenkundige en meetkundige rijen: vraagstukken </A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4verwante_hoeken.htm">Goniometrische getallen van verwante hoeken</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4gonio.htm">Goniometrie: oplossen van willekeurige driehoeken</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4gonio_vraagst.htm">Goniometrie: oplossen van willekeurige driehoeken - vraagstukken</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4vectoren.htm">Rekenen met vectoren</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3parametervgl.htm">Parametervergelijkingen van een rechte</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4vgl_ll.htm">Vergelijking van een loodlijn opstellen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4vgl_mll.htm">Vergelijking van een middelloodlijn opstellen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4afstand.htm">Afstand van een punt tot een rechte</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4vgl_biss.htm">Vergelijking van een deellijn opstellen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4vgl_cirkel.htm">Vergelijking van een cirkel</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4vgl_cirkel_opstellen.htm">Vergelijking van een cirkel opstellen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4snijp_rechte_cirkel.htm">Onderlinge ligging van rechte en cirkel</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4vgl_raaklijn_in_punt.htm">Vergelijking opstellen van de raaklijn in een punt op de cirkel</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4onderl_ligging_2cirkels_oef1.htm">Onderlinge ligging van twee cirkels - oefening 1</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4onderl_ligging_2cirkels_oef2.htm">Onderlinge ligging van twee cirkels - oefening 2</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4telproblemen.htm">Telproblemen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4kansrekenen.htm">Kansrekenen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/1rechten_ruimte.htm">Onderlinge ligging van rechten in de ruimte</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4ruimtemtk_onderlinge_ligging.htm">Onderlinge ligging van rechten en vlakken in de ruimte</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4doorsnedes.htm">Doorsnedes van vlakken met ruimtelichamen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/4afstand_hoek_ruimte.htm">Afstanden en hoeken in de ruimte</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/vwoj1r.htm">Vlaamse Wiskunde Olympiade Junior 2002 - 1ste ronde </A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/vwoj2003_1r.htm">Vlaamse Wiskunde Olympiade Junior 2003 - 1ste ronde </A></TD></TR>
+
+<TR><TD><br><A class="keuze" HREF="elem.htm">Zelfstudie elementaire functies</A></TD></TR>
+</TABLE></CENTER><BR>
+
+
+<p>
+
+ 
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="wisk1.htm">
+<img src="images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="wisk3.htm">
+<img src="images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="wisk4.htm">
+<img src="images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="wisk5.htm">
+<img src="images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="wiskunde.htm">
+<img src="images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

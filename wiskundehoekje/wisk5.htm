@@ -1,0 +1,406 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="tabel.css" type="text/css">
+<script src="determinant_berekenen.js"></script>
+
+
+<script language="">
+<!-- 
+function omhoog() 
+{
+gewist = 0
+
+document.horn.vt7.value = document.horn.co7.value
+document.horn.vt6.value = document.horn.co6.value
+document.horn.vt5.value = document.horn.co5.value
+document.horn.vt4.value = document.horn.co4.value
+document.horn.vt3.value = document.horn.co3.value
+document.horn.vt2.value = document.horn.co2.value
+document.horn.vt1.value = document.horn.co1.value
+
+if (document.horn.vt7.value != "") 
+	{
+	document.horn.vt7.value = ""
+	gewist = 1
+	}
+if ((gewist == 0) && (document.horn.vt6.value != ""))
+	{
+	document.horn.vt6.value = ""
+	gewist = 1
+	}
+if ((gewist == 0) && (document.horn.vt5.value != ""))
+	{
+	document.horn.vt5.value = ""
+	gewist = 1
+	}
+if ((gewist == 0) && (document.horn.vt4.value != ""))
+	{
+	document.horn.vt4.value = ""
+	gewist = 1
+	}
+if ((gewist == 0) && (document.horn.vt3.value != ""))
+	{
+	document.horn.vt3.value = ""
+	gewist = 1
+	}
+if ((gewist == 0) && (document.horn.vt2.value != ""))
+	{
+	document.horn.vt2.value = ""
+	gewist = 1
+	}
+if ((gewist == 0) && (document.horn.vt1.value != ""))
+	{
+	document.horn.vt1.value = ""
+	gewist = 1
+	}
+
+document.horn.co7.value = ""
+document.horn.co6.value = ""
+document.horn.co5.value = ""
+document.horn.co4.value = ""
+document.horn.co3.value = ""
+document.horn.co2.value = ""
+document.horn.co1.value = ""
+
+document.horn.get7.value = ""
+document.horn.get6.value = ""
+document.horn.get5.value = ""
+document.horn.get4.value = ""
+document.horn.get3.value = ""
+document.horn.get2.value = ""
+}
+
+function berekenhorner() 
+{
+var vt1int = parseInt(document.horn.vt1.value)
+var vt2int = parseInt(document.horn.vt2.value)
+var vt3int = parseInt(document.horn.vt3.value)
+var vt4int = parseInt(document.horn.vt4.value)
+var vt5int = parseInt(document.horn.vt5.value)
+var vt6int = parseInt(document.horn.vt6.value)
+var vt7int = parseInt(document.horn.vt7.value)
+var npint = parseInt(document.horn.np.value)
+
+if (document.horn.vt1.value != "") document.horn.co1.value = vt1int
+if (document.horn.vt2.value != "") 
+	{
+	document.horn.get2.value = parseInt(document.horn.co1.value) * npint;
+	document.horn.co2.value = vt2int + parseInt(document.horn.get2.value);	    
+	}
+if (document.horn.vt3.value != "") 
+	{
+	document.horn.get3.value = parseInt(document.horn.co2.value) * npint;
+	document.horn.co3.value = vt3int + parseInt(document.horn.get3.value);	    
+	}
+if (document.horn.vt4.value != "") 
+	{
+	document.horn.get4.value = parseInt(document.horn.co3.value) * npint;
+	document.horn.co4.value = vt4int + parseInt(document.horn.get4.value);	    
+	}
+if (document.horn.vt5.value != "") 
+	{
+	document.horn.get5.value = parseInt(document.horn.co4.value) * npint;
+	document.horn.co5.value = vt5int + parseInt(document.horn.get5.value);	    
+	}
+if (document.horn.vt6.value != "") 
+	{
+	document.horn.get6.value = parseInt(document.horn.co5.value) * npint;
+	document.horn.co6.value = vt6int + parseInt(document.horn.get6.value);	    
+	}
+if (document.horn.vt7.value != "") 
+	{
+	document.horn.get7.value = parseInt(document.horn.co6.value) * npint;
+	document.horn.co7.value = vt7int + parseInt(document.horn.get7.value);	    
+	}
+}
+//  Script End -->
+</script>
+
+<script src="info_pienter.js"></script></HEAD>
+
+
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Wiskundehoekje 3de graad</FONT></A></CENTER>
+</TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+<CENTER><TABLE BORDER="0" CELLPADDING="4" CELLSPACING="1" WIDTH="90%">
+<TR><TD><FONT  SIZE="2">
+Onderwerpen</B></TD><TD><A class="keuze" HREF="#horner">Regel van Horner</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#determ">Determinant berekenen</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#oef">Online oefeningen</A></TD></TR>
+</TABLE></CENTER><BR><BR>
+
+
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="horner"><FONT SIZE="3" COLOR="#000000"
+>Regel van Horner</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+<FORM NAME="horn">
+Geef boven de coëfficiënten van de veelterm die je wil ontbinden en links het gekende nulpunt. Vergeet de nulletjes niet (voor ontbrekende termen). Klik op "Bereken" en je krijgt onderaan het resultaat. Als je een veelterm in factoren moet ontbinden, dan kan de knop "Omhoog" handig zijn: deze zet de getallen uit de onderste rij in de rij bovenaan en wist de overige getallen, zodat je opnieuw de regel van Horner kan toepassen op het quotiënt.<p><table>
+  <tr>
+    <td></td>
+    <td><font size=+1>|</font></td>
+	<td width="35"><input type="text" name="vt1" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="vt2" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="vt3" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="vt4" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="vt5" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="vt6" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="vt7" size=3 maxlength=6></td>
+    <td><input type="reset" value="Wissen"></td>
+  </tr>
+  <tr>
+    <td width="35"><input type="text" name="np" size=3 maxlength=6></td>
+    <td><font size=+1>|</font></td>
+    <td></td>
+    <td width="35"><input type="text" name="get2" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="get3" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="get4" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="get5" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="get6" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="get7" size=3 maxlength=6></td>
+    <td><input type="button" value="Bereken" onClick="berekenhorner()"></td>
+  </tr>
+  <tr height="3"><td colspan="9"><hr size=2 noshade color="#000000"></td><td></tr>
+  <tr>
+    <td></td>
+    <td><font size=+1>|</font></td>
+    <td width="35"><input type="text" name="co1" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="co2" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="co3" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="co4" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="co5" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="co6" size=3 maxlength=6></td>
+    <td width="35"><input type="text" name="co7" size=3 maxlength=6></td>
+    <td><input type="button" value="Omhoog" onClick="omhoog()"><p> 
+  </tr>
+</table>
+</FORM>
+<P>
+<BR>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="determ"><FONT SIZE="3" COLOR="#000000"
+>Determinant berekenen</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+<FORM NAME="det">
+
+Bepaal eerst in de keuzelijst welke afmetingen je matrix moet hebben. Geef daarna de getallen in en klik op "Bereken determinant" om de determinant te berekenen.<P>
+<table border="0">
+	<tr>
+		<td><select name="afm" onChange="wijzigformaat()">
+	<option value="0"> afmetingen</option>
+	<option value="2"> 2 x 2</option>
+	<option value="3"> 3 x 3</option>
+	<option value="4"> 4 x 4</option>
+</select>
+
+		
+		</td>
+		<td>
+<!-- 2x2 matrix -->
+<DIV ID="m2x2" STYLE="display:none">
+<table border="0" cellpadding=0 cellspacing=0>
+	<tr align="center">
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+		<td><input type="text" name="txtC11" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtC12" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+	</tr>
+	<tr align="center">
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+		<td><input type="text" name="txtC21" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtC22" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+	</tr>
+</table>
+</DIV>
+<!-- 3x3 matrix -->
+<DIV ID="m3x3" STYLE="display:none">
+<table border="0" cellpadding=0 cellspacing=0>
+	<tr align="center">
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+		<td><input type="text" name="txtB11" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtB12" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtB13" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+	</tr>
+	<tr align="center">
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+		<td><input type="text" name="txtB21" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtB22" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtB23" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+	</tr>
+	<tr align="center">
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+		<td><input type="text" name="txtB31" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtB32" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtB33" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+	</tr>
+</table>
+</DIV>
+<!-- 4x4 matrix -->
+<DIV ID="m4x4" STYLE="display:none">
+<table border="0" cellpadding=0 cellspacing=0>
+	<tr align="center">
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+		<td><input type="text" name="txtA11" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA12" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA13" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA14" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+	</tr>
+	<tr align="center">
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+		<td><input type="text" name="txtA21" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA22" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA23" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA24" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+	</tr>
+	<tr align="center">
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+		<td><input type="text" name="txtA31" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA32" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA33" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA34" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+	</tr>
+	<tr align="center">
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+		<td><input type="text" name="txtA41" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA42" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA43" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><input type="text" name="txtA44" size="6" maxlength="8" class="veld">&nbsp;</td>
+		<td><img src="inhoud/wiskoef/images/5matrices_l.gif" border="0" width="8" height="28" alt=""></td>
+	</tr>
+</table>
+</DIV>
+
+
+		</td>
+		<td class="midden"> = <input type="text" name="txtdet" size="6" maxlength="8" class="veld"> <input type="button" value="Bereken determinant" onClick="determinant()">
+</td>
+	</tr>
+</table>
+
+</FORM>
+<P>
+<BR>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="oef"><FONT SIZE="3" COLOR="#000000"
+>Online oefeningen:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+<CENTER><TABLE BORDER="0" CELLPADDING="4" CELLSPACING="1" WIDTH="90%">
+<TR><TD><A class="keuze" HREF="wiskoef/5sinus.htm">De algemene sinusfunctie</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/5tekenv.htm">Tekenverloop van veeltermfuncties (tot 5de graad) en rationale functies</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/5limiet.htm">Limiet bepalen op grafiek</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/vwo2003_1r.htm">Vlaamse Wiskunde Olympiade 2003 - 1ste ronde </A></TD></TR>
+
+</TABLE></CENTER><BR>
+
+
+
+<p>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="wisk1.htm">
+<img src="images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="wisk3.htm">
+<img src="images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="wisk4.htm">
+<img src="images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="wisk5.htm">
+<img src="images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="wiskunde.htm">
+<img src="images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

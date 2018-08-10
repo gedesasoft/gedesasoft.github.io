@@ -1,0 +1,613 @@
+FIGURE CabriII vers. MS-Windows 1.0
+
+Used macro
+
+Schuifregelaar aan/uit, no name
+Icon:
+0000000000000000
+0000000000220000
+0999999992222990
+0999999992222990
+0000000000220000
+0000000000000000
+0000000000000000
+0000000000000000
+0000000000000F00
+000000000000FF00
+00000000000FFF00
+000000000000FF00
+000000000000FF00
+000000000000FF00
+00000000000FFFF0
+0000000000000000
+Help:
+"Plaats twee punten er wordt een schuifregelaar geplaatst die de waarde ""1"" of ""bestaat niet"" aanneemt"
+Mth: 0
+CN:2, ON:6, FN:4, PO:0
+CT:
+point, CS 0, R, W, t, DS:1 1, GT:1, V, nSt
+point, CS 0, R, W, t, DS:1 1, GT:1, V, nSt
+Const:
+Seg, Mth:0, 1, 0, CN:2, VN:0, Const: 1 2, dG, W, t, DS:1 1, GT:0, V, nSt
+Pt/, Mth:1, 1, 0, CN:1, VN:3, Const: 3, O, W, t, DS:1 1, GT:2, V, nSt
+Lgth, Mth:0, 0, 0, CN:1, VN:1, Const: 3
+Lgth, Mth:1, 0, 0, CN:2, VN:1, Const: 4 1
+Formula, Mth:0, 1, 0, CN:2, VN:1, Const: 6 5, B, W, NbD:2, nFD, WU, GT:0, V, nSt, formula: 1/round(a/(b*1.6))
+Text, Mth:0, 1, 0, CN:1, VN:1, Const: 7, B, W, BTh:2, DS:1 1, GT:0, V, nSt
+
+Figure description:
+
+Window center x: -1.45520833333333 y: 0.79375 Window size x: 20.7433333333333 y: 12.3825
+
+1: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Val: 0 0
+
+2: Axes, 1, CN:1, VN:3
+Gr, W, t, DS:1 1, GT:0, I, nSt
+Const: 1, Val: 1 0, 0 1
+
+3: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, I, St
+Val: 4.57729166666667 4.89479166666667
+
+4: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, I, St
+Val: 5.97958333333333 4.89479166666667
+
+5: Line, 0, CN:2, VN:2
+V, W, t, DS:1 1, GT:0, I, nSt
+Const: 3 4
+
+6: Perp, 0, CN:2, VN:2
+V, W, t, DS:1 1, GT:0, I, nSt
+Const: 3 5
+
+7: Perp, 0, CN:2, VN:2
+V, W, t, DS:1 1, GT:0, I, nSt
+Const: 4 5
+
+8: Pt/, 0, CN:1, VN:3
+R, W, t, DS:1 1, GT:1, I, St
+Const: 6, Val: 4.57729166666667 4.048125
+
+9: Pt/, 0, CN:1, VN:3
+R, W, t, DS:1 1, GT:1, I, St
+Const: 6, Val: 4.57729166666667 3.254375
+
+10: Pt/, 0, CN:1, VN:3
+R, W, t, DS:1 1, GT:1, I, St
+Const: 6, Val: 4.57729166666667 2.48708333333333
+
+11: Pt/, 0, CN:1, VN:3
+R, W, t, DS:1 1, GT:1, I, St
+Const: 6, Val: 4.57729166666667 1.71979166666667
+
+12: Pt/, 0, CN:1, VN:3
+R, W, t, DS:1 1, GT:1, I, St
+Const: 6, Val: 4.57729166666667 0.926041666666667
+
+13: Par, 0, CN:2, VN:2
+V, W, t, DS:1 1, GT:0, I, nSt
+Const: 8 5
+
+14: Par, 0, CN:2, VN:2
+V, W, t, DS:1 1, GT:0, I, nSt
+Const: 9 13
+
+15: Par, 0, CN:2, VN:2
+V, W, t, DS:1 1, GT:0, I, nSt
+Const: 10 14
+
+16: Par, 0, CN:2, VN:2
+V, W, t, DS:1 1, GT:0, I, nSt
+Const: 11 15
+
+17: Par, 0, CN:2, VN:2
+V, W, t, DS:1 1, GT:0, I, nSt
+Const: 12 16
+
+18: Int, 0, CN:2, VN:1
+R, W, t, DS:1 1, GT:1, I, St
+Const: 7 13
+
+19: Int, 0, CN:2, VN:1
+R, W, t, DS:1 1, GT:1, I, St
+Const: 7 14
+
+20: Int, 0, CN:2, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Const: 7 15
+
+21: Int, 0, CN:2, VN:1
+R, W, t, DS:1 1, GT:1, I, St
+Const: 7 16
+
+22: Int, 0, CN:2, VN:1
+R, W, t, DS:1 1, GT:1, I, St
+Const: 7 17
+
+Ma: Schuifregelaar aan/uit, Const: 3 i: 0 4 i: 0
+23: Ma R, F No1, VN:0
+dG, W, t, DS:1 1, GT:0, V, nSt
+
+24: Ma R, F No2, VN:3
+O, W, t, DS:1 1, GT:2, V, nSt
+Val: 4.57729166666667 4.89479166666667
+
+27: Ma R, F No3, VN:1
+B, W, NbD:2, nFD, WU, GT:0, I, nSt
+Val: 272 -192 0, A, P, TP: 7.19666666666667, 5.08,TS: 2.01083333333333, -0.423333333333333
+p: 0, System, S: 0 C: 15 Fa: 0
+
+28: Ma R, F No4, VN:1
+B, W, BTh:2, DS:1 1, GT:0, I, nSt
+Val: 272 -192 0, nA, nP, TP: 7.19666666666667, 5.08,TS: 2.06375, -0.47625
+""#"
+p: 0, System, S: 0 C: 15 Fa: 0
+
+29: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Const: 8 3 27
+
+30: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Const: 18 3 27
+
+Ma: Schuifregelaar aan/uit, Const: 29 i: 0 30 i: 0
+31: Ma R, F No1, VN:0
+dG, W, t, DS:1 1, GT:0, V, nSt
+
+32: Ma R, F No2, VN:3
+O, W, t, DS:1 1, GT:2, V, nSt
+Val: 4.57729166666667 4.048125
+
+35: Ma R, F No3, VN:1
+B, W, NbD:2, nFD, WU, GT:0, I, nSt
+Val: 269 -159 0, A, P, TP: 7.11729166666667, 4.206875,TS: 2.01083333333333, -0.423333333333333
+p: 0, System, S: 0 C: 15 Fa: 0
+
+36: Ma R, F No4, VN:1
+B, W, BTh:2, DS:1 1, GT:0, I, nSt
+Val: 269 -159 0, nA, nP, TP: 7.11729166666667, 4.206875,TS: 2.06375, -0.47625
+""#"
+p: 0, System, S: 0 C: 15 Fa: 0
+
+37: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Const: 9 3 35
+
+38: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Const: 19 3 35
+
+Ma: Schuifregelaar aan/uit, Const: 37 i: 0 38 i: 0
+39: Ma R, F No1, VN:0
+dG, W, t, DS:1 1, GT:0, V, nSt
+
+40: Ma R, F No2, VN:3
+O, W, t, DS:1 1, GT:2, V, nSt
+Val: 4.57729166666667 3.254375
+
+43: Ma R, F No3, VN:1
+B, W, NbD:2, nFD, WU, GT:0, I, nSt
+Val: 266 -126 0, A, P, TP: 7.03791666666667, 3.33375,TS: 2.01083333333333, -0.423333333333333
+p: 0, System, S: 0 C: 15 Fa: 0
+
+44: Ma R, F No4, VN:1
+B, W, BTh:2, DS:1 1, GT:0, I, nSt
+Val: 266 -126 0, nA, nP, TP: 7.03791666666667, 3.33375,TS: 2.06375, -0.47625
+""#"
+p: 0, System, S: 0 C: 15 Fa: 0
+
+45: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Const: 10 3 43
+
+46: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Const: 20 3 43
+
+Ma: Schuifregelaar aan/uit, Const: 45 i: 0 46 i: 0
+47: Ma R, F No1, VN:0
+dG, W, t, DS:1 1, GT:0, V, nSt
+
+48: Ma R, F No2, VN:3
+O, W, t, DS:1 1, GT:2, V, nSt
+Val: 4.57729166666667 2.48708333333333
+
+51: Ma R, F No3, VN:1
+B, W, NbD:2, nFD, WU, GT:0, I, nSt
+Val: 267 -98 0, A, P, TP: 7.064375, 2.59291666666667,TS: 2.01083333333333, -0.423333333333333
+p: 0, System, S: 0 C: 15 Fa: 0
+
+52: Ma R, F No4, VN:1
+B, W, BTh:2, DS:1 1, GT:0, I, nSt
+Val: 267 -98 0, nA, nP, TP: 7.064375, 2.59291666666667,TS: 2.06375, -0.47625
+""#"
+p: 0, System, S: 0 C: 15 Fa: 0
+
+53: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Const: 11 3 51
+
+54: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Const: 21 3 51
+
+Ma: Schuifregelaar aan/uit, Const: 53 i: 0 54 i: 0
+55: Ma R, F No1, VN:0
+dG, W, t, DS:1 1, GT:0, V, nSt
+
+56: Ma R, F No2, VN:3
+O, W, t, DS:1 1, GT:2, V, nSt
+Val: 4.57729166666667 1.71979166666667
+
+59: Ma R, F No3, VN:1
+B, W, NbD:2, nFD, WU, GT:0, I, nSt
+Val: 272 -69 0, A, P, TP: 7.19666666666667, 1.825625,TS: 2.01083333333333, -0.423333333333333
+p: 0, System, S: 0 C: 15 Fa: 0
+
+60: Ma R, F No4, VN:1
+B, W, BTh:2, DS:1 1, GT:0, I, nSt
+Val: 272 -69 0, nA, nP, TP: 7.19666666666667, 1.825625,TS: 2.06375, -0.47625
+""#"
+p: 0, System, S: 0 C: 15 Fa: 0
+
+61: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Const: 12 3 59
+
+62: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Const: 22 3 59
+
+Ma: Schuifregelaar aan/uit, Const: 61 i: 0 62 i: 0
+63: Ma R, F No1, VN:0
+dG, W, t, DS:1 1, GT:0, V, nSt
+
+64: Ma R, F No2, VN:3
+O, W, t, DS:1 1, GT:2, V, nSt
+Val: 4.57729166666667 0.926041666666667
+
+67: Ma R, F No3, VN:1
+B, W, NbD:2, nFD, WU, GT:0, I, nSt
+Val: 275 -36 0, A, P, TP: 7.27604166666667, 0.9525,TS: 2.01083333333333, -0.423333333333333
+p: 0, System, S: 0 C: 15 Fa: 0
+
+68: Ma R, F No4, VN:1
+B, W, BTh:2, DS:1 1, GT:0, I, nSt
+Val: 275 -36 0, nA, nP, TP: 7.27604166666667, 0.9525,TS: 2.06375, -0.47625
+""#"
+p: 0, System, S: 0 C: 15 Fa: 0
+
+"C", NP: 17, -85, NS: 11, 18
+69: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, V, St
+Val: 0.370416666666667 1.87854166666667
+p: 0, System, S: 0 C: 3 Fa: 0
+
+"A", NP: -264, -91, NS: 10, 18
+70: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, V, St
+Val: -6.79979166666667 1.87854166666667
+p: 0, System, S: 0 C: 3 Fa: 0
+
+71: Seg, 0, CN:2, VN:0
+Bl, W, t, DS:1 1, GT:0, V, nSt
+Const: 69 70
+
+"B", NP: -142, 4, NS: 12, 18
+72: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, V, St
+Val: -3.83645833333333 -0.105833333333333
+p: 0, System, S: 0 C: 3 Fa: 0
+
+73: Seg, 0, CN:2, VN:0
+Bl, W, t, DS:1 1, GT:0, V, nSt
+Const: 70 72
+
+74: Seg, 0, CN:2, VN:0
+Bl, W, t, DS:1 1, GT:0, V, nSt
+Const: 69 72
+
+"D", NP: -289, 61, NS: 12, 18
+75: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, V, St
+Val: -7.32895833333333 -1.56104166666667
+p: 0, System, S: 0 C: 3 Fa: 0
+
+76: Seg, 0, CN:2, VN:0
+Bl, W, t, DS:1 1, GT:0, V, nSt
+Const: 70 75
+
+77: Par, 0, CN:2, VN:2
+Bl, W, t, DS:1 1, GT:0, I, nSt
+Const: 75 73
+
+78: Par, 0, CN:2, VN:2
+Bl, W, t, DS:1 1, GT:0, I, nSt
+Const: 72 76
+
+79: Par, 0, CN:2, VN:2
+Bl, W, t, DS:1 1, GT:0, I, nSt
+Const: 69 76
+
+"E", NP: -169, 138, NS: 11, 18
+80: Int, 0, CN:2, VN:1
+R, W, t, DS:1 1, GT:1, V, St
+Const: 77 78
+p: 0, System, S: 0 C: 3 Fa: 0
+
+81: Par, 0, CN:2, VN:2
+Bl, W, t, DS:1 1, GT:0, I, nSt
+Const: 80 74
+
+"F", NP: -4, 60, NS: 10, 18
+82: Int, 0, CN:2, VN:1
+R, W, t, DS:1 1, GT:1, V, St
+Const: 79 81
+p: 0, System, S: 0 C: 3 Fa: 0
+
+83: Seg, 0, CN:2, VN:0
+Bl, W, t, DS:1 1, GT:0, V, nSt
+Const: 75 80
+
+84: Seg, 0, CN:2, VN:0
+Bl, W, t, DS:1 1, GT:0, V, nSt
+Const: 80 82
+
+85: Seg, 0, CN:2, VN:0
+Bl, W, t, DS:1 1, GT:0, V, nSt
+Const: 69 82
+
+86: Seg, 0, CN:2, VN:0
+Bl, W, t, DS:1 1, GT:0, V, nSt
+Const: 72 80
+
+87: Seg, 0, CN:2, VN:0
+Bl, W, t, DS:5 8, GT:0, V, nSt
+Const: 75 82
+
+"Q", NP: -265, 14, NS: 12, 18
+88: Pt/, 0, CN:1, VN:3
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 76, Val: -7.17020833333333 -0.529166666666667
+p: 0, System, S: 0 C: 2 Fa: 0
+
+"R", NP: -129, 120, NS: 12, 18
+89: Pt/, 0, CN:1, VN:3
+O, W, t, DS:1 1, GT:1, V, St
+Const: 84, Val: -3.36020833333333 -3.07116352201259
+p: 0, System, S: 0 C: 2 Fa: 0
+
+90: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 88 3 27
+
+91: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Const: 75 3 27
+
+92: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Const: 82 3 27
+
+93: Line, 0, CN:2, VN:2
+dG, W, t, DS:5 8, GT:0, I, nSt
+Const: 91 92
+
+94: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 89 3 35
+
+95: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 89 3 43
+
+96: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 88 3 43
+
+97: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 89 3 59
+
+"P", NP: -32, -47, NS: 11, 18
+98: Pt/, 0, CN:1, VN:3
+O, W, t, DS:1 1, GT:1, V, St
+Const: 74, Val: -0.873125 1.29196540880503
+p: 0, System, S: 0 C: 2 Fa: 0
+
+99: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 98 3 59
+
+100: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 98 3 27
+
+101: Seg, 0, CN:2, VN:0
+O, W, t, DS:1 1, GT:0, I, nSt
+Const: 98 89
+
+102: Line, 0, CN:2, VN:2
+dG, W, t, DS:5 8, GT:0, I, nSt
+Const: 69 82
+
+103: Line, 0, CN:2, VN:2
+dG, W, t, DS:5 8, GT:0, I, nSt
+Const: 98 89
+
+104: Int, 0, CN:2, VN:1
+O, W, t, DS:1 1, GT:1, I, nSt
+Const: 102 103
+
+105: Line, 0, CN:2, VN:2
+dG, W, t, DS:5 8, GT:0, I, nSt
+Const: 104 88
+
+106: Int, 0, CN:2, VN:1
+O, W, t, DS:1 1, GT:1, I, nSt
+Const: 71 105
+
+107: Line, 0, CN:2, VN:2
+dG, W, t, DS:5 8, GT:0, I, nSt
+Const: 82 75
+
+108: Int, 0, CN:2, VN:1
+O, W, t, DS:1 1, GT:1, I, nSt
+Const: 105 107
+
+109: Line, 0, CN:2, VN:2
+dG, W, t, DS:5 8, GT:0, I, nSt
+Const: 108 89
+
+110: Int, 0, CN:2, VN:1
+O, W, t, DS:1 1, GT:1, I, nSt
+Const: 83 109
+
+111: Seg, 0, CN:2, VN:0
+O, W, t, DS:1 1, GT:0, I, nSt
+Const: 88 110
+
+112: Seg, 0, CN:2, VN:0
+O, W, t, DS:1 1, GT:0, I, nSt
+Const: 110 89
+
+113: Seg, 0, CN:2, VN:0
+O, W, t, DS:1 1, GT:0, I, nSt
+Const: 98 106
+
+114: Seg, 0, CN:2, VN:0
+O, W, t, DS:1 1, GT:0, I, nSt
+Const: 106 88
+
+115: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 89 3 27
+
+116: Seg, 0, CN:2, VN:0
+O, W, t, DS:1 1, GT:0, V, nSt
+Const: 100 115
+
+117: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Const: 69 3 35
+
+118: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Const: 82 3 35
+
+119: Line, 0, CN:2, VN:2
+dG, W, t, DS:5 8, GT:0, V, nSt
+Const: 117 118
+
+120: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 98 3 35
+
+121: Line, 0, CN:2, VN:2
+dG, W, t, DS:5 8, GT:0, V, nSt
+Const: 120 94
+
+"Z", NP: 34, -154, NS: 11, 18
+122: Dil, 0, CN:3, VN:1
+dG, W, t, DS:1 1, GT:2, V, nSt
+Const: 104 3 35
+p: 0, System, S: 0 C: 9 Fa: 0
+
+123: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, I, nSt
+Const: 104 3 43
+
+124: Line, 0, CN:2, VN:2
+Gr, W, t, DS:5 8, GT:0, V, nSt
+Const: 123 96
+
+"S", NP: -121, -91, NS: 11, 18
+125: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 106 3 43
+p: 0, System, S: 0 C: 2 Fa: 0
+
+126: Seg, 0, CN:2, VN:0
+O, W, t, DS:1 1, GT:0, V, nSt
+Const: 125 96
+
+127: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 100 3 35
+
+128: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 115 3 35
+
+129: Seg, 0, CN:2, VN:0
+O, W, t, DS:1 1, GT:0, V, nSt
+Const: 127 128
+
+130: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Const: 82 3 51
+
+131: Dil, 0, CN:3, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Const: 75 3 51
+
+132: Line, 0, CN:2, VN:2
+Gr, W, t, DS:5 8, GT:0, V, nSt
+Const: 130 131
+
+"Y", NP: -341, 35, NS: 12, 18
+133: Dil, 0, CN:3, VN:1
+Gr, W, t, DS:1 1, GT:2, V, nSt
+Const: 108 3 51
+p: 0, System, S: 0 C: 13 Fa: 0
+
+134: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, I, nSt
+Const: 108 3 59
+
+135: Line, 0, CN:2, VN:2
+R, W, t, DS:5 8, GT:0, V, nSt
+Const: 134 97
+
+136: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 98 3 51
+
+137: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, I, nSt
+Const: 106 3 51
+
+138: Seg, 0, CN:2, VN:0
+O, W, t, DS:1 1, GT:0, V, nSt
+Const: 136 137
+
+"T", NP: -244, 87, NS: 10, 18
+139: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 110 3 59
+p: 0, System, S: 0 C: 2 Fa: 0
+
+140: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 88 3 67
+
+141: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, I, nSt
+Const: 110 3 67
+
+142: Seg, 0, CN:2, VN:0
+O, W, t, DS:1 1, GT:0, V, nSt
+Const: 140 141
+
+143: Dil, 0, CN:3, VN:1
+O, W, t, DS:1 1, GT:1, V, nSt
+Const: 89 3 67
+
+144: Seg, 0, CN:2, VN:0
+O, W, t, DS:1 1, GT:0, V, nSt
+Const: 141 143
+

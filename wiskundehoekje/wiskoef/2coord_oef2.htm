@@ -1,0 +1,129 @@
+<HTML>
+<HEAD><BASEFONT SIZE="2" FACE="arial, helvetica">
+<TITLE>
+</TITLE>
+<link rel="stylesheet" href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<script src="2coord_oef2.js"></script>
+<BODY TOPMARGIN="0" LEFTMARGIN="0" TEXT="000000" BACKGROUND="../bck.gif">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD WIDTH="28" VALIGN="top"><!-- Tabel voor pijltjes-->
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER="0" WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD><!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Coördinaten</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+<form name="co">
+<table width=568 height=397 cellpadding=0 cellspacing=0 BACKGROUND="images/2coord_oef2_leeg.gif">
+    <tr>
+      <td><img src="images/leeg.gif" border=0 width=568 height=19 name="boven" onClick="controle2mis()"><br>
+	  <img src="images/leeg.gif" border=0 width=12 height=7 name="links" onClick="controle2mis()"><img src="images/leeg.gif" border=0 width=7 height=7 name="punt" onClick="controle2goed()"><img src="images/leeg.gif" border=0 width=549 height=7 name="rechts" onClick="controle2mis()"><br><img src="images/leeg.gif" border=0 width=568 height=370 name="onder" onClick="controle2mis()"></td>
+    </tr>
+</table><p>
+<input type="button" value="Nieuwe oefening" onClick="nieuwoef()">
+<DIV ID="opg1" STYLE="display:none">
+Welke zijn de coördinaten van het groene punt? ( <input type="text" name="X1" size="3" maxlength="5"> , <input type="text" name="Y1" size="3" maxlength="5"> ) <input type="button" value="Controle" onClick="controle1()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl1"><br>
+Opmerking: decimale getallen (met punt) of breuken ingeven, bv 1.5 of 3/2 . 
+</DIV>
+<DIV ID="opg2" STYLE="display:none">
+Plaats het punt ( <input type="text" name="X2" size="3" maxlength="5" onFocus="blur()"> , <input type="text" name="Y2" size="3" maxlength="5" onFocus="blur()"> ) door in de grafiek op de juiste plaats te klikken. <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl2"><br>
+Opmerking: het punt verschijnt als je het juist hebt.
+</DIV>
+<p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+</form>
+<br>
+<P>
+<TABLE BORDER="0" CELLPADDING="1" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+</div </B>
+</TD>
+</TR>
+</TABLE>
+<map name="2coord2_1leeg">
+<area shape="rect" coords="11,69,20,79" onClick="controleB()">
+<area shape="default" nohref>
+</map>
+<map name="2coord5_1leeg">
+<area shape="rect" coords="8,70,17,80" onClick="controleJ()">
+<area shape="default" nohref>
+</map>
+<map name="2coord3_2leeg">
+<area shape="rect" coords="8,20,17,30" onClick="controleD()">
+<area shape="default" nohref>
+</map>
+<map name="2coord4_2leeg">
+<area shape="rect" coords="17,20,26,30" onClick="controleF()">
+<area shape="default" nohref>
+</map>
+<map name="2coord6_3leeg">
+<area shape="rect" coords="24,20,33,31" onClick="controleA()">
+<area shape="default" nohref>
+</map>
+<map name="2coord1_4leeg">
+<area shape="rect" coords="51,17,60,27" onClick="controleE()">
+<area shape="default" nohref>
+</map>
+<map name="2coord2_5leeg">
+<area shape="rect" coords="11,21,20,31" onClick="controleG()">
+<area shape="default" nohref>
+</map>
+<map name="2coord6_5leeg">
+<area shape="rect" coords="24,21,33,32" onClick="controleC()">
+<area shape="default" nohref>
+</map>
+<map name="2coord4_6leeg">
+<area shape="rect" coords="17,19,26,29" onClick="controleI()">
+<area shape="default" nohref>
+</map>
+<map name="2coord7_6leeg">
+<area shape="rect" coords="24,19,34,29" onClick="controleH()">
+<area shape="default" nohref>
+</map>
+</BODY>
+</HTML>

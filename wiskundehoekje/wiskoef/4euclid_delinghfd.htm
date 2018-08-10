@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" SRC="4euclid_deling.js"></script>
+<script language= "JavaScript">
+<!--
+	if (top.frames.length == 0)
+	top.location = "4euclid_deling.htm";
+
+// -->
+
+</script>
+
+</HEAD>
+
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Euclidische deling (veeltermen)</FONT></A>
+</CENTER></TD>
+
+</TR>
+</TABLE>
+<img src="../images/goed.gif" border=0 width=1 height=1><img src="../images/fout.gif" border=0 width=1 height=1><img src="images/sup_aan.gif" border=0 width=1 height=1><BR><p>
+
+
+<A NAME="top"></A>
+Kies een moeilijkheidsgraad en klik op "Nieuwe oefening": onderaan verschijnt een opgave. Je krijgt een deeltal en een deler. Aan jou om quotiënt en rest te bepalen. Een tweede- of derdemacht mag je ingeven met x² of x³ (zoals je ze boven de shift-lock vindt) of met x^2 (x^3). Als de deling opgaat moet je rest = 0 invullen. Belangrijk is wel dat je de veeltermen volgens dalende exponenten ingeeft (bv 5x³ - 3x² + 4). Om te controleren of je antwoord juist is druk je op "Controle". Goede antwoorden worden beloond met een lachend groen gezichtje (smiley), foutieve antwoorden geven een nors rood gezichtje als resultaat. Als je het echt niet vindt kan je de oplossing ook tonen met de knop "Toon de oplossing" (dat helpt je misschien de fout in jouw berekeningen op te sporen).
+<form name="ed">
+<table>
+  <tr>
+    <td><SELECT NAME="kiesoef">
+    <OPTION VALUE="niet" SELECTED> Moeilijkheidsgraad
+	<option value="makk"> Gemakkelijk
+	<option value="norm"> Normaal
+	<option value="moei"> Moeilijk
+</select><img src="images/leeg.gif" border=0 width=30 height=22>
+</td>
+    <td><input type="button" value="Nieuwe oefening" onClick="nieuwoef()"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Controle" onClick="controle()"> <img src="../images/vraagteken.gif" name="opl" border=0 width=22 height=22></td>
+    <td><input type="button" value="Toon de oplossing" onClick="toonopl()"></td>
+  </tr>
+</table>
+
+<p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+
+</form>
+
+
+<P>
+<BR>
+<CENTER>
+<A HREF="../wisk4.htm" target="doel"><IMG SRC="../images/terug.gif" BORDER=0 ALT="Terug"></A></CENTER>
+<br>
+</B>
+
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

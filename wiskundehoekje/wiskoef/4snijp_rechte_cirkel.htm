@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<script src="4snijp_rechte_cirkel.js"></script>
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Onderlinge ligging van rechte en cirkel</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+<A NAME="top"></A>
+Klik op "Nieuwe oefening": je krijgt de vergelijking van een cirkel (c) en van een rechte (r). Bepaal de eventuele snijpunten. Geef eerst het aantal snijpunten in en voer dan (eventueel) hun coördinaten in. Controleer daarna je oplossing door te klikken op de knop "Controle". <br>
+
+Goede antwoorden worden beloond met een lachend groen gezichtje (smiley), foutieve antwoorden geven een nors rood gezichtje als resultaat.
+
+<form name="fv">
+<input type="button" value="Nieuwe oefening" onClick="nieuwoef()">
+<p>
+
+<table>
+    <tr>
+	  <td>Gegeven:</td>
+      <td>c <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> <input type="text" name="txtcirkel" size=25 maxlength=30 onFocus="blur()"></td>
+    </tr>
+    <tr>
+	  <td></td>
+      <td>r <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> <input type="text" name="txtrechte" size=25 maxlength=30 onFocus="blur()"></td>
+    </tr>
+</table>
+
+  <u>Aantal snijpunten:</u>  
+<select name="keuzenp" onChange="wijzignp()">
+	<option value="x" selected> ?
+	<option value="0"> 0
+	<option value="1"> 1
+	<option value="2"> 2
+</select> <img src="../images/vraagteken.gif" name="oplnp" border=0 width=22 height=22> 
+<p>
+
+<DIV ID=Dnul STYLE="display:none">Het snijpunt is ( <INPUT NAME="enigeoplx" TYPE="TEXT" VALUE="" SIZE="6"> , <INPUT NAME="enigeoply" TYPE="TEXT" VALUE="" SIZE="6"> ) .</DIV>
+<DIV ID=Dpos STYLE="display:none">De snijpunten zijn  ( <INPUT NAME="oplx1" TYPE="TEXT" VALUE="" SIZE="6">  , <INPUT NAME="oply1" TYPE="TEXT" VALUE="" SIZE="6"> ) en ( <INPUT NAME="oplx2" TYPE="TEXT" VALUE="" SIZE="6"> , <INPUT NAME="oply2" TYPE="TEXT" VALUE="" SIZE="6"> ) </DIV>
+<p>
+
+<input type="button" value="Controle" onClick="controle()"> <img src="../images/vraagteken.gif" name="opl" border=0 width=22 height=22>
+ <p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+
+</form>
+<P>
+<a href="4onderl_ligging_cirkel_rechte.htm">Op deze pagina</a> kan je de onderlinge ligging van een rechte en een cirkel onderzoeken door beide grafieken te laten tekenen met een Java-applet.
+<P>
+<BR>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

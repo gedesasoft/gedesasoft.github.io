@@ -1,0 +1,117 @@
+<HTML>
+<HEAD><BASEFONT SIZE="2" FACE="arial, helvetica">
+<TITLE>
+</TITLE>
+<link rel="stylesheet" href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<script src="4wederk.js"></script>
+<BODY TOPMARGIN="0" LEFTMARGIN="0" TEXT="000000" BACKGROUND="../bck.gif">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD WIDTH="28" VALIGN="top"><!-- Tabel voor pijltjes-->
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER="0" WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD><!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Wederkerige vergelijkingen</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+Klik op de knop "Nieuwe oefening". Je krijgt bovenaan een wederkerige vergelijking. Bepaal alle wortels van deze vergelijking. Geef eerst het aantal wortels in en vul ze daarna in. Gebruik geen decimale getallen maar geef onvereenvoudigbare breuken in: scheid de teller en de noemer met een "/" (bv -4/9).  
+Goede antwoorden worden beloond met een lachend groen gezichtje (smiley), foutieve antwoorden geven een nors rood gezichtje als resultaat.
+<p>
+<form name="fv">
+<table>
+    <tr>
+      <td><input type="button" value="Nieuwe oefening" onClick="nieuwoef()"></td>
+      <td><DIV ID=vierdemacht STYLE="display:none"><input type="text" name="txtX4" size="5" maxlength="60"> x<sup>4</sup> + </DIV></td>
+      <td><DIV ID=derdemacht STYLE="display:"><input type="text" name="txtX3" size="5" maxlength="60"> x<sup>3</sup> + </DIV></td>
+      <td><DIV ID=tweedemacht STYLE="display:"><input type="text" name="txtX2" size="5" maxlength="60"> x<sup>2</sup> + </DIV></td>
+      <td><DIV ID=eerstemacht STYLE="display:"><input type="text" name="txtX1" size="5" maxlength="60"> x + </DIV></td>
+<td><input type="text" name="txtX0" size="5" maxlength="6"> = 0</td>
+    </tr>
+</table>
+
+
+
+<p>
+	<u>Wortels:</u> Er zijn 
+<select name="keuzenp" onChange="wijzignp()">
+	<option value="x" selected> ?
+	<option value="0"> 0
+	<option value="1"> 1
+	<option value="2"> 2
+	<option value="3"> 3
+	<option value="4"> 4
+</select>
+verschillende wortels. <img src="../images/vraagteken.gif" name="opl05" border=0 width=22 height=22>
+<p>
+
+
+<table>
+    <tr>
+      <td><DIV ID=eenopl STYLE="display:none">De enige wortel is <INPUT NAME="enigeopl" TYPE="TEXT" VALUE="" SIZE="6">.</DIV><DIV ID=tweeopl STYLE="display:none">De wortels zijn <INPUT NAME="oplx1" TYPE="TEXT" VALUE="" SIZE="6">
+<INPUT NAME="oplx2" TYPE="TEXT" VALUE="" SIZE="6"> </DIV>
+</td>
+      <td><DIV ID=drieopl STYLE="display:none"> <INPUT NAME="oplx3" TYPE="TEXT" VALUE="" SIZE="6"></DIV></td>
+      <td><DIV ID=vieropl STYLE="display:none"> <INPUT NAME="oplx4" TYPE="TEXT" VALUE="" SIZE="6"></DIV></td>
+      <td><input type="button" value="Controle" onClick="controle()">  <img src="../images/vraagteken.gif" name="opl" border=0 width=22 height=22>
+</td>
+    </tr>
+</table>
+<p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+<p>
+
+</form>
+<br>
+<P>
+<TABLE BORDER="0" CELLPADDING="1" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+</div </B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

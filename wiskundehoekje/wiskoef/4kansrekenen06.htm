@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+
+<script src="4kansrekenen.js"></script>
+<script language= "JavaScript">
+<!--
+	if (top.frames.length == 0)
+	top.location = "4kansrekenen.htm";
+
+var aantalopgaven = 4
+var antw01 = "1/25"
+var antw02 = "67/100"
+var antw03 = "3/25"
+var antw04 = "81/100"
+var antw05 = ""
+
+// -->
+</script>
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<p><br>
+
+
+<A NAME="top"></A>
+<form name="telpr">
+Pieters examens bij Kerstmis waren niet goed: hij behaalde een onvoldoende op Wiskunde, Frans en Nederlands. Zijn leraar wiskunde acht de kans dat hij zijn onvoldoende op wiskunde kan ophalen 3 op 4. Voor Nederlands heeft hij zelfs 80% kans om toch te slagen voor dat vak. Voor Frans behaalde hij echter het slechtste resultaat en zijn leerkracht denkt dan ook dat hij nog maar 1 kans op 5 heeft om voor Frans te slagen. Als hij op het einde van het jaar slechts op één van de vakken een onvoldoende haalt, zal hij wellicht toch mogen overgaan met een vakantiewerk voor dat vak. Onvoldoendes op twee hoofdvakken betekenen het jaar overdoen. Pieters vader wil hem extra motiveren en dus stelt hij het volgende voorop. Als Pieter toch mag overgaan, mag hij volgend jaar mee op skiklassen. Haalt hij alle vakken op, dan belooft zijn vader hem zelfs een nieuwe ski-uitrusting te kopen.<p>
+<table>
+    <tr>
+      <td>a)</td>
+      <td>Wat is de kans dat Pieter geen enkele van de drie onvoldoendes kan omzetten in een voldoende? (ingeven als breuk)</td>
+      <td width="120"><input type="text" name="vr01" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl01"></td>
+    </tr>
+    <tr>
+      <td>b)</td>
+      <td>Wat is de kans dat Pieter toch mag overgaan (en dus mee op skireis mag)? (ingeven als breuk)</td>
+      <td><input type="text" name="vr02" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl02"></td>
+    </tr>
+    <tr>
+      <td>c)</td>
+      <td>Wat is de kans dat Pieter volgend jaar een nieuwe ski-uitrusting krijgt? (ingeven als breuk)</td>
+      <td><input type="text" name="vr03" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl03"></td>
+    </tr>
+    <tr>
+      <td>d)</td>
+      <td>Omdat Pieter vreselijk veel moeite heeft met Frans besluit zijn moeder hem wekelijks bijles te laten volgen (bij zijn oom, ook een leerkracht Frans): hierdoor stijgt zijn slaagkans voor Frans tot 60%. Bereken de kans dat hij mee op skireis mag. (ingeven als breuk)</td>
+      <td><input type="text" name="vr04" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl04"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><input type=button value="Controle" onClick="controle()"><p><input type=button value="Oplossing?" onClick="document.all.oplossing.style.display=''"></td>
+    </tr>
+</table>
+<p>
+
+</form>
+<DIV ID=oplossing STYLE="display:none">
+<table>
+    <tr>
+      <td></td>
+      <td><img src="images/4kansrekenen06a.gif" border=0 width=452 height=333><p></td>
+    </tr>
+    <tr>
+      <td>a)</td>
+      <td>Uit bovenstaande kansboom blijkt dat de kans op 3 onvoldoendes (o,o,o) gelijk is aan 4/100 = 1/25</td>
+    </tr>
+    <tr>
+      <td>b)</td>
+      <td>Dan moet hij minstens twee voldoendes halen. Dus moeten we de kansen van de volgende gebeurtenissen uit de kansboom optellen: P(v,v,v) + P(v,v,o) + P(v,o,v) + P(o,v,v) = 12/100 + 48/100 + 3/100 + 4/100 = 67/100</td>
+    </tr>
+    <tr>
+      <td>c)</td>
+      <td>P(v,v,v) = 12/100 = 3/25</td>
+    </tr>
+    <tr>
+      <td>d)</td>
+      <td><img src="images/4kansrekenen06b.gif" border=0 width=468 height=337><p>
+	  Dan wordt de kans om te slagen 36/100 + 24/100 + 9/100 + 12/100 = 81/100</td>
+    </tr>
+</table>
+
+</DIV>
+<P>
+<BR>
+<CENTER>
+<A HREF="4kansrekenen00.htm"><IMG SRC="../images/terug.gif" BORDER=0 ALT="Terug"></A></CENTER>
+<br>
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

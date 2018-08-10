@@ -1,0 +1,96 @@
+FIGURE CabriII vers. MS-Windows 1.0
+
+Window center x: 2.2225 y: -1.32291666666667 Window size x: 20.7433333333333 y: 12.3825
+
+1: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, I, nSt
+Val: 0 0
+
+2: Axes, 1, CN:1, VN:3
+Gr, W, t, DS:1 1, GT:0, I, nSt
+Const: 1, Val: 1 0, 0 1
+
+3: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Val: -2.35479166666667 -4.7625
+
+"a", NP: 417, 94, NS: 10, 18
+4: Line, 0, CN:1, VN:2
+V, W, t, DS:1 1, GT:0, V, nSt
+Const: 3, Val: 0.98467362645549 0.174407136789164
+p: 0, System, S: 0 C: 5 Fa: 0
+
+5: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Val: -4.89479166666667 0.529166666666667
+
+"b", NP: -231, -138, NS: 10, 18
+6: Line, 0, CN:2, VN:2
+V, W, t, DS:1 1, GT:0, V, nSt
+Const: 5 3
+p: 0, System, S: 0 C: 5 Fa: 0
+
+"A", NP: -49, -24, NS: 10, 18
+7: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Val: -1.29645833333333 0
+p: 0, System, S: 0 C: 3 Fa: 0
+
+"B", NP: 45, -84, NS: 12, 18
+8: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Val: 1.11125 1.71979166666667
+p: 0, System, S: 0 C: 3 Fa: 0
+
+9: Seg, 0, CN:2, VN:0
+V, W, t, DS:1 1, GT:0, V, nSt
+Const: 7 8
+
+"C", NP: 157, -47, NS: 11, 18
+10: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Val: 4.18041666666667 0.555625
+p: 0, System, S: 0 C: 3 Fa: 0
+
+"D", NP: 252, -109, NS: 12, 18
+11: Pt, 0, CN:0, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Val: 6.588125 2.27541666666667
+p: 0, System, S: 0 C: 3 Fa: 0
+
+12: Seg, 0, CN:2, VN:0
+V, W, t, DS:1 1, GT:0, V, nSt
+Const: 10 11
+
+13: Lgth, 0, CN:1, VN:1
+B, W, NbD:2, FD, cm, GT:0, V, nSt
+Const: 9, Val: -3 -32 111.83, A, P
+p: 0, System, S: 0 C: 15 Fa: 0
+
+14: Text, 0, CN:2, VN:3
+B, W, BTh:2, DS:1 1, GT:0, V, nSt
+Const: 9 13, Val: -3 -32 0, nA, nP, TP: -0.079375, 0.846666666666667,TS: 1.53458333333333, -0.47625
+""#"
+p: 0, System, S: 0 C: 15 Fa: 0
+
+15: Par, 0, CN:2, VN:2
+V, W, t, DS:1 1, GT:0, V, nSt
+Const: 7 6
+
+"A'", NP: 29, 135, NS: 14, 18
+16: Int, 0, CN:2, VN:1
+R, W, t, DS:1 1, GT:1, V, nSt
+Const: 4 15
+p: 0, System, S: 0 C: 3 Fa: 0
+
+17: Lgth, 0, CN:1, VN:1
+B, W, NbD:2, FD, cm, GT:0, V, nSt
+Const: 12, Val: 196 -48 111.83, A, P
+p: 0, System, S: 0 C: 15 Fa: 0
+
+18: Text, 0, CN:2, VN:3
+B, W, BTh:2, DS:1 1, GT:0, V, nSt
+Const: 12 17, Val: 196 -48 0, nA, nP, TP: 5.18583333333333, 1.27,TS: 1.53458333333333, -0.47625
+""#"
+p: 0, System, S: 0 C: 15 Fa: 0
+

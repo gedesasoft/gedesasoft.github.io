@@ -1,0 +1,184 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<script language="JavaScript" SRC="3puntoprechte.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Punt op rechte (of niet)</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<img src="../images/goed.gif" border=0 width=1 height=1><img src="../images/fout.gif" border=0 width=1 height=1><br>
+<BR>
+
+
+
+<img src="../images/goed.gif" border=0 width=1 height=1><img src="../images/fout.gif" border=0 width=1 height=1><br>
+
+
+<A NAME="top"></A>
+Klik op de knop "Nieuwe oefening" en je krijgt de vergelijking van een rechte. Ga na of de punten (A tot en met J) op deze rechte liggen. Antwoord telkens met "ja" of "nee". 
+Goede antwoorden worden beloond met een groene smiley, heb je het fout dan zie een nors rood gezichtje.<p>
+<form name="coeff">
+<input type="button" value="Nieuwe oefening" onClick="nieuwoef()"> <img src="images/leeg.gif" border=0 width=25 height=25> 
+a <img src="images/heeft_als_vgl.gif" align="middle" border=0 width=28 height=25> <input type="text" name="txtvgl" size=20 maxlength=30> <p>
+<table width="80%">
+    <tr align="right">
+      <td>A(2,-3) <img src="images/element_van.gif" border=0 width=17 height=21 align="middle"> a 
+<img src="images/leeg.gif" border=0 width=25 height=21>
+<select name="antwA" onChange="controleA()">
+	<option value="?"> ???
+	<option value="j"> ja
+	<option value="n"> nee
+</select>
+<img src="../images/vraagteken.gif" name="oplA" border=0 width=22 height=22></td>
+      <td>F(1/2;3) <img src="images/element_van.gif" border=0 width=17 height=21 align="middle"> a 
+<img src="images/leeg.gif" border=0 width=25 height=21>
+<select name="antwF" onChange="controleF()">
+	<option value="?"> ???
+	<option value="j"> ja
+	<option value="n"> nee
+</select>
+<img src="../images/vraagteken.gif" name="oplF" border=0 width=22 height=22></td>
+    </tr>
+    <tr align="right">
+      <td>B(1,-5) <img src="images/element_van.gif" border=0 width=17 height=21 align="middle"> a 
+<img src="images/leeg.gif" border=0 width=25 height=21>
+<select name="antwB" onChange="controleB()">
+	<option value="?"> ???
+	<option value="j"> ja
+	<option value="n"> nee
+</select>
+<img src="../images/vraagteken.gif" name="oplB" border=0 width=22 height=22></td>
+      <td>G(2/3;-1/2) <img src="images/element_van.gif" border=0 width=17 height=21 align="middle"> a 
+<img src="images/leeg.gif" border=0 width=25 height=21>
+<select name="antwG" onChange="controleG()">
+	<option value="?"> ???
+	<option value="j"> ja
+	<option value="n"> nee
+</select>
+<img src="../images/vraagteken.gif" name="oplG" border=0 width=22 height=22></td>
+    </tr>
+    <tr align="right">
+      <td>C(-2,-3) <img src="images/element_van.gif" border=0 width=17 height=21 align="middle"> a 
+<img src="images/leeg.gif" border=0 width=25 height=21>
+<select name="antwC" onChange="controleC()">
+	<option value="?"> ???
+	<option value="j"> ja
+	<option value="n"> nee
+</select>
+<img src="../images/vraagteken.gif" name="oplC" border=0 width=22 height=22></td>
+      <td>H(-1/2;1/3) <img src="images/element_van.gif" border=0 width=17 height=21 align="middle"> a 
+<img src="images/leeg.gif" border=0 width=25 height=21>
+<select name="antwH" onChange="controleH()">
+	<option value="?"> ???
+	<option value="j"> ja
+	<option value="n"> nee
+</select>
+<img src="../images/vraagteken.gif" name="oplH" border=0 width=22 height=22></td>
+    </tr>
+    <tr align="right">
+      <td>D(-1,4) <img src="images/element_van.gif" border=0 width=17 height=21 align="middle"> a 
+<img src="images/leeg.gif" border=0 width=25 height=21>
+<select name="antwD" onChange="controleD()">
+	<option value="?"> ???
+	<option value="j"> ja
+	<option value="n"> nee
+</select>
+<img src="../images/vraagteken.gif" name="oplD" border=0 width=22 height=22></td>
+      <td>I(0;1/3) <img src="images/element_van.gif" border=0 width=17 height=21 align="middle"> a 
+<img src="images/leeg.gif" border=0 width=25 height=21>
+<select name="antwI" onChange="controleI()">
+	<option value="?"> ???
+	<option value="j"> ja
+	<option value="n"> nee
+</select>
+<img src="../images/vraagteken.gif" name="oplI" border=0 width=22 height=22></td>
+    </tr>
+    <tr align="right">
+      <td>E(-5,1) <img src="images/element_van.gif" border=0 width=17 height=21 align="middle"> a 
+<img src="images/leeg.gif" border=0 width=25 height=21>
+<select name="antwE" onChange="controleE()">
+	<option value="?"> ???
+	<option value="j"> ja
+	<option value="n"> nee
+</select>
+<img src="../images/vraagteken.gif" name="oplE" border=0 width=22 height=22></td>
+      <td>J(1/2;0) <img src="images/element_van.gif" border=0 width=17 height=21 align="middle"> a 
+<img src="images/leeg.gif" border=0 width=25 height=21>
+<select name="antwJ" onChange="controleJ()">
+	<option value="?"> ???
+	<option value="j"> ja
+	<option value="n"> nee
+</select>
+<img src="../images/vraagteken.gif" name="oplJ" border=0 width=22 height=22></td>
+    </tr>
+</table>
+<p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+
+</form>
+
+
+<P>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

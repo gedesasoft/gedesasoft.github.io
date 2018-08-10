@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<script src="4vgl_ll.js"></script>
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Vergelijking van een loodlijn opstellen</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+<img src="../images/goed.gif" border=0 width=1 height=1><img src="../images/fout.gif" border=0 width=1 height=1><br>
+
+
+<A NAME="top"></A>
+Klik op "Nieuwe oefening" en je krijgt de coördinaten van punt P en ook wat informatie over de rechte AB (dat kan de vergelijking van AB zijn, maar ook de coördinaten van A en B). Bereken dan de vergelijking van de loodlijn (d) uit P op AB.<p>
+Opmerkingen:
+<LI>Geef eerst (in de keuzelijst) aan om welk soort vergelijking het gaat<br>
+(y = mx + q // y = getal // x = getal)
+<LI>Je gebruikt best breuken (geen decimale getallen) in de tekstvakken (bv 7/2).<p>
+<form name="coeff">
+<input type="button" value="Nieuwe oefening" onClick="nieuwoef()"><p>
+<DIV ID="opg1" STYLE="display:none">
+Gegeven: A( <input type="text" name="txtX1" size=3 
+maxlength=4> , <input type="text" name="txtY1" size=3 
+maxlength=4> ) ; B( <input type="text" name="txtX2" size=3 
+maxlength=4> , <input type="text" name="txtY2" size=3 
+maxlength=4> ) ; P( <input type="text" name="txtX3" size=3 
+maxlength=4> , <input type="text" name="txtY3" size=3 
+maxlength=4> )<p>
+</DIV>
+<DIV ID="opg2" STYLE="display:none">
+Gegeven: AB <img src="images/heeft_als_vgl.gif" align="middle" border=0 width=28 height=25> <input type="text" name="txtvgl" size=15 
+maxlength=30> ; P( <input type="text" name="txtX4" size=3 
+maxlength=4> , <input type="text" name="txtY4" size=3 
+maxlength=4> )<p>
+</DIV>
+De vergelijking van d (de loodlijn uit P op AB) is van de vorm 
+<select name="keuzevgl" onChange="wijzigvgl()">
+	<option value="x" selected> ????
+	<option value="1"> x = getal
+	<option value="2"> y = getal
+	<option value="3"> y = mx + q
+</select>. <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl05"><p>
+<DIV ID="oef1" STYLE="display:none">
+d <img src="images/heeft_als_vgl.gif" align="middle" border=0 width=28 height=25> x = <input type="text" name="txtX" size=5 maxlength=6>
+</DIV>
+<DIV ID="oef2" STYLE="display:none">
+d <img src="images/heeft_als_vgl.gif" align="middle" border=0 width=28 height=25> y = <input type="text" name="txtY" size=5 maxlength=6>
+</DIV>
+<DIV ID="oef3" STYLE="display:none">
+d <img src="images/heeft_als_vgl.gif" align="middle" border=0 width=28 height=25> y = <input type="text" name="txtM" size=6 maxlength=10>x + <input type="text" name="txtQ" size=6 maxlength=10> 
+</DIV>
+ 
+<p>
+<input type="button" value="Controle" onClick="controle()"> <img src="../images/vraagteken.gif" name="opl" border=0 width=22 height=22>
+<p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+
+</form>
+
+</ul>
+
+</form>
+<p>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

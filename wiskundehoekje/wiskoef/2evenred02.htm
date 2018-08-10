@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+
+<script language= "JavaScript">
+<!--
+	if (top.frames.length == 0)
+	top.location = "2evenred.htm";
+// -->
+</script>
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<script language="JavaScript" SRC="2evenred02.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<p><br>
+
+
+<A NAME="top"></A>
+Bereken x.
+<form name="er">
+<table>
+  <tr>
+    <td><input type="button" value="Nieuwe oefening" onClick="nieuwoef()"></td>
+	<td width="30"></td>
+    <td><input type="text" name="term1" size=6 maxlength=8><hr size=3 noshade><input type="text" name="term2" size=6 maxlength=8></td>
+    <td><br><font size=+2>=</font></td>
+    <td><input type="text" name="term3" size=6 maxlength=8><hr size=3 noshade><input type="text" name="term4" size=6 maxlength=8></td>
+  </tr>
+  <tr height="15"></tr>
+  <tr>
+  	<td>Jouw antwoord: x = <input type="text" name="antw" size=6 maxlength=12></td>
+	<td></td>
+	<td colspan="3"><input type="button" value="Controle" onClick="controleer()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl"></td>
+
+</table>
+
+<p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+
+</form>
+
+
+<P>
+<BR>
+<CENTER>
+<A HREF="2evenred00.htm"><IMG SRC="../images/terug.gif" BORDER=0 ALT="Terug"></A></CENTER>
+<br>
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

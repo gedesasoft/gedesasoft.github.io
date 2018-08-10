@@ -1,0 +1,391 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<SCRIPT LANGUAGE= "JavaScript">
+<!--
+/* Functie om onbekende in de evenredigeid te berekenen */
+	
+function evenred()
+{
+var evenredteller = 0
+var teg = eval(er.tellereerstegetal.value)
+var neg = eval(er.noemereerstegetal.value)
+var ttg = eval(er.tellertweedegetal.value)
+var ntg = eval(er.noemertweedegetal.value)
+
+if (er.noemereerstegetal.value == "0") alert ('De noemer mag niet 0 zijn !!')
+if (er.noemertweedegetal.value == "0") alert ('De noemer mag niet 0 zijn !!')
+
+if (er.tellereerstegetal.value != "") evenredteller = evenredteller + 1
+if (er.noemereerstegetal.value != "") evenredteller = evenredteller + 2
+if (er.tellertweedegetal.value != "") evenredteller = evenredteller + 4
+if (er.noemertweedegetal.value != "") evenredteller = evenredteller + 8
+
+if (evenredteller == 7)
+	{
+	ntg = (neg * ttg) / teg;
+	er.noemertweedegetal.value = ntg;
+	}
+else
+	{	
+	if (evenredteller == 11)
+		{
+		ttg = (teg * ntg) / neg;
+		er.tellertweedegetal.value = ttg;
+		}
+	else
+		{
+		if (evenredteller == 13)
+			{
+			neg = (teg * ntg) / ttg;
+			er.noemereerstegetal.value = neg;
+			}
+			else
+				{
+				if (evenredteller == 14)
+					{
+					teg = (neg * ttg) / ntg;
+					er.tellereerstegetal.value = teg;
+					}
+		else
+						{
+						alert ('Je moet drie termen ingeven!')
+						}
+				}
+			}
+		}
+	
+}
+
+/* Functie om tiendelige graden om te zetten in graden, minuten en seconden (en omgekeerd) */
+	
+function omzetten()
+{
+	if(document.omz.decimaal.value != '')
+	{
+		var hoek = parseFloat(document.omz.decimaal.value);
+		var grad = Math.floor(hoek);
+		document.omz.graden.value = grad;
+		var minu = Math.floor((hoek - grad) * 60);
+		document.omz.minuten.value = minu;
+		var sec = Math.round((hoek - grad - minu / 60) * 3600);
+		document.omz.seconden.value = sec;
+	}
+	else
+	{
+		document.omz.decimaal.value = parseFloat(parseFloat(document.omz.graden.value) + parseFloat(document.omz.minuten.value) / 60 + parseFloat(document.omz.seconden.value) / 3600);
+	}
+}
+
+/* Functie om decimaal getal om te zetten in wetenschappelijke notatie (en omgekeerd) */
+	
+function notatie()
+{
+	if(document.wetdec.decimaal.value != '')
+	{
+		var exponent = Math.floor(Math.log(Math.abs(document.wetdec.decimaal.value)) * Math.LOG10E);
+		var mantisse = document.wetdec.decimaal.value / Math.pow(10, exponent);
+		var lengtemantisse = document.wetdec.decimaal.value.length;
+		var mantisseafgerond = Math.round(mantisse * Math.pow(10, lengtemantisse)) / Math.pow(10, lengtemantisse)
+		document.wetdec.mantisse.value = mantisseafgerond
+		document.wetdec.exponent.value = exponent
+	}
+	else
+	{
+		var decigetal = document.wetdec.mantisse.value * Math.pow(10, document.wetdec.exponent.value);
+		var lengtedecigetal = document.wetdec.mantisse.value.length + Math.abs(document.wetdec.exponent.value);
+		var decigetalafgerond = Math.round(decigetal * Math.pow(10, lengtedecigetal)) / Math.pow(10, lengtedecigetal);
+		document.wetdec.decimaal.value = decigetalafgerond;
+		var exp = document.wetdec.exponent.value;
+		var mant = Math.floor(Math.log(Math.abs(document.wetdec.mantisse.value)) * Math.LOG10E);
+		var fout = parseInt(exp) + parseInt(mant);
+		if (fout < -6)
+ 		{
+			alert('Het spijt ons.\nDoor de beperkingen van JavaScript geeft deze functie voor getallen kleiner dan 0.0000001 de correct decimale notatie niet weer.');
+		}
+		if (fout > 20)
+ 		{
+			alert('Het spijt ons.\nDoor de beperkingen van JavaScript geeft deze functie voor getallen groter dan 1000000000000000000000 de correct decimale notatie niet weer.');
+		}
+	}
+}
+
+/* Functie voor het berekenen van ggd en kgv */
+
+function ggdkgv()
+{
+	var ng1 = parseInt(document.ggd.getal1.value);
+	var ng2 = parseInt(document.ggd.getal2.value);
+	var ngA = ng1
+	var ngB = ng2
+	var rest = 1
+	
+	while (rest != 0)
+		{
+		rest = ng1 % ng2;
+		ng1 = ng2;
+		ng2 = rest;
+		}
+
+	document.ggd.ggd.value = ng1;
+	document.ggd.kgv.value = ngA * ngB / ng1;
+}
+
+/* Functie voor het ontbinden in priemfactoren */
+
+var getalA = 1
+var deler = 2
+var scheiding = " * "
+var aantalfact = 0
+var ontbinding = 0
+
+function priemwissen()
+{
+getalA = 1
+deler = 2
+scheiding = " * "
+aantalfact = 0
+ontbinding = 0
+document.ontbpriem.priemfactoren.value = ""
+document.ontbpriem.opgave.value = ""
+}
+
+function priemfactor()
+{
+getalA = parseInt(document.ontbpriem.opgave.value)
+if (getalA == 1) 
+{
+alert ('Sorry, het getal 1 is niet te ontbinden in priemfactoren aangezien het kleinste priemgetal 2 is.')
+ontbinding = 1
+}
+else
+while (getalA != 1)
+{
+	if (getalA % deler == 0)
+	{
+		getalA = getalA / deler
+		aantalfact++
+		if (aantalfact == 1) ontbinding = deler
+		else ontbinding = ontbinding + scheiding + deler
+	}
+	else
+	deler++	
+}
+document.ontbpriem.priemfactoren.value = ontbinding
+}
+
+// -->
+</SCRIPT>
+<link rel=stylesheet href="tabel.css" type="text/css"><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script src="info_pienter.js"></script></HEAD>
+
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Wiskundehoekje 2de jaar</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+Belangrijke opmerking: om decimale getallen in te geven moet je een punt (.) typen als komma.</B><P>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="4" CELLSPACING="1" WIDTH="90%">
+<TR><TD><FONT  SIZE="2">
+Onderwerpen</B></TD><TD><A class="keuze" HREF="#dec-wet">Omzetting decimale/wetenschappelijke schrijfwijze</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#evenred">Evenredigheden</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#cabrijava2">Online applets</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#oef2">Online oefeningen</A></TD></TR>
+
+</TABLE></CENTER><BR><BR>
+
+
+
+
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="dec-wet"><FONT SIZE="3" COLOR="#000000"
+>Omzetting decimale/wetenschappelijke notatie van een getal:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+
+Geef links het getal in decimale vorm in en lees rechts de wetenschappelijke notatie af (of omgekeerd). 
+<FORM NAME="wetdec">
+<CENTER><TABLE><TR><TD><BR>
+</TD><TD ROWSPAN="2"><INPUT NAME="exponent" TYPE="TEXT" VALUE="" SIZE="2"></TD></TR>
+<TR><TD><INPUT NAME="decimaal" TYPE="TEXT" VALUE="" SIZE="20"><FONT  SIZE="2">
+ = </B> 
+<INPUT NAME="mantisse" TYPE="TEXT" VALUE="" SIZE="8"><FONT  SIZE="2">
+ . 10</B></TD></TR>
+
+</TABLE><P>
+<INPUT TYPE="BUTTON" VALUE="Omzetten" onClick="notatie()">
+<INPUT TYPE="RESET" VALUE="Wissen">
+</CENTER></FORM>
+<P>
+<BR>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="evenred"><FONT SIZE="3" COLOR="#000000"
+>Evenredigheden:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+Geef drie van de vier waarden in de evenredigheid en laat het vierde getal berekenen.<p>
+<form name="er">
+<center>
+<table>
+  <tr>
+    <td><input type="text" name="tellereerstegetal" size=4 maxlength=8><hr size=3 noshade><input type="text" name="noemereerstegetal" size=4 maxlength=8></td>
+    <td><br><font size=+2>=</font></td>
+    <td><input type="text" name="tellertweedegetal" size=4 maxlength=8><hr size=3 noshade><input type="text" name="noemertweedegetal" size=4 maxlength=8></td>
+	<td width="50"></td>
+	<td><INPUT TYPE="BUTTON" VALUE="Bereken" onClick="evenred()"><p>
+<INPUT TYPE="RESET" VALUE=" Wissen ">
+</td>
+  </tr>
+</table>
+</center>
+
+</form>
+<P>
+<BR>
+ 
+
+
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="cabrijava2"><FONT SIZE="3" COLOR="#000000"
+>Online CabriJava-applets:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+Het inladen van de bestanden nodig voor deze toepassingen (148 kB) kan de eerste keer wel even duren. Bovendien werken deze toepassingen enkel onder moderne browsers (Internet Explorer 5 en hoger). Mochten deze applets niet werken op jouw PC (bv onder Windows XP), installeer dan de Java Virtual Machine die je kan downloaden bij <a href="http://java.sun.com/getjava/index.html" target="_blank">http://java.sun.com/</a>. <p>
+<CENTER><TABLE BORDER="0" CELLPADDING="4" CELLSPACING="1" WIDTH="90%">
+<TR><TD><A class="keuze" HREF="wiskoef/2spiegeling_eig.htm">Spiegeling: eigenschappen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2puntspiegeling_eig.htm">Puntspiegeling: eigenschappen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2verschuiving_eig.htm">Verschuiving: eigenschappen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2draaiing_eig.htm">Draaiing: eigenschappen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2middelloodlijncriterium.htm">Middelloodlijncriterium</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2middelloodlijnconstructie.htm">Middelloodlijn: constructie</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2deellijncriterium.htm">Deellijncriterium</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2deellijnconstructie.htm">Deellijn: constructie</A></TD></TR>
+<TR height="10"><TD></TD></TR>
+<TR><TD><A HREF="wiskoef/2kwadraat_tweeterm.htm" class="keuze">Merkwaardige producten: kwadraat van een tweeterm</A> (Java)</TD></TR>
+
+</TABLE></CENTER><BR>
+Op onze <a href="wisk_oef.htm#cabri_oef">"oefeningen en werkbladen"-pagina</a> kan je de Cabri-bestanden ook apart downloaden.
+
+<p><br>
+
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="oef2"><FONT SIZE="3" COLOR="#000000"
+>Online oefeningen 2de jaar:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+<CENTER><TABLE BORDER="0" CELLPADDING="4" CELLSPACING="1" WIDTH="90%">
+<TR><TD><A class="keuze" HREF="wiskoef/2coord.htm">Coördinaten - oefening 1</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2coord_oef2.htm">Coördinaten - oefening 2</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2transf.htm">Transformaties van het vlak (spiegeling / puntspiegeling / verschuiving / draaiing)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2evenw_sn.htm">Hoeken bij evenwijdigen en een snijlijn (benamingen)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2evenw_sn_oef.htm">Hoeken bij evenwijdigen en een snijlijn berekenen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2drieh.htm">Som van de hoeken in een driehoek</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2vierh.htm">Som van de hoeken in een vierhoek</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2eig_vierhoeken.htm">Eigenschappen van vierhoeken</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3soortgetal.htm">Soorten getallen (natuurlijk / geheel / rationaal)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2machten.htm">Rekenen met machten - eenvoudig</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3machten.htm">Rekenen met machten (2) - moeilijk</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2vglopl.htm">Vergelijkingen in Q oplossen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2vraagst.htm">Vraagstukken oplossen met vergelijkingen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2evenred.htm">Evenredigheden</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2re_oe.htm">Recht en omgekeerd evenredig (vraagstukken)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2macht_eenterm.htm">Macht van een eenterm</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2veelt_getalw.htm">Getalwaarde van een veelterm</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2veelt.htm">Rekenen met veeltermen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2mp.htm">Merkwaardige producten - 1</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3mp.htm">Merkwaardige producten - 2</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2mp_toep.htm">Merkwaardige producten - toepassing: hoofdrekenen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2oif.htm">Ontbinding in factoren - 1</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3oif.htm">Ontbinding in factoren - 2</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3diagrammen.htm">Diagrammen (omzetten)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2grafiek.htm">Grafieken en diagrammen (interpreteren)</A></TD></TR>
+
+</TABLE></CENTER><BR>
+
+
+<p>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="wisk1.htm">
+<img src="images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="wisk3.htm">
+<img src="images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="wisk4.htm">
+<img src="images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="wisk5.htm">
+<img src="images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="wiskunde.htm">
+<img src="images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+
+</B>
+
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

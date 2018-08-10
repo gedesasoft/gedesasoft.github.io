@@ -1,0 +1,162 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<script src="4grafiek.js"></script>
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Voorschrift van tweedegraadsfuncties bepalen</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+Kies in het eerste keuzelijstje een grafiek en wacht tot de tweedegraadsfunctie op je scherm verschijnt. Kies dan uit de tweede keuzelijst (antwoorden) het juiste voorschrift.
+Opmerking: in het lijstje wordt x<SUP>2</SUP> geschreven als x^2. Een goed antwoord wordt beloond met :-) , een foutief antwoord geeft :-( als resultaat.<p>
+<table>
+    <tr>
+      <td>
+<table width=365 height=365 cellpadding=0 cellspacing=0 BACKGROUND="images/5sinus.gif">
+    <tr>
+      <td><img src="images/4graf00.gif" name="functie" border=0 width=365 height=365></td>
+    </tr>
+</table>
+	  </td>
+      <td>
+<FORM NAME="grafiek">
+<SELECT NAME="selecteer" onChange="veranderafbeelding()">
+<OPTION VALUE="f00" SELECTED>Kies een grafiek
+<OPTION VALUE="f01">Grafiek 1
+<OPTION VALUE="f17">Grafiek 2
+<OPTION VALUE="f29">Grafiek 3
+<OPTION VALUE="f23">Grafiek 4
+<OPTION VALUE="f04">Grafiek 5
+<OPTION VALUE="f18">Grafiek 6
+<OPTION VALUE="f20">Grafiek 7
+<OPTION VALUE="f06">Grafiek 8
+<OPTION VALUE="f16">Grafiek 9
+<OPTION VALUE="f28">Grafiek 10
+<OPTION VALUE="f25">Grafiek 11
+<OPTION VALUE="f10">Grafiek 12
+<OPTION VALUE="f07">Grafiek 13
+<OPTION VALUE="f12">Grafiek 14
+<OPTION VALUE="f27">Grafiek 15
+<OPTION VALUE="f14">Grafiek 16
+<OPTION VALUE="f09">Grafiek 17
+<OPTION VALUE="f02">Grafiek 18
+<OPTION VALUE="f19">Grafiek 19
+<OPTION VALUE="f26">Grafiek 20
+<OPTION VALUE="f15">Grafiek 21
+<OPTION VALUE="f22">Grafiek 22
+<OPTION VALUE="f13">Grafiek 23
+<OPTION VALUE="f24">Grafiek 24
+<OPTION VALUE="f11">Grafiek 25
+<OPTION VALUE="f05">Grafiek 26
+<OPTION VALUE="f21">Grafiek 27
+<OPTION VALUE="f08">Grafiek 28
+<OPTION VALUE="f30">Grafiek 29
+<OPTION VALUE="f03">Grafiek 30
+</SELECT><p>
+
+<SELECT CLASS="formulier" NAME="formulenaam" onChange="controleer()">
+<OPTION VALUE="opnieuw" SELECTED>Antwoorden
+<OPTION VALUE="graf26">y = -3x^2 - 12x - 12
+<OPTION VALUE="graf24">y = -3x^2 - 6x - 1 
+<OPTION VALUE="graf04">y = -3x^2
+<OPTION VALUE="graf07">y = -3x^2 + 6x - 3
+<OPTION VALUE="graf11">y = -3x^2 + 6x + 1
+<OPTION VALUE="graf20">y = -3x^2 + 12x - 8
+<OPTION VALUE="graf30">y = -2x^2 - 12x -21
+<OPTION VALUE="graf28">y = -2x^2 - 8x - 11
+<OPTION VALUE="graf10">y = -2x^2 + 4x - 3
+<OPTION VALUE="graf14">y = -2x^2 + 8x - 8
+<OPTION VALUE="graf03">y = -x^2
+<OPTION VALUE="graf19">y = -x^2 + 4x - 3
+<OPTION VALUE="graf18">y = -x^2 + 4x
+<OPTION VALUE="graf17">y = x^2 - 4x + 1
+<OPTION VALUE="graf16">y = x^2 - 4x + 2 
+<OPTION VALUE="graf12">y = x^2 - 4x + 4
+<OPTION VALUE="graf15">y = x^2 - 4x + 5
+<OPTION VALUE="graf09">y = x^2 - 2x - 1
+<OPTION VALUE="graf05">y = x^2 - 2x + 1
+<OPTION VALUE="graf08">y = x^2 - 2x + 4
+<OPTION VALUE="graf01">y = x^2
+<OPTION VALUE="graf22">y = x^2 + 2x - 2
+<OPTION VALUE="graf21">y = x^2 + 2x + 1
+<OPTION VALUE="graf25">y = x^2 + 4x + 4
+<OPTION VALUE="graf29">y = x^2 + 4x + 5
+<OPTION VALUE="graf27">y = x^2 + 6x + 9
+<OPTION VALUE="graf06">y = 2x^2 - 4x + 2 
+<OPTION VALUE="graf02">y = 2x^2
+<OPTION VALUE="graf23">x = 2x^2 + 4x - 2
+<OPTION VALUE="graf13">y = 3x^2 - 12x + 12
+</SELECT>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="controle"><p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+</FORM>
+	  </td>
+    </tr>
+</table>
+
+<p>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

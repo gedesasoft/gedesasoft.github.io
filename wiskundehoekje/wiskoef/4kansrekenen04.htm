@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+
+<script src="4kansrekenen.js"></script>
+<script language= "JavaScript">
+<!--
+	if (top.frames.length == 0)
+	top.location = "4kansrekenen.htm";
+
+var aantalopgaven = 4
+var antw01 = "1/25"
+var antw02 = "0.28"
+var antw03 = "9/50"
+var antw04 = "4/125"
+var antw05 = ""
+
+// -->
+</script>
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<p><br>
+
+
+<A NAME="top"></A>
+<form name="telpr">
+Lies moet van haar ouders elke dag oefenen op haar dwarsfluit. Men stelt vast dat in 50% van de gevallen Lies 1 uur per dag oefent. Drie keer van de tien oefent ze slechts een half uur per dag. In 1 op 5 gevallen oefent ze zelfs twee uur per dag.<p>
+<table>
+    <tr>
+      <td>a)</td>
+      <td>Wat is de kans dat Lies 4 uur oefent op 2 dagen? (ingeven als breuk)</td>
+      <td width="120"><input type="text" name="vr01" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl01"></td>
+    </tr>
+    <tr>
+      <td>b)</td>
+      <td>Wat is de kans dat Lies niet meer dan 4 uur oefent op een week? (ingeven als percentage met twee decimalen, bv 2.35)</td>
+      <td><input type="text" name="vr02" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl02"></td>
+    </tr>
+    <tr>
+      <td>c)</td>
+      <td>Wat is de kans dat ze op 3 dagen net 3,5 uur oefent? (ingeven als breuk)</td>
+      <td><input type="text" name="vr03" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl03"></td>
+    </tr>
+    <tr>
+      <td>d)</td>
+      <td>Als je weet dat Lies het niet kan opbrengen om twee dagen op rij telkens twee uur te oefenen, wat is dan de kans dat ze minstens 4,5 uur oefent op 3 dagen? (ingeven als breuk)</td>
+      <td><input type="text" name="vr04" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl04"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><input type=button value="Controle" onClick="controle()"><p><input type=button value="Oplossing?" onClick="document.all.oplossing.style.display=''"></td>
+    </tr>
+</table>
+<p>
+
+</form>
+<DIV ID=oplossing STYLE="display:none">
+<table>
+    <tr>
+      <td>a)</td>
+      <td>4 uur oefenen op 2 dagen kan enkel door 2 dagen na elkaar telkens 2 uur te oefenen. De kans hierop is 1/5 . 1/5 = 1/25</td>
+    </tr>
+    <tr>
+      <td>b)</td>
+      <td>Niet meer dan 4 uur oefenen op een week, dan zou Lies ofwel alle dagen een half uur moeten spelen ofwel 1 dag een uurtje en de andere dagen slechts een halfuur.<br>
+De kans dat ze 7 dagen op rij slechts een half uur oefent = (3/10)<sup>7</sup> = 2187/10000000.<br>
+De kans dat ze één dag een uurtje en de andere dagen een half uur oefent = (3/10)<sup>6</sup> . 5/10 <font color="#ff0000">. 7</font> = 25515/10000000 (inderdaad, vermenigvuldigen met 7 want ze kan elke dag van de week kiezen om een volledig uur te oefenen). De kans dat ze hogstens 4 uur oefent op een week is dus 2187/10000000 + 25515/10000000 = 27702/10000000 = 0.0027702 = 0.28%</td>
+    </tr>
+    <tr>
+      <td>c)</td>
+      <td>Om op drie dagen net 3,5 uur te oefenen moet ze wel 1 dag twee uur, 1 dag één uur en 1 dag een half uur spelen. De kans dat dat gebeurt is 3/10 . 5/10 . 2/10 <font color="#ff0000">. 6</font> = 180/1000 = 9/50 . De vermenigvuldiging met 6 is nodig omdat er 6 mogelijkheden zijn om de tijdsbesteding zo te verdelen, nl (2,1,½) , (2,½,1) , (1,2,½) , (1,½,2) , (½,1,2) en (½,2,1)</td>
+    </tr>
+    <tr>
+      <td>d)</td>
+      <td>Als Lies geen twee dagen na elkaar 2 uur kan oefenen dan kan ze enkel aan 4,5 uur (of meer) oefenen komen door de eerste en de derde dag twee uur te oefenen. De mogelijkheden zijn dan enkel (2,½,2) met kans 2/10 . 3/10 . 2/10 = 12/1000 en (2,1,2) met kans 2/10 . 5/10 . 2/10 = 20/1000. De kans dat ze op drie dagen minstens 4,5 uur oefent is dan 12/1000 + 20/1000 = 32/1000 = 4/125</td>
+    </tr>
+</table>
+
+</DIV>
+<P>
+<BR>
+<CENTER>
+<A HREF="4kansrekenen00.htm"><IMG SRC="../images/terug.gif" BORDER=0 ALT="Terug"></A></CENTER>
+<br>
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

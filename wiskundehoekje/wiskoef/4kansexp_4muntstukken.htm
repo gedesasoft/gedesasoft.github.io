@@ -1,0 +1,113 @@
+<HTML>
+<HEAD><BASEFONT SIZE="2" FACE="arial, helvetica">
+<TITLE>
+</TITLE>
+<link rel="stylesheet" href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<script src="4kansexp_4muntstukken.js"></script>
+<BODY TOPMARGIN="0" LEFTMARGIN="0" TEXT="000000" BACKGROUND="../bck.gif" onLoad="wishistogram()">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD WIDTH="28" VALIGN="top"><!-- Tabel voor pijltjes-->
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD><!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Kansrekening: experiment met 4 muntstukken</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+Op deze pagina kan je het volgende experiment simuleren: vier leerlingen gooien gelijktijdig een muntstuk op. Hoe groot is de kans dat ze hierbij vier keer kop gooien, of drie keer kop en één keer munt, ...<br>
+Vul eerst in hoe vaak je de leerlingen hun muntstuk wilt laten opgooien. Probeer eerst een laag aantal (bv 20 of 50 keer) en verhoog daarna het aantal keer dat je wenst te gooien (tot bv 50000 keer) ... Als je het aantal worpen ingegeven hebt, klik dan op de knop "Gooien maar". Je krijgt onderaan te zien hoe vaak elke combinatie van muntstukken gegooid werd (zowel in een tabel als in een grafiek). Ga na wat er wijzigt aan de resultaten naarmate je vaker laat opgooien.<p>
+Opmerking: hoe groter het aantal worpen, hoe langer het uiteraard duurt eer de resultaten op het scherm komen. <p>
+<form name="exp">
+Aantal worpen: <input type="text" name="txtaantal" size=6 maxlength=6>
+<input type="button" value="Gooien maar" onClick="nieuwoef()"> <p>
+
+<table>
+    <tr>
+      <td><img src="images/munt1.gif" border=0 width=30 height=30> <img src="images/munt1.gif" border=0 width=30 height=30> <img src="images/munt1.gif" border=0 width=30 height=30> <img src="images/munt1.gif" border=0 width=30 height=30></td>
+      <td><input type="text" name="aantal1" size=8 maxlength=10 onFocus="blur()"></td>
+      <td><img src="images/pijl.gif" border=0 width=18 height=11> <input type="text" name="percent1" size=8 maxlength=12 onFocus="blur()"> %</td>
+	  <td><img src="images/3stat_n1.gif" name="hist1" border=0 width=0 height=25 hspace="0"></td>
+    </tr>
+    <tr>
+      <td><img src="images/munt1.gif" border=0 width=30 height=30> <img src="images/munt1.gif" border=0 width=30 height=30> <img src="images/munt1.gif" border=0 width=30 height=30> <img src="images/munt2.gif" border=0 width=30 height=30></td>
+      <td><input type="text" name="aantal2" size=8 maxlength=10 onFocus="blur()"></td>
+      <td><img src="images/pijl.gif" border=0 width=18 height=11> <input type="text" name="percent2" size=8 maxlength=12 onFocus="blur()"> %</td>
+	  <td><img src="images/3stat_n2.gif" name="hist2" border=0 width=0 height=25 hspace="0"></td>
+    </tr>
+    <tr>
+      <td><img src="images/munt1.gif" border=0 width=30 height=30> <img src="images/munt1.gif" border=0 width=30 height=30> <img src="images/munt2.gif" border=0 width=30 height=30> <img src="images/munt2.gif" border=0 width=30 height=30></td>
+      <td><input type="text" name="aantal3" size=8 maxlength=10 onFocus="blur()"></td>
+      <td><img src="images/pijl.gif" border=0 width=18 height=11> <input type="text" name="percent3" size=8 maxlength=12 onFocus="blur()"> %</td>
+	  <td><img src="images/3stat_n3.gif" name="hist3" border=0 width=0 height=25 hspace="0"></td>
+    </tr>
+    <tr>
+      <td><img src="images/munt1.gif" border=0 width=30 height=30> <img src="images/munt2.gif" border=0 width=30 height=30> <img src="images/munt2.gif" border=0 width=30 height=30> <img src="images/munt2.gif" border=0 width=30 height=30></td>
+      <td><input type="text" name="aantal4" size=8 maxlength=10 onFocus="blur()"></td>
+      <td><img src="images/pijl.gif" border=0 width=18 height=11> <input type="text" name="percent4" size=8 maxlength=12 onFocus="blur()"> %</td>
+	  <td><img src="images/3stat_n4.gif" name="hist4" border=0 width=0 height=25 hspace="0"></td>
+    </tr>
+    <tr>
+      <td><img src="images/munt2.gif" border=0 width=30 height=30> <img src="images/munt2.gif" border=0 width=30 height=30> <img src="images/munt2.gif" border=0 width=30 height=30> <img src="images/munt2.gif" border=0 width=30 height=30></td>
+      <td><input type="text" name="aantal5" size=8 maxlength=10 onFocus="blur()"></td>
+      <td><img src="images/pijl.gif" border=0 width=18 height=11> <input type="text" name="percent5" size=8 maxlength=12 onFocus="blur()"> %</td>
+	  <td><img src="images/3stat_n5.gif" name="hist5" border=0 width=0 height=25 hspace="0"></td>
+    </tr>
+</table>
+</form>
+<p>
+Probeer nu zelf eens uit te dokteren hoe deze verdeling (bij hoog aantal worpen) tot stand komt. Probeer de redenering eerst uit te werken voor een gelijkaardig experiment met 2, dan met 3 leerlingen. Kan je daarna ook voorspellen wat de verdeling zal zijn tussen de mogelijkheden als je bv 7 leerlingen elk een muntstuk laat opgooien? Klik <a href="4kansexp_4muntstukken_uitleg.htm">hier</a> voor wat meer uitleg.<p>
+Op <a href="4kansexp_muntstuk.htm">deze pagina</a> kan je een kansexperiment uitvoeren met het gooien van een muntstuk.<br>
+Op <a href="4kansexp_1dobbelsteen.htm">deze pagina</a> kan je een kansexperiment uitvoeren met het gooien van een dobbelsteen.<br>
+Op <a href="4kansexp_2dobbelstenen.htm">deze pagina</a> kan je een kansexperiment uitvoeren met het gooien van 2 dobbelstenen.
+<br>
+<P>
+<TABLE BORDER="0" CELLPADDING="1" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+</div </B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

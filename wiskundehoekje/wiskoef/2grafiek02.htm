@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+
+<script language= "JavaScript">
+<!--
+	if (top.frames.length == 0)
+	top.location = "2grafiek.htm";
+// -->
+</script>
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<script language="JavaScript" SRC="2grafiek02.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<p><br>
+
+
+<A NAME="top"></A>
+<center><img src="images/2grafiek02b.gif" border=0 width=415 height=244><img src="images/2grafiek02a.gif" border=0 width=209 height=244></center><p>
+<form name="vragen">
+Bovenstaande grafiek (links) geeft de resultaten op een examen wiskunde (31-40 wil zeggen tussen 31 en 40 op 100) van de leerlingen van het tweede jaar weer. <p>
+<table>
+    <tr>
+      <td><li>Hoeveel leerlingen deden mee aan dit examen?</td>
+      <td><input type="text" name="vr1" size=6 maxlength=6></td>
+      <td><img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl1"></td>
+    </tr>
+    <tr>
+      <td><li>Hoeveel leerlingen haalden 80% of meer?</td>
+      <td><input type="text" name="vr2" size=6 maxlength=6></td>
+      <td><img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl2"></td>
+    </tr>
+    <tr>
+      <td><li>Hoeveel % van de leerlingen haalden niet de helft?</td>
+      <td><input type="text" name="vr3" size=4 maxlength=6> %</td>
+      <td><img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl3"></td>
+    </tr>
+    <tr>
+      <td><li>26,4 % van de leerlingen haalde ...</td>
+      <td><select name="vr4">
+	<option value="0"> ??-??
+	<option value="30-39"> 30-39
+	<option value="40-49"> 40-49
+	<option value="50-59"> 50-59
+	<option value="60-69"> 60-69
+	<option value="70-79"> 70-79
+	<option value="80-89"> 80-89
+	<option value="90-99"> 90-99
+</select>
+</td>
+      <td><img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl4"></td>
+    </tr>
+    <tr>
+      <td><li>Bekijk nu ook het cirkeldiagram aan de rechterkant. Hier werden verschillende kleuren gebruikt, maar helaas werd er niet bijgeschreven welke groep bij welke kleur hoort. Welk resultaat hoort bij de lichtblauwe kleur?</td>
+      <td><select name="vr5">
+	<option value="0"> ??-??
+	<option value="30-39"> 30-39
+	<option value="40-49"> 40-49
+	<option value="50-59"> 50-59
+	<option value="60-69"> 60-69
+	<option value="70-79"> 70-79
+	<option value="80-89"> 80-89
+	<option value="90-99"> 90-99
+</select>
+</td>
+      <td><img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl5"></td>
+    </tr>
+    <tr>
+      <td><li>Het oranjerood vlak van het schijfdiagram hoort bij de leerlingen die tussen 80 en 89 op hun examen scoorden. Hoe groot is de hoek (in deze kleur) in het middelpunt van de cirkel?</td>
+      <td><input type="text" name="vr6" size=4 maxlength=6> °</td>
+      <td><img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl6"></td>
+    </tr>
+
+</table>
+<p> 
+<input type="button" value="Controleer al je antwoorden" onClick="controleer()"> 
+
+<p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> vragen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+
+</form>
+
+
+<P>
+<BR>
+<CENTER>
+<A HREF="2grafiek00.htm"><IMG SRC="../images/terug.gif" BORDER=0 ALT="Terug"></A></CENTER>
+<br>
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

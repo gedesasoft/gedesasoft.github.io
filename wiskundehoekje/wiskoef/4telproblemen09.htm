@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+
+<script src="4telproblemen.js"></script>
+<script language= "JavaScript">
+<!--
+	if (top.frames.length == 0)
+	top.location = "4telproblemen.htm";
+
+var aantalopgaven = 5
+var antw01 = "126"
+var antw02 = "40"
+var antw03 = "20"
+var antw04 = "66"
+var antw05 = "8480"
+
+// -->
+</script>
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<p><br>
+
+
+<A NAME="top"></A>
+<form name="telpr">
+<img src="images/4telproblemen09a.gif" border=0 width=350 height=210>
+<p>
+<table>
+    <tr>
+      <td>a)</td>
+      <td>Hoeveel "kortste wegen" zijn er van A naar B?</td>
+      <td width="120"><input type="text" name="vr01" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl01"></td>
+    </tr>
+    <tr>
+      <td>b)</td>
+      <td>Hoeveel "kortste wegen" zijn er van A naar B via C?</td>
+      <td><input type="text" name="vr02" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl02"></td>
+    </tr>
+    <tr>
+      <td>c)</td>
+      <td>Hoeveel "kortste wegen" zijn er van A naar B via D?</td>
+      <td><input type="text" name="vr03" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl03"></td>
+    </tr>
+    <tr>
+      <td>d)</td>
+      <td>Hoeveel "kortste wegen" zijn er van A naar B zonder door C of D te komen?</td>
+      <td><input type="text" name="vr04" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl04"></td>
+    </tr>
+    <tr>
+      <td>e)</td>
+      <td>Je moet van A naar B gaan en terugkeren. Op je weg moet je minstens éénmaal langs C passeren en je moet altijd gebruik maken van de "kortste weg" tussen twee punten.</td>
+      <td><input type="text" name="vr05" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl05"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><input type=button value="Controle" onClick="controle()"><p><input type=button value="Oplossing?" onClick="document.all.oplossing.style.display=''"></td>
+    </tr>
+</table>
+<p>
+
+</form>
+<DIV ID=oplossing STYLE="display:none">
+<table>
+    <tr>
+      <td>a)</td>
+      <td><img src="images/4telproblemen09b.gif" border=0 width=350 height=210><br>Dus zijn er 126 kortste wegen van A naar B<p></td>
+    </tr>
+    <tr>
+      <td>b)</td>
+      <td><img src="images/4telproblemen09c.gif" border=0 width=350 height=210><br>Er zijn 4 kortste wegen van A naar C. Van C naar B zijn er 10 kortste wegen. Dus zijn er 4 . 10 = 40 kortste wegen van A naar B die via C lopen.<p></td>
+    </tr>
+    <tr>
+      <td>c)</td>
+      <td><img src="images/4telproblemen09d.gif" border=0 width=350 height=210><br>Er zijn 4 kortste wegen van A naar D. Van D naar B zijn er 5 kortste wegen. Dus zijn er 4 . 5 = 20 kortste wegen van A naar B die via D lopen.<p></td>
+    </tr>
+    <tr>
+      <td>d)</td>
+      <td>Er zijn 126 kortste wegen van A naar B. 40 daarvan komen via C (zie opgave b), 20 lopen langs D. Dus zijn er 126 - 40 - 20 = 66 kortste wegen van A naar B zonder door C en D te komen.<p></td>
+    </tr>
+    <tr>
+      <td>e)</td>
+      <td>Het aantal "kortste wegen" van A naar B via C is 40. Het aantal "kortste wegen" van A naar B zonder door C te komen bedraagt 126 - 40 = 86<p>
+Je kan nu drie trajecten volgen:<br>
+van A naar B door C op de heenweg maar niet door C op de terugweg: 40 . 86 = 3440 mogelijke routes<br>
+van A naar B door C op de terugweg maar niet door C op de heenweg: 86 . 40 = 3440 mogelijke routes<br>    van A naar B door C op de heen- en op de terugweg: 40 . 40 = 1600 mogelijke routes<p>
+Dus zijn er in totaal 3440 + 3440 + 1600 = 8480 manieren om van A naar B en terug te gaan met minstens één doortocht door C.
+</td></tr>
+</table>
+
+</DIV>
+<P>
+<BR>
+<CENTER>
+<A HREF="4telproblemen00.htm"><IMG SRC="../images/terug.gif" BORDER=0 ALT="Terug"></A></CENTER>
+<br>
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

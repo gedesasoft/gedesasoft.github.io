@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+
+
+<A NAME="top"></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Tweedegraadsfuncties: toepassing (oppervlakte rechthoek)</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<img src="../images/goed.gif" border=0 width=1 height=1><img src="../images/fout.gif" border=0 width=1 height=1><img src="../images/vraagteken.gif" border=0 width=1 height=1>
+<br>
+<FORM NAME="merkwlijnen">
+In onderstaand applet zie je een rechthoek, getekend in een driehoek. Door het punt P (op de schuine zijde van de driehoek) te verslepen kan je lengte en breedte van de rechthoek wijzigen. Uiteraard wijzigt dan ook de oppervlakte. De functie die rechts getekend wordt, geeft de oppervlakte weer in functie van de gekozen breedte. Ga na bij welke breedte de oppervlakte maximaal is? Dit applet illustreert op een eenvoudige wijze dat functies een rol kunnen spelen bij het onderzoek naar het gedrag van meetkundige begrippen (zoals bv oppervlakte).
+<P>
+<center>
+
+<applet 
+        archive="Descartes.jar"
+        MAYSCRIPT
+        width=600 height=500 code="Descartes.class"
+       >
+   <param name="Version" value="2.45">
+   <param name="Language" value="english">
+   <param name="Buttons" value="about=no config=no init=no clear=no">
+   <param name="Space" value="background=white net=no net10=no axes=no text=black x-axis='x' y-axis='y'">
+   <param name="C_00" value="id=escala type=numeric value='30' decimals='4*(escala<10)' incr='0.2*escala' inf='0.001' sup='1000000' name=in- en uitzoomen region=external">
+   <param name="C_01" value="id=Ox type=numeric value='-275' decimals='0' incr='100' name=O.x region=external">
+   <param name="C_02" value="id=Oy type=numeric value='175' decimals='0' incr='100' name=O.y region=external">
+   <param name="C_03" value="id=p type=graphic expresion='(2,16/3)' text='P' decimals='2' size=3 constraint='y=(-4/3)*x+8'">
+   <param name="C_04" value="id=p.x type=numeric value='0' decimals='2' incr='0.04' inf='0' sup='6' name=Verschuif P visible=no">
+   <param name="C_05" value="id=p.y type=numeric value='0' decimals='2' incr='0.1' region=external">
+   <param name="G_00" value="type=polygon expresion='(0,0)(0,8)(6,0)(0,0)' colour=black width=2">
+   <param name="G_01" value="type=polygon expresion='(0,0)(p.x,0)(p.x,p.y)(0,p.y)(0,0)' width=2 fill=ffa000">
+   <param name="G_02" value="type=segment expresion='(0,0)(0,p.y)' draw-if='(p.x>0) && (p.x<6)' text='h' size=1 width=2">
+   <param name="G_03" value="type=segment expresion='(0,0)(p.x,0)' draw-if='(p.x>0) && (p.x<6)' text='b' size=1 width=2">
+   <param name="G_04" value="type=arrow expresion='(8,0)(18,0)' colour=black arrow=black width=0 spear=5">
+   <param name="G_05" value="type=arrow expresion='(9,-1)(9,13)' colour=black arrow=black width=0 spear=5">
+   <param name="G_06" value="type=point expresion='(p.x+9,p.x*p.y)' colour=008000 trace=blue">
+   <param name="G_07" value="type=point expresion='(p.x+9,p.x*p.y)' colour=008000 size=3">
+   <param name="G_08" value="type=point expresion='(0,12)' text='b = [p.x]' size=1">
+   <param name="G_09" value="type=point expresion='(0,11)' text='h = [p.y]' size=1">
+   <param name="G_10" value="type=point expresion='(0,10)' text='opp = [p.y*p.x]' size=1">
+   <param name="G_11" value="type=segment expresion='(0,10)(0,12)' colour=white width=3">
+   <param name="G_12" value="type=point expresion='(9,13)' colour=black text='y' size=0">
+   <param name="G_13" value="type=point expresion='(18,0)' colour=black text='x' size=0">
+   <param name="G_14" value="type=point expresion='(9,1+s)' colour=black family=s s.interval=[0,11] s.steps=11 text='[s+1]' decimals=0">
+   <param name="G_15" value="type=point expresion='(9+s,0)' colour=black family=s s.interval=[0,8] s.steps=8 text='[s]' decimals=0">
+   <param name="G_16" value="type=segment expresion='(p.x+9,p.x*p.y)(9,p.x*p.y)' colour=008000 size=0">
+   <param name="G_17" value="type=segment expresion='(p.x+9,p.x*p.y)(p.x+9,0)' colour=008000 size=0">
+</applet>
+
+
+
+
+</center>
+
+
+</FORM>
+<P>
+
+<TABLE BORDER="0" CELLPADDING="1" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

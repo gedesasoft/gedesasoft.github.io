@@ -1,0 +1,221 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<script src="2vglopl.js"></script>
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Vergelijkingen oplossen</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+Los de volgende vergelijkingen op in Q, controleer daarna je oplossingen door ze in te geven in het vak rechts van de opgave. Oplossingen in breukvorm geef je als volgt in: 2/5 (teller/noemer). Je mag ook met decimale vormen werken als je zorgt voor <u>twee cijfers na de komma</u> en correct afrondt, bv 0.36 (ingeven met een punt). Een goed antwoord wordt beloond met :-) , een foutief antwoord geeft :-( als resultaat.<p>
+
+<form name="vgl">
+<table BORDER=0 CELLPADDING=1 CELLSPACING=2 >
+  <tr>
+    <td width="250">Opgave</td>
+    <td width="100">Oplossing</td>
+	<td width="150"></td>
+  </tr>
+  <tr>
+    <td>5x - 10 = -8</td>
+    <td>x = <input type="text" name="vgl01" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle01()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl01"></td>
+  </tr>
+  <tr>
+    <td>9x + 2 = -5</td>
+    <td>x = <input type="text" name="vgl02" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle02()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl02"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl03.gif" WIDTH=94 HEIGHT=37></td>
+    <td>x = <input type="text" name="vgl03" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle03()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl03"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl04.gif" WIDTH=77 HEIGHT=37></td>
+    <td>x = <input type="text" name="vgl04" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle04()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl04"></td>
+  </tr>
+  <tr>
+    <td>0,3x + 2 = 0,7</td>
+    <td>x = <input type="text" name="vgl05" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle05()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl05"></td>
+  </tr>
+  <tr>
+    <td>3v - 4 = v - 8</td>
+    <td>v = <input type="text" name="vgl06" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle06()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl06"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl07.gif" WIDTH=90 HEIGHT=37></td>
+    <td>x = <input type="text" name="vgl07" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle07()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl07"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl08.gif" WIDTH=124 HEIGHT=41></td>
+    <td>x = <input type="text" name="vgl08" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle08()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl08"></td>
+  </tr>
+  <tr>
+    <td>3(x + 2) = 5x - 1</td>
+    <td>x = <input type="text" name="vgl09" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle09()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl09"></td>
+  </tr>
+  <tr>
+    <td>-3(k - 5) = 4(-k + 0,5)</td>
+    <td>k = <input type="text" name="vgl10" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle10()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl10"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl11.gif" WIDTH=172 HEIGHT=21></td>
+    <td>x = <input type="text" name="vgl11" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle11()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl11"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl12.gif" WIDTH=224 HEIGHT=21></td>
+    <td>x = <input type="text" name="vgl12" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle12()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl12"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl13.gif" WIDTH=108 HEIGHT=37></td>
+    <td>x = <input type="text" name="vgl13" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle13()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl13"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl14.gif" WIDTH=129 HEIGHT=42></td>
+    <td>x = <input type="text" name="vgl14" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle14()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl14"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl15.gif" WIDTH=168 HEIGHT=37></td>
+    <td>x = <input type="text" name="vgl15" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle15()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl15"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl16.gif" WIDTH=164 HEIGHT=42></td>
+    <td>x = <input type="text" name="vgl16" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle16()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl16"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl17.gif" WIDTH=192 HEIGHT=37></td>
+    <td>x = <input type="text" name="vgl17" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle17()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl17"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl18.gif" WIDTH=197 HEIGHT=42></td>
+    <td>x = <input type="text" name="vgl18" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle18()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl18"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl19.gif" WIDTH=188 HEIGHT=37></td>
+    <td>x = <input type="text" name="vgl19" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle19()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl19"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl20.gif" WIDTH=146 HEIGHT=37></td>
+    <td>x = <input type="text" name="vgl20" size=6 maxlength=40></td>
+	<td><input type=button value="Controle" onClick="controle20()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl20"></td>
+  </tr>
+ </table>
+</form>
+<p>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="links"><FONT SIZE="3" COLOR="#000000"
+>Vergelijkingen laten berekenen op het net:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+Hieronder vind je een link naar een andere wiskunde-site waar je (vrij ingewikkelde) vergelijkingen kan ingeven en laten berekenen.<P>
+<a href="http://school.discovery.com/homeworkhelp/webmath/nsolve.html" target="_blank">Webmath: solving advanced equations</a><p>
+Nog enkele opmerkingen voor je naar deze site begeeft. De resultaten worden numeriek berekend met benaderingstechnieken. Alle antwoorden worden gegeven als decimale getallen en soms kan het zijn dat de oplossing niet volledig correct is (vanaf het derde cijfer na de komma). Om de opgaven in te typen moet je wel haakjes gebruiken voor tellers en noemers die uit meerdere termen bestaan, enkele voorbeelden:<P>
+<table>
+  <tr>
+    <td><IMG SRC="images/2vglopl14.gif" WIDTH=129 HEIGHT=42></td>
+    <td>ingeven als</td>
+    <td><input type="text" size="20" value="1/2*(x-1/3)"> = <input type="text" size="10" value="2/3*x+2/5"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl19.gif" WIDTH=188 HEIGHT=37></td>
+    <td>ingeven als</td>
+    <td><input type="text" size="20" value="-(2x-9)/3+(x-2)/4-(x-5)/6"> = <input type="text" size="10" value="1"></td>
+  </tr>
+  <tr>
+    <td><IMG SRC="images/2vglopl20.gif" WIDTH=146 HEIGHT=37></td>
+    <td>ingeven als</td>
+    <td><input type="text" size="20" value="(3x+8)/12-(x-1)/6"> = <input type="text" size="10" value="(3+x)/3"></td>
+  </tr>
+
+</table><p>
+Vergeet ook niet dat je de variabele (x) moet ingeven. En nog een laatste opmerking: soms geeft de site bij het inladen van het antwoord een foutmelding, laat je hierdoor niet van de wijs brengen, het kan geen kwaad.
+<P>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

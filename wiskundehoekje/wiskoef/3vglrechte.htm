@@ -1,0 +1,173 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<script src="3vglrechte.js"></script>
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Vergelijking van een rechte bepalen</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+Kies in het eerste keuzelijstje een opgave en stel de juiste vergelijking op. Die kies je dan uit de tweede keuzelijst (antwoorden). Een goed antwoord wordt beloond met :-) , een foutief antwoord geeft :-( als resultaat.<p>
+<FORM NAME="grafiek">
+De rechte 
+<SELECT NAME="selecteer">
+<OPTION VALUE="f00" SELECTED>Kies hier een opgave
+<OPTION VALUE="oef23">met rico 2 en door (1,7)
+<OPTION VALUE="oef30">met rico 7 en door (3,2)
+<OPTION VALUE="oef09">met rico -3 en door de oorsprong
+<OPTION VALUE="oef04">met rico -5 en door (3,-14)
+<OPTION VALUE="oef06">met rico -4 en door (1,-6)
+<OPTION VALUE="oef28">met rico 4 en door (-3,1)
+<OPTION VALUE="oef17">met rico 1 en door (2,-2)
+<OPTION VALUE="oef22">met rico 2 en door (-7,-14)
+<OPTION VALUE="oef12">met rico -2 en door (0,7)
+<OPTION VALUE="oef31">door de oorsprong en het punt (2,14)
+<OPTION VALUE="oef20">door de oorsprong en het punt (2,3)
+<OPTION VALUE="oef03">door de oorsprong en het punt (-3,15)
+<OPTION VALUE="oef39">door de oorsprong en het punt (0,-5)
+<OPTION VALUE="oef11">door de punten (1,-1) en (3,-5)
+<OPTION VALUE="oef27">door de punten (-1,-5) en (3,11)
+<OPTION VALUE="oef40">door de punten (3,-5) en (3,11)
+<OPTION VALUE="oef33">door de punten (2,19) en (0,-4)
+<OPTION VALUE="oef14">door de punten (3,3) en (2,4)
+<OPTION VALUE="oef18">door de punten (-1,0) en (0,1)
+<OPTION VALUE="oef29">door de punten (1,11) en (-1,1)
+<OPTION VALUE="oef35">door de punten (4,1) en (-3,1)
+<OPTION VALUE="oef15">door de punten (-4,1) en (2,4)
+<OPTION VALUE="oef24">door de punten (2,2) en (-1,-7)
+<OPTION VALUE="oef01">door de punten (-2,-1) en (-3,7)
+<OPTION VALUE="oef26">door de punten (1,6) en (-1,0)
+<OPTION VALUE="oef05">door de punten (2,-2) en (-4,25)
+<OPTION VALUE="oef19">door het punt (2,0) en // met y = 1,5x + 7
+<OPTION VALUE="oef25">door het punt (-2,-7) en // met y = 3x + 19
+<OPTION VALUE="oef07">door het punt (-1,5) en // met y = -4x - 9
+<OPTION VALUE="oef02">door het punt (-1,2) en // met y = -5x
+<OPTION VALUE="oef32">door het punt (0,2) en // met y = 7x
+<OPTION VALUE="oef13">door het punt (2,-5) en // met y = -x + 9
+<OPTION VALUE="oef34">door het punt (5,-3) en // met y = 7
+<OPTION VALUE="oef08">door het punt (-1,1) en // met 2y + 6x - 7 = 0
+<OPTION VALUE="oef21">door het punt (2,4) en // met 3x - 2y + 5 = 0
+<OPTION VALUE="oef10">door het punt (2,-1) en // met 6x + 2y - 1 = 0
+<OPTION VALUE="oef16">door het punt (6,9) en // met x - 2y - 5 = 0
+<OPTION VALUE="oef38">door het punt (-4,5) en // met de y-as
+<OPTION VALUE="oef41">door het punt (5,1) en // met de y-as
+<OPTION VALUE="oef37">door het punt (-4,5) en // met de x-as
+<OPTION VALUE="oef36">door het punt (-3,3) en // met de x-as
+</SELECT> <p>
+heeft als vergelijking 
+<SELECT NAME="formulenaam" onChange="controleer()">
+<OPTION VALUE="opnieuw" SELECTED>Kies hier de oplossing
+<OPTION VALUE="oploef01">y = -8x - 17
+<OPTION VALUE="oploef02">y = -5x - 3
+<OPTION VALUE="oploef03">y = -5x
+<OPTION VALUE="oploef04">y = -5x + 1
+<OPTION VALUE="oploef05">y = -4,5x + 7
+<OPTION VALUE="oploef06">y = -4x - 2
+<OPTION VALUE="oploef07">y = -4x + 1
+<OPTION VALUE="oploef08">y = -3x - 2
+<OPTION VALUE="oploef09">y = -3x
+<OPTION VALUE="oploef10">y = -3x + 5
+<OPTION VALUE="oploef11">y = -2x + 1
+<OPTION VALUE="oploef12">y = -2x + 7
+<OPTION VALUE="oploef13">y = -x - 3
+<OPTION VALUE="oploef14">y = -x + 6
+<OPTION VALUE="oploef15">y = 0,5x + 3
+<OPTION VALUE="oploef16">y = 0,5x + 6
+<OPTION VALUE="oploef17">y = x - 4
+<OPTION VALUE="oploef18">y = x + 1
+<OPTION VALUE="oploef19">y = 1,5x - 3
+<OPTION VALUE="oploef20">y = 1,5x
+<OPTION VALUE="oploef21">y = 1,5x + 1
+<OPTION VALUE="oploef22">y = 2x
+<OPTION VALUE="oploef23">y = 2x + 5
+<OPTION VALUE="oploef24">y = 3x - 4
+<OPTION VALUE="oploef25">y = 3x - 1
+<OPTION VALUE="oploef26">y = 3x + 3
+<OPTION VALUE="oploef27">y = 4x - 1
+<OPTION VALUE="oploef28">y = 4x + 13
+<OPTION VALUE="oploef29">y = 5x + 6
+<OPTION VALUE="oploef30">y = 7x - 19
+<OPTION VALUE="oploef31">y = 7x
+<OPTION VALUE="oploef32">y = 7x + 2
+<OPTION VALUE="oploef33">y = 11,5x - 4
+<OPTION VALUE="oploef34">y = -3
+<OPTION VALUE="oploef35">y = 1
+<OPTION VALUE="oploef36">y = 3
+<OPTION VALUE="oploef37">y = 5
+<OPTION VALUE="oploef38">x = -4
+<OPTION VALUE="oploef39">x = 0
+<OPTION VALUE="oploef40">x = 3
+<OPTION VALUE="oploef41">x = 5
+</SELECT>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="controle">
+<p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+
+  
+</FORM>
+<p>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.5" codebase="https://www.gedesasoft.be/wiskundehoekje/wiskoef/" href="kubus_vlak_04.jnlp">
+   <information>
+      <title>CabriJava</title>
+      <vendor>Geert De Saegher</vendor>
+      <description>CabriJava</description>
+      <homepage href="https://www.gedesasoft.be/wiskundehoekje/"/>
+      <offline-allowed/>
+   </information>
+   <security>
+      <all-permissions/>
+   </security>
+   <resources>
+     <jar href="CabriJava.jar"/>
+    </resources>
+   <applet-desc documentBase="https://www.gedesasoft.be/wiskundehoekje/wiskoef/" name="CabriJava" main-class="CabriJava" width="580" height="400">
+    <param name="border" value="2"/>
+    <param name="lang" value="nl"/>
+    <param name="file" value="doorsnede_kubus_vlak_04.fig"/>
+  </applet-desc>
+</jnlp>
