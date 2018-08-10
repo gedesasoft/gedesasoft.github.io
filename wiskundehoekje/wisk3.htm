@@ -1,0 +1,1172 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<SCRIPT LANGUAGE= "JavaScript">
+<!--
+/* Functie voor het berekenen van de oppervlakte van een willekeurige driehoek */
+function opp3hoek()
+{
+var AB = parseFloat(document.oppdriehoek.zijdeAB.value);
+var BC = parseFloat(document.oppdriehoek.zijdeBC.value);
+var AC = parseFloat(document.oppdriehoek.zijdeAC.value);
+if (AB < 0)
+{
+	AB = - AB
+	document.oppdriehoek.zijdeAB.value = AB
+}
+if (BC < 0)
+{
+	BC = - BC
+	document.oppdriehoek.zijdeBC.value = BC
+}
+if (AC < 0)
+{
+	AC = - AC
+	document.oppdriehoek.zijdeAC.value = AC
+}
+
+var P = (AB + BC + AC) / 2;
+var heroon = P * (P - AB) * (P - BC) * (P - AC)
+if (heroon > 0)
+	{
+	document.oppdriehoek.opp3h.value = Math.sqrt(heroon)
+	}
+else
+	{
+	alert('Met de ingegeven waarden kan je geen driehoek vormen.')
+	}	 
+}
+
+
+/* Functies voor het berekenen van de omtrek en oppervlakte van een regelmatige veelhoek */
+
+function veelhoek()
+{
+var Z = Math.floor(document.vlhk.zijden.value);
+var r = parseFloat(document.vlhk.straal.value);
+var O = Z * 2 * r * Math.sin(Math.PI / Z);
+var S = Z * r * Math.sin(Math.PI / Z) * r * Math.cos(Math.PI / Z) 
+document.vlhk.omtrek.value = Math.round(O * 1000) / 1000;
+document.vlhk.opp.value = Math.round(S * 1000) / 1000;
+}
+
+/* Functies voor het berekenen van de zijden en hoeken */
+
+var alfa = 0
+var beta = 0
+
+function hoekennaarrad()
+{
+	if (document.pyth.alfagr.value == '')
+	{
+	Agr = 0
+	}
+	else
+	{
+	Agr = parseFloat(document.pyth.alfagr.value)
+	}
+	if (Agr != NaN)
+	{
+	A = Agr
+	}
+	
+	if (document.pyth.alfamin.value == '')
+	{
+	Amin = 0
+	}
+	else
+	{
+	Amin = parseFloat(document.pyth.alfamin.value) / 60
+	}
+	if (Amin != NaN)
+	{
+	A = A + Amin
+	}
+	
+	if (document.pyth.alfasec.value == '')
+	{
+	Asec = 0
+	}
+	else
+	{
+	Asec = parseFloat(document.pyth.alfasec.value) / 3600
+	}
+	if (Asec != NaN)
+	{
+	A = A + Asec
+	}
+alfa = A
+
+	if (document.pyth.betagr.value == '')
+	{
+	Bgr = 0
+	}
+	else
+	{
+	Bgr = parseFloat(document.pyth.betagr.value)
+	}
+	if (Bgr != NaN)
+	{
+	B = Bgr
+	}
+	
+	if (document.pyth.betamin.value == '')
+	{
+	Bmin = 0
+	}
+	else
+	{
+	Bmin = parseFloat(document.pyth.betamin.value) / 60
+	}
+	if (Bmin != NaN)
+	{
+	B = B + Bmin
+	}
+	
+	if (document.pyth.betasec.value == '')
+	{
+	Bsec = 0
+	}
+	else
+	{
+	Bsec = parseFloat(document.pyth.betasec.value) / 3600
+	}
+	if (Bsec != NaN)
+	{
+	B = B + Bsec
+	}
+beta = B}
+
+function AenBgeeftC()
+{
+	document.pyth.schzC.value = Math.sqrt(Math.pow(parseFloat(document.pyth.rhzA.value),2) + Math.pow(parseFloat(document.pyth.rhzB.value),2));
+}
+
+function BenCgeeftA()
+{
+	document.pyth.rhzA.value = Math.sqrt(Math.pow(parseFloat(document.pyth.schzC.value),2) - Math.pow(parseFloat(document.pyth.rhzB.value),2));
+}
+
+function AenCgeeftB()
+{
+	document.pyth.rhzB.value = Math.sqrt(Math.pow(parseFloat(document.pyth.schzC.value),2) - Math.pow(parseFloat(document.pyth.rhzA.value),2));
+}
+
+function AenageeftC()
+{
+	document.pyth.schzC.value = parseFloat(document.pyth.rhzA.value) / Math.sin(alfa * Math.PI / 180);
+}
+
+function BenbgeeftC()
+{
+	document.pyth.schzC.value = parseFloat(document.pyth.rhzB.value) / Math.sin(beta * Math.PI / 180);
+}
+
+function CenageeftA()
+{
+	document.pyth.rhzA.value = parseFloat(document.pyth.schzC.value) * Math.sin(alfa * Math.PI / 180);
+}
+
+function AenCgeefta()
+{
+	alfa = Math.asin(parseFloat(document.pyth.rhzA.value) / parseFloat(document.pyth.schzC.value)) * 180 / Math.PI;
+}
+
+function ageeftb()
+{
+	beta = 90 - alfa;
+}
+
+function bgeefta()
+{
+	alfa = 90 - beta;
+}
+
+/* Om het driehoeksmeting te starten */
+
+function trigo()
+{
+	if(document.pyth.rhzA.value != '')
+	{
+		if(document.pyth.rhzB.value != '')
+		{
+			AenBgeeftC()
+			AenCgeefta()
+			ageeftb()
+		}
+		if(document.pyth.schzC.value != '')
+		{
+			AenCgeeftB()
+			AenCgeefta()
+			ageeftb()
+		}
+		if (alfa != 0)
+		{
+			AenageeftC()
+			AenCgeeftB()
+			ageeftb()
+		}
+		if (beta != 0)
+		{
+			bgeefta()
+			AenageeftC()
+			AenCgeeftB()
+		}
+		else
+		{
+			alert('Voer twee waarden in!')
+		}
+	}
+	if(document.pyth.rhzB.value != '')
+		{
+			if(document.pyth.schzC.value != '')
+			{
+				BenCgeeftA()
+				AenCgeefta()
+				ageeftb()
+			}
+			if (alfa != 0)
+			{
+				ageeftb()
+				BenbgeeftC()
+				BenCgeeftA()
+			}
+			if (beta != 0)
+			{
+				bgeefta()
+				BenbgeeftC()
+				BenCgeeftA()
+			}
+			else
+			{
+				alert('Voer twee waarden in!')
+			}
+		}
+	if(document.pyth.schzC.value != '')
+		{
+			if (alfa != 0)
+			{
+				ageeftb()
+				CenageeftA()
+				AenCgeeftB()
+			}
+			if (beta != 0)
+			{
+				bgeefta()
+				CenageeftA()
+				AenCgeeftB()
+			}
+			else
+			{
+				alert('Voer twee waarden in!')
+			}		
+		}
+	if (alfa != 0)
+		{
+			ageeftb()
+		}
+	if (beta != 0)
+		{
+			bgeefta()
+		}
+	}
+
+function omzetten(hoek)
+{
+hoekgrad = Math.floor(hoek);
+hoekmin = Math.floor((hoek - hoekgrad) * 60);
+hoeksec = Math.round((hoek - hoekgrad - hoekmin / 60) * 3600);
+		if (hoeksec == 60)
+		{
+		hoeksec = 0
+		hoekmin = hoekmin + 1
+		}
+		if (hoekmin == 60)
+		{
+		hoekmin = 0
+		hoekgrad = hoekgrad + 1
+		}
+}
+
+	
+function afronden()
+{
+var afgerondA = Math.round(document.pyth.rhzA.value * 1000) / 1000;
+document.pyth.rhzA.value = afgerondA;
+var afgerondB = Math.round(document.pyth.rhzB.value * 1000) / 1000;
+document.pyth.rhzB.value = afgerondB;
+var afgerondC = Math.round(document.pyth.schzC.value * 1000) / 1000;
+document.pyth.schzC.value = afgerondC;
+omzetten(alfa)
+document.pyth.alfagr.value = hoekgrad;
+document.pyth.alfamin.value = hoekmin;
+document.pyth.alfasec.value = hoeksec;
+omzetten(beta)
+document.pyth.betagr.value = hoekgrad;
+document.pyth.betamin.value = hoekmin;
+document.pyth.betasec.value = hoeksec;
+
+}
+
+function bereken()
+{
+	hoekennaarrad()
+	trigo()
+	afronden()
+}
+
+
+/* Functie voor het berekenen van |ab| en co(m) als co(a) en co(b) gegeven zijn*/
+
+function berekenco()
+{
+	var xeen = parseFloat(document.coord.x1.value);
+	var xtwee = parseFloat(document.coord.x2.value);
+	var yeen = parseFloat(document.coord.y1.value);
+	var ytwee = parseFloat(document.coord.y2.value);
+	var xm = (xeen + xtwee)/2;
+	document.coord.xm.value = xm;
+	var ym = parseFloat((yeen + ytwee)/2);
+	document.coord.ym.value = ym;
+	var verschilx = xtwee - xeen;
+	var verschily = ytwee - yeen;
+	var afstandkwadraat = Math.pow(verschilx,2) + Math.pow(verschily,2);
+	var afstand = Math.sqrt(afstandkwadraat);
+	document.coord.afstand.value = Math.round(afstand * 10000) / 10000;
+	if (xeen == xtwee)
+	{
+		if (yeen == ytwee)
+		{
+			alert('Voer a.u.b. twee verschillende punten in voor het opstellen van de vergelijking van een rechte.');
+		}
+		else
+		{
+		document.all.snijdtY.style.display= "none";
+		document.all.horizontaal.style.display= "none";
+		document.all.verticaal.style.display= "";
+		document.coord.q.value = xeen;
+		}
+	}
+	else
+	{
+		if (yeen == ytwee)
+		{
+		document.all.snijdtY.style.display= "none";
+		document.all.horizontaal.style.display= "";
+		document.all.verticaal.style.display= "none";
+		document.coord.q.value = yeen;
+		}
+		else
+		{
+		document.all.snijdtY.style.display= "";
+		document.all.horizontaal.style.display= "";
+		document.all.verticaal.style.display= "none";
+		var rico = verschily/verschilx;
+		document.coord.m.value = Math.round(rico * 10000) / 10000;
+		var snijpuntY = yeen - rico * xeen;
+		document.coord.q.value = Math.round(snijpuntY * 10000) / 10000;
+		}
+	}
+}
+
+/* Functie voor het oplossen van een stelsel */
+
+function berekenstelsel()
+{
+	var ax = parseFloat(document.stelsel.ax.value);
+	var by = parseFloat(document.stelsel.by.value);
+	var cz = parseFloat(document.stelsel.cz.value);
+	var dx = parseFloat(document.stelsel.dx.value);
+	var ey = parseFloat(document.stelsel.ey.value);
+	var fz = parseFloat(document.stelsel.fz.value);
+	var determ = ax * ey - dx * by;
+	var determx = cz * ey - fz * by;
+	var determy = ax * fz - dx * cz;
+	var oplosx = Math.round(determx / determ * 10000) / 10000;
+	var oplosy = Math.round(determy / determ * 10000) / 10000;
+	if (determ == 0)
+	{
+		alert('Er is geen eenduidig bepaalde oplossing voor dit stelsel.');
+	}
+	else
+	{
+	document.stelsel.oplx.value = oplosx;
+	document.stelsel.oply.value = oplosy;
+	}
+}
+
+/* Functies voor statistiek */
+
+/* Functies voor berekenen van xi.ni */
+
+function berekenstat()
+{
+var x1 = parseFloat(frmstat.x1.value)
+var x2 = parseFloat(frmstat.x2.value)
+var x3 = parseFloat(frmstat.x3.value)
+var x4 = parseFloat(frmstat.x4.value)
+var x5 = parseFloat(frmstat.x5.value)
+var x6 = parseFloat(frmstat.x6.value)
+var x7 = parseFloat(frmstat.x7.value)
+var x8 = parseFloat(frmstat.x8.value)
+var x9 = parseFloat(frmstat.x9.value)
+var x10 = parseFloat(frmstat.x10.value)
+var n1 = parseFloat(frmstat.n1.value)
+var n2 = parseFloat(frmstat.n2.value)
+var n3 = parseFloat(frmstat.n3.value)
+var n4 = parseFloat(frmstat.n4.value)
+var n5 = parseFloat(frmstat.n5.value)
+var n6 = parseFloat(frmstat.n6.value)
+var n7 = parseFloat(frmstat.n7.value)
+var n8 = parseFloat(frmstat.n8.value)
+var n9 = parseFloat(frmstat.n9.value)
+var n10 = parseFloat(frmstat.n10.value)
+n = n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10
+frmstat.n.value= n
+x1n1 = x1 * n1
+x2n2 = x2* n2
+x3n3 = x3* n3
+x4n4 = x4* n4
+x5n5 = x5* n5
+x6n6 = x6* n6
+x7n7 = x7* n7
+x8n8 = x8* n8
+x9n9 = x9* n9
+x10n10 = x10* n10
+frmstat.x1n1.value=x1n1
+frmstat.x2n2.value=x2n2
+frmstat.x3n3.value=x3n3
+frmstat.x4n4.value=x4n4
+frmstat.x5n5.value=x5n5
+frmstat.x6n6.value=x6n6
+frmstat.x7n7.value=x7n7
+frmstat.x8n8.value=x8n8
+frmstat.x9n9.value=x9n9
+frmstat.x10n10.value=x10n10
+xn = x1n1 + x2n2 + x3n3 + x4n4 + x5n5 + x6n6 + x7n7 + x8n8 + x9n9 + x10n10
+frmstat.xn.value= xn
+var gem = xn / n
+frmstat.gem.value= gem
+
+frmstat.d1.value=x1 - gem
+frmstat.d2.value=x2 - gem
+frmstat.d3.value=x3 - gem
+frmstat.d4.value=x4 - gem
+frmstat.d5.value=x5 - gem
+frmstat.d6.value=x6 - gem
+frmstat.d7.value=x7 - gem
+frmstat.d8.value=x8 - gem
+frmstat.d9.value=x9 - gem
+frmstat.d10.value=x10 - gem
+
+frmstat.e1.value=Math.pow((x1 - gem),2)
+frmstat.e2.value=Math.pow((x2 - gem),2)
+frmstat.e3.value=Math.pow((x3 - gem),2)
+frmstat.e4.value=Math.pow((x4 - gem),2)
+frmstat.e5.value=Math.pow((x5 - gem),2)
+frmstat.e6.value=Math.pow((x6 - gem),2)
+frmstat.e7.value=Math.pow((x7 - gem),2)
+frmstat.e8.value=Math.pow((x8 - gem),2)
+frmstat.e9.value=Math.pow((x9 - gem),2)
+frmstat.e10.value=Math.pow((x10 - gem),2)
+
+f1= Math.pow((x1- gem),2) * n1
+f2= Math.pow((x2- gem),2) * n2
+f3= Math.pow((x3- gem),2) * n3
+f4= Math.pow((x4- gem),2) * n4
+f5= Math.pow((x5- gem),2) * n5
+f6= Math.pow((x6- gem),2) * n6
+f7= Math.pow((x7- gem),2) * n7
+f8= Math.pow((x8- gem),2) * n8
+f9= Math.pow((x9- gem),2) * n9
+f10= Math.pow((x10- gem),2) * n10
+
+frmstat.f1.value=f1
+frmstat.f2.value=f2
+frmstat.f3.value=f3
+frmstat.f4.value=f4
+frmstat.f5.value=f5
+frmstat.f6.value=f6
+frmstat.f7.value=f7
+frmstat.f8.value=f8
+frmstat.f9.value=f9
+frmstat.f10.value=f10
+
+som = f1 + f2 +f3 +f4 + f5 + f6 + f7 + f8 + f9 + f10
+frmstat.som.value = som
+frmstat.s.value = Math.sqrt(som / n)
+}
+
+/* Functies voor berekenen van histogram */
+
+function histogram()
+{
+var n1 = parseFloat(frmstat.n1.value)
+var n2 = parseFloat(frmstat.n2.value)
+var n3 = parseFloat(frmstat.n3.value)
+var n4 = parseFloat(frmstat.n4.value)
+var n5 = parseFloat(frmstat.n5.value)
+var n6 = parseFloat(frmstat.n6.value)
+var n7 = parseFloat(frmstat.n7.value)
+var n8 = parseFloat(frmstat.n8.value)
+var n9 = parseFloat(frmstat.n9.value)
+var n10 = parseFloat(frmstat.n10.value)
+
+n = n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10
+
+max = Math.max(n1,n2)
+max = Math.max(max,n3)
+max = Math.max(max,n4)
+max = Math.max(max,n5)
+max = Math.max(max,n6)
+max = Math.max(max,n7)
+max = Math.max(max,n8)
+max = Math.max(max,n9)
+max = Math.max(max,n10)
+
+var hoogte1 = n1 / max * 180
+var hoogte2 = n2 / max * 180
+var hoogte3 = n3 / max * 180
+var hoogte4 = n4 / max * 180
+var hoogte5 = n5 / max * 180
+var hoogte6 = n6 / max * 180
+var hoogte7 = n7 / max * 180
+var hoogte8 = n8 / max * 180
+var hoogte9 = n9 / max * 180
+var hoogte10 = n10 / max * 180
+
+document.hist1.height = hoogte1
+document.hist2.height = hoogte2
+document.hist3.height = hoogte3
+document.hist4.height = hoogte4
+document.hist5.height = hoogte5
+document.hist6.height = hoogte6
+document.hist7.height = hoogte7
+document.hist8.height = hoogte8
+document.hist9.height = hoogte9
+document.hist10.height = hoogte10
+
+frmstat.histmax.value = max
+frmstat.histmid.value = Math.round(max / 2)
+}
+
+function wishistogram()
+{
+document.hist1.height = "0"
+document.hist2.height = "0"
+document.hist3.height = "0"
+document.hist4.height = "0"
+document.hist5.height = "0"
+document.hist6.height = "0"
+document.hist7.height = "0"
+document.hist8.height = "0"
+document.hist9.height = "0"
+document.hist10.height = "0"
+frmstat.histmax.value = ""
+frmstat.histmid.value = ""
+}
+
+// -->
+</SCRIPT>
+<link rel=stylesheet href="tabel.css" type="text/css"><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script src="info_pienter.js"></script></HEAD>
+
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="bck.gif" onLoad="wishistogram()">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Wiskundehoekje 3de jaar</FONT></A></CENTER></td>
+
+
+</TR>
+</TABLE>
+<BR>
+
+Belangrijke opmerking: om decimale getallen in te geven moet je een punt (.) typen als komma.</B><P>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="4" CELLSPACING="1" WIDTH="90%">
+<TR><TD><FONT  SIZE="2">
+Onderwerpen</B></TD><TD><A class="keuze" HREF="#3hoek">Driehoeksmeting / Stelling van Pythagoras</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#opp3hoek">Oppervlakte van een willekeurige driehoek</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#veelhoek">Regelmatige veelhoeken</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#coord">Analytische meetkunde</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#stelsel">Stelsels van twee vergelijkingen met twee onbekenden</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#stat">Statistiek: gemiddelde en standaardafwijking</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="wisk_oef.htm">Werkbladen en oefeningen</A></TD>
+</TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#cabrijava">Online applets</A></TD></TR>
+<TR><TD></TD><TD><A class="keuze" HREF="#oef">Online oefeningen</A></TD></TR>
+</TABLE></CENTER><BR><BR>
+
+
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="3hoek"><FONT SIZE="3" COLOR="#000000"
+>Driehoeksmeting / Stelling van Pythagoras:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+
+Geef twee waarden in (minstens één zijde) en bereken de andere drie. 
+<FORM NAME="pyth">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 ALIGN="CENTER">
+<TR>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD align="right"><INPUT NAME="betagr" TYPE="TEXT" SIZE="2">°</TD>
+<TD><INPUT NAME="betamin" TYPE="TEXT" SIZE="2">'<INPUT NAME="betasec" TYPE="TEXT" SIZE="2">"</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD><IMG SRC="images/pythb.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD></TD>
+<TD COLSPAN="2"><CENTER><INPUT NAME="schzC" TYPE="TEXT" SIZE="5"></CENTER></TD>
+<TD><IMG SRC="images/pythcc.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD><IMG SRC="images/pythaa.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD><IMG SRC="images/pythcc.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD></TD>
+<TD><IMG SRC="images/pythaa.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD><INPUT NAME="rhzA" TYPE="TEXT" SIZE="5"></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD></TD>
+<TD><IMG SRC="images/pythcc.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD></TD>
+<TD></TD>
+<TD><IMG SRC="images/pythaa.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD></TD>
+</TR>
+<TR>
+<TD><INPUT NAME="alfagr" TYPE="TEXT" SIZE="2">°<INPUT NAME="alfamin" TYPE="TEXT" SIZE="2">'<INPUT NAME="alfasec" TYPE="TEXT" SIZE="2">"</TD>
+<TD><IMG SRC="images/pytha.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD><IMG SRC="images/pythbb.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD><IMG SRC="images/pythbb.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD><IMG SRC="images/pythbb.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD><IMG SRC="images/pythc.gif" BORDER=0 HEIGHT=37,5 WIDTH=50 ALT=""></TD>
+<TD></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD COLSPAN="2"><INPUT NAME="rhzB" TYPE="TEXT" SIZE="5"></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+</TABLE>
+<P>
+<CENTER><INPUT TYPE="BUTTON" VALUE="Bereken" onClick="bereken()">
+<INPUT TYPE="RESET" VALUE="Wissen">
+</CENTER>
+</FORM>
+<p>
+Nog enkele links naar sites over de stelling van Pythagoras:<BR>
+<UL>
+<LI><a href="http://www.cut-the-knot.com/pythagoras/index.html" target="_blank">32 verschillende bewijzen</a>
+<LI><a href="http://sunsite.ubc.ca/LivingMathematics/V001N01/UBCExamples/Pythagoras/pythagoras.html" target="_blank">Interactief bewijs 1 (Java applet)</a>
+<LI><a href="http://www.utc.edu/~cpmawata/geom/geom7.htm" target="_blank">Interactief bewijs 2 (Java applet)</a>
+<LI><a href="http://www.davis-inc.com/pythagor/proof2.html" target="_blank">Geanimeerd bewijs 3 (animated gif)</a>
+<LI><a href="http://persweb.wabash.edu/facstaff/footer/Pythagoras.htm" target="_blank">Geanimeerd bewijs 4 (animated gif)</a>
+</UL>
+<P>
+<BR>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="opp3hoek"><FONT SIZE="3" COLOR="#000000"
+>Oppervlakte van een willekeurige driehoek</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+<FORM NAME="oppdriehoek">
+Geef de lengtes van de drie zijden in:<br>
+|AB|= <input type="text" name="zijdeAB" size=3 maxlength=10>, 
+|BC|= <input type="text" name="zijdeBC" size=3 maxlength=10> en
+|AC|= <input type="text" name="zijdeAC" size=3 maxlength=10><p>
+De oppervlakte van de driehoek ABC = <input type="text" name="opp3h" size=5 maxlength=10><p> 
+<CENTER><INPUT TYPE="BUTTON" VALUE="Bereken" onClick="opp3hoek()">
+<INPUT TYPE="RESET" VALUE="Wissen">
+</CENTER>
+</FORM>
+<P>
+<BR>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="veelhoek"><FONT SIZE="3" COLOR="#000000"
+>Regelmatige veelhoeken</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+<FORM NAME="vlhk">
+Geef het aantal zijden en de straal in:<br>
+Een regelmatige <input type="text" name="zijden" size=3 maxlength=3>-hoek ingeschreven in een cirkel met straal <input type="text" name="straal" size=3 maxlength=5> cm heeft <br>
+als omtrek <input type="text" name="omtrek" size=5 maxlength=10> cm
+en heeft als oppervlakte <input type="text" name="opp" size=5 maxlength=10>
+cm<SUP>2</SUP>.<p>
+<CENTER><INPUT TYPE="BUTTON" VALUE="Bereken" onClick="veelhoek()">
+<INPUT TYPE="RESET" VALUE="Wissen">
+</CENTER>
+</FORM>
+<P>
+<BR>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="coord"><FONT SIZE="3" COLOR="#000000"
+>Analytische meetkunde:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+Geef links de coördinaten in van twee punten (A en B) in het vlak en bereken de afstand |AB| 
+tussen deze punten. Ook de coördinaat van het midden van het lijnstuk [AB] wordt berekend.
+<FORM NAME="coord">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2>
+<TR>
+<TD ROWSPAN="2">A ( <INPUT NAME="x1" TYPE="TEXT" VALUE="" SIZE="3"> , <INPUT NAME="y1" TYPE="TEXT" VALUE="" SIZE="3"> )<BR>
+B ( <INPUT NAME="x2" TYPE="TEXT" VALUE="" SIZE="3"> , <INPUT NAME="y2" TYPE="TEXT" VALUE="" SIZE="3"> )</TD>
+<TD WIDTH="20"></TD>
+<TD ALIGN="right">Afstand |AB| =</TD>
+<TD><INPUT NAME="afstand" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD ALIGN="right">Coördinaat van het midden van [AB] = </TD>
+<TD>( <INPUT NAME="xm" TYPE="TEXT" VALUE="" SIZE="3"> , <INPUT NAME="ym" TYPE="TEXT" VALUE="" SIZE="3"> )</TD>
+</TR>
+<TR>
+<TD></TD>
+<TD></TD>
+<TD ALIGN="right">Vergelijking van de rechte AB : </TD>
+<TD><A class="titel" ID=horizontaal STYLE="display:">y = </A><A class="titel" ID=snijdtY STYLE="display:"><INPUT NAME="m" TYPE="TEXT" VALUE="" SIZE="4"> x + </A>
+<A class="titel" ID=verticaal STYLE="display:none">x = </A><INPUT NAME="q" TYPE="TEXT" VALUE="" SIZE="4">
+</TD>
+</TR>
+</TABLE>
+
+<CENTER><P>
+
+<INPUT TYPE="BUTTON" VALUE="Bereken" onClick="berekenco()">
+<INPUT TYPE="RESET" VALUE="Wissen">
+</CENTER></FORM>
+<P>
+<BR>
+
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="stelsel"><FONT SIZE="3" COLOR="#000000"
+>Stelsels van twee vergelijkingen met twee onbekenden:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+Geef de coëfficiënten in van het stelsel en bereken de de oplossing van het stelsel.
+<FORM NAME="stelsel">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2>
+<TR>
+<TD ROWSPAN="2"><FONT SIZE="6">{</FONT></TD>
+<TD ROWSPAN="2"><INPUT NAME="ax" TYPE="TEXT" VALUE="" SIZE="3"> x + <INPUT NAME="by" TYPE="TEXT" VALUE="" SIZE="3"> y = <INPUT NAME="cz" TYPE="TEXT" VALUE="" SIZE="3"><BR>
+<INPUT NAME="dx" TYPE="TEXT" VALUE="" SIZE="3"> x + <INPUT NAME="ey" TYPE="TEXT" VALUE="" SIZE="3"> y = <INPUT NAME="fz" TYPE="TEXT" VALUE="" SIZE="3"></TD>
+<TD WIDTH="30"></TD>
+<TD ROWSPAN="2" ALIGN="right">Oplossing:</TD>
+<TD WIDTH="20"></TD>
+<TD>x = <INPUT NAME="oplx" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+<TR>
+<TD></TD>
+
+<TD></TD>
+<TD>y = <INPUT NAME="oply" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+</TABLE>
+
+<CENTER><P>
+
+<INPUT TYPE="BUTTON" VALUE="Bereken" onClick="berekenstelsel()">
+<INPUT TYPE="RESET" VALUE="Wissen">
+</CENTER></FORM>
+<P>
+<BR>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="stat"><FONT SIZE="3" COLOR="#000000"
+>Statistiek - berekening gemiddelde en standaardafwijking:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+Geef de waarnemingsgetallen in de eerste kolom en de absolute frequenties in de tweede kolom in.
+<FORM NAME="frmstat">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=1 WIDTH="95%">
+<TR>
+<TD>x<SUB>i</SUB></TD>
+<TD>n<SUB>i</SUB></TD>
+<TD>x<SUB>i</SUB> . n<SUB>i</SUB></TD>
+<TD>x<SUB>i</SUB> - x</TD>
+<TD>(x<SUB>i</SUB> - x)<SUP>2</SUP></TD>
+<TD COLSPAN="2">n<SUB>i</SUB> . (x<SUB>i</SUB> - x)<SUP>2</SUP></TD>
+
+</TR>
+<TR>
+<TD><INPUT NAME="x1" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.x1.value=""></TD>
+<TD><INPUT NAME="n1" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.n1.value="">
+<img src="wiskoef/images/3stat_n1.gif" border=0 width=10 height=10>
+</TD>
+<TD><INPUT NAME="x1n1" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="d1" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="e1" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="f1" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD ROWSPAN ="11">
+<CENTER>
+<INPUT TYPE="BUTTON" VALUE="Bereken" onClick="berekenstat()">
+<INPUT TYPE="RESET" VALUE="Wissen"><P>
+Het gemiddelde (x) is <BR>
+<INPUT NAME="gem" TYPE="TEXT" VALUE="" SIZE="8"><P>
+De standaardafwijking is<BR>
+ <INPUT NAME="s" TYPE="TEXT" VALUE="" SIZE="8">
+</CENTER>
+</TD>
+
+</TR>
+<TR>
+<TD><INPUT NAME="x2" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.x2.value=""></TD>
+<TD><INPUT NAME="n2" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.n2.value="">
+<img src="wiskoef/images/3stat_n2.gif" border=0 width=10 height=10></TD>
+<TD><INPUT NAME="x2n2" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="d2" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="e2" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="f2" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+<TR>
+<TD><INPUT NAME="x3" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.x3.value=""></TD>
+<TD><INPUT NAME="n3" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.n3.value="">
+<img src="wiskoef/images/3stat_n3.gif" border=0 width=10 height=10></TD>
+<TD><INPUT NAME="x3n3" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="d3" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="e3" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="f3" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+<TR>
+<TD><INPUT NAME="x4" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.x4.value=""></TD>
+<TD><INPUT NAME="n4" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.n4.value="">
+<img src="wiskoef/images/3stat_n4.gif" border=0 width=10 height=10></TD>
+<TD><INPUT NAME="x4n4" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="d4" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="e4" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="f4" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+<TR>
+<TD><INPUT NAME="x5" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.x5.value=""></TD>
+<TD><INPUT NAME="n5" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.n5.value="">
+<img src="wiskoef/images/3stat_n5.gif" border=0 width=10 height=10></TD>
+<TD><INPUT NAME="x5n5" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="d5" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="e5" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="f5" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+<TR>
+<TD><INPUT NAME="x6" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.x6.value=""></TD>
+<TD><INPUT NAME="n6" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.n6.value="">
+<img src="wiskoef/images/3stat_n6.gif" border=0 width=10 height=10></TD>
+<TD><INPUT NAME="x6n6" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="d6" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="e6" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="f6" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+<TR>
+<TD><INPUT NAME="x7" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.x7.value=""></TD>
+<TD><INPUT NAME="n7" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.n7.value="">
+<img src="wiskoef/images/3stat_n7.gif" border=0 width=10 height=10></TD>
+<TD><INPUT NAME="x7n7" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="d7" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="e7" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="f7" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+<TR>
+<TD><INPUT NAME="x8" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.x8.value=""></TD>
+<TD><INPUT NAME="n8" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.n8.value="">
+<img src="wiskoef/images/3stat_n8.gif" border=0 width=10 height=10></TD>
+<TD><INPUT NAME="x8n8" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="d8" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="e8" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="f8" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+<TR>
+<TD><INPUT NAME="x9" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.x9.value=""></TD>
+<TD><INPUT NAME="n9" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.n9.value="">
+<img src="wiskoef/images/3stat_n9.gif" border=0 width=10 height=10></TD>
+<TD><INPUT NAME="x9n9" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="d9" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="e9" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="f9" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+<TR>
+<TD><INPUT NAME="x10" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.x10.value=""></TD>
+<TD><INPUT NAME="n10" TYPE="TEXT" VALUE="0" SIZE="4" onClick=frmstat.n10.value="">
+<img src="wiskoef/images/3stat_n10.gif" border=0 width=10 height=10></TD>
+<TD><INPUT NAME="x10n10" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="d10" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="e10" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="f10" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD><INPUT NAME="n" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD><INPUT NAME="xn" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+<TD></TD>
+<TD></TD>
+<TD><INPUT NAME="som" TYPE="TEXT" VALUE="" SIZE="6"></TD>
+</TR>
+</TABLE><P>
+<table>
+    <tr>
+      <td>
+
+<TABLE CELLSPACING = 0 CELLPADDING = 0 BORDER = 0 BGCOLOR="#FFFFFF">
+<TR>
+<TD ROWSPAN="3">
+<table CELLSPACING = 0 CELLPADDING = 0 BORDER = 0>
+    <tr>
+      <td valign="top" height="100"><br><input type="text" name="histmax" size=4 maxlength=4>
+</td>
+    </tr>
+    <tr>
+      <td valign="top" height="80"><input type="text" name="histmid" size=4 maxlength=4></td>
+    </tr>
+    <tr>
+      <td valign="bottom" height=18><input type="text" name="histmin" size=4 maxlength=4 value="0"></td>
+    </tr>
+</table>
+</TD>
+<TD COLSPAN="3"><IMG SRC="wiskoef/images/3hist1_1.gif" WIDTH=293 HEIGHT=16></TD></TR>
+<TR><TD><IMG SRC="wiskoef/images/3hist1_2.gif" WIDTH=8 HEIGHT=188></TD>
+<TD WIDTH=272 VALIGN="bottom">
+<img src="wiskoef/images/3stat_n0.gif" border=0 width=5 height=184>
+<img src="wiskoef/images/3stat_n1.gif" name="hist1" border=0 width=20 height=0 hspace="0">
+<img src="wiskoef/images/3stat_n2.gif" name="hist2" border=0 width=20 height=0 hspace="0">
+<img src="wiskoef/images/3stat_n3.gif" name="hist3" border=0 width=20 height=0 hspace="0">
+<img src="wiskoef/images/3stat_n4.gif" name="hist4" border=0 width=20 height=0 hspace="0">
+<img src="wiskoef/images/3stat_n5.gif" name="hist5" border=0 width=20 height=0 hspace="0">
+<img src="wiskoef/images/3stat_n6.gif" name="hist6" border=0 width=20 height=0 hspace="0">
+<img src="wiskoef/images/3stat_n7.gif" name="hist7" border=0 width=20 height=0 hspace="0">
+<img src="wiskoef/images/3stat_n8.gif" name="hist8" border=0 width=20 height=0 hspace="0">
+<img src="wiskoef/images/3stat_n9.gif" name="hist9" border=0 width=20 height=0 hspace="0">
+<img src="wiskoef/images/3stat_n10.gif" name="hist10" border=0 width=20 height=0 hspace="0">
+</TD>
+<TD><IMG SRC="wiskoef/images/3hist3_2.gif" WIDTH=13 HEIGHT=188></TD></TR>
+<TR><TD COLSPAN="3"><IMG SRC="wiskoef/images/3hist1_3.gif" WIDTH=293 HEIGHT=4></TD></TR>
+</TABLE>
+
+		</td>
+      <td width="200" ALIGN="center"><font color="#ff0000"><h4>Histogram:</h4></font>
+	  	<br>
+		<INPUT TYPE="BUTTON" VALUE="Teken histogram" onClick="histogram()"><p>
+		<INPUT TYPE="BUTTON" VALUE="Wis histogram" onClick="wishistogram()">
+	  </td>
+
+    </tr>
+</table>
+
+</FORM>
+<p><br>
+
+
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="cabrijava"><FONT SIZE="3" COLOR="#000000"
+>Online applets:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+Het inladen van de bestanden nodig voor deze toepassingen (148 kB) kan de eerste keer wel even duren. Bovendien werken deze toepassingen enkel onder moderne browsers (Internet Explorer 5 en hoger). Mochten deze applets niet werken op jouw PC (bv onder Windows XP), installeer dan de Java Virtual Machine die je kan downloaden bij <a href="http://java.sun.com/getjava/index.html" target="_blank">http://java.sun.com/</a>. <p>
+<CENTER><TABLE BORDER="0" CELLPADDING="4" CELLSPACING="1" WIDTH="90%">
+<TR><TD><A HREF="wiskoef/3homothetie_eig.htm" class="keuze">Homothetie: eigenschappen</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/3pythagoras.htm" class="keuze">Stelling van Pythagoras</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/3gonio_def.htm" class="keuze">Definitie van goniometrische getallen</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/3vectoren_som.htm" class="keuze">Vectoren: som van vectoren</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/3vectoren_verschil.htm" class="keuze">Vectoren: verschil van vectoren</A> (CabriJava)</TD></TR>
+<TR><TD><A HREF="wiskoef/3vectoren_coord.htm" class="keuze">Coördinaat van een vector</A> (CabriJava)</TD></TR>
+<TR height="10"><TD></TD></TR>
+<TR><TD><A HREF="wiskoef/2derdemacht_tweeterm.htm" class="keuze">Merkwaardige producten: derde macht van een tweeterm</A> (Java)</TD></TR>
+<TR><TD><A HREF="wiskoef/3vgl_mx+q.htm" class="keuze">Rechten met vergelijking y = mx + q</A> (Java)</TD></TR>
+<TR><TD><A HREF="wiskoef/3onderl_ligging_2rechten.htm" class="keuze">Onderlinge ligging van twee rechten</A> (Java)</TD></TR>
+</TABLE></CENTER><BR>
+Op onze <a href="wisk_oef.htm#cabri_oef">"oefeningen en werkbladen"-pagina</a> kan je de Cabri-bestanden ook apart downloaden.
+
+<p><br>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><A class="titel" NAME="oef"><FONT SIZE="3" COLOR="#000000"
+>Online oefeningen:</FONT></A></TD>
+</TR>
+</TABLE>
+<BR>
+<CENTER><TABLE BORDER="0" CELLPADDING="4" CELLSPACING="1" WIDTH="90%">
+<TR><TD><A class="keuze" HREF="wiskoef/3decbreuk.htm">Decimale vormen omzetten naar breuken</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3rat_of_irrat.htm">Rationaal of irrationaal</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3soortgetal.htm">Soorten getallen (natuurlijk / geheel / rationaal / reëel)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3intervallen.htm">Intervallen in R</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3bew_intervallen.htm">Bewerkingen met intervallen in R (doorsnede/unie/verschil)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3machten.htm">Rekenen met machten (2) - moeilijk</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3bew_orde.htm">Bewerkingen en orde</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3wort.htm">Rekenen met vierkantswortels</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2mp.htm">Merkwaardige producten - 1</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3mp.htm">Merkwaardige producten - 2</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2mp_toep.htm">Merkwaardige producten - toepassing: hoofdrekenen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3tweeterm_aanvullen.htm">Tweeterm aanvullen tot een volkomen kwadraat</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2oif.htm">Ontbinding in factoren - 1</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3oif.htm">Ontbinding in factoren - 2</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3vgl_bespr.htm">Vergelijkingen bespreken</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3vraagst.htm">Vraagstukken oplossen met vergelijkingen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3ongelijkh.htm">Ongelijkheden oplossen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3stels_ongl.htm">Stelsels van ongelijkheden</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3ongl_bespr.htm">Ongelijkheden bespreken</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/2transf.htm">Transformaties van het vlak (evenwijdige projectie / homothetie)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3homoth.htm">Homothetieën (vraagstukken)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3thales.htm">Stelling van Thales</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3geldrh.htm">Gelijkvormige driehoeken</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3pytha.htm">Stelling van Pythagoras</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3gonio.htm">Goniometrie: oplossen van rechthoekige driehoeken</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3funct.htm">Herkennen van functies</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3dombld.htm">Domein en beeld van een functie bepalen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3fw_graf.htm">Functiewaarde op grafiek</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3functiewaarde.htm">Functiewaarde</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3grafiek.htm">Voorschrift bij een grafiek bepalen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3rechte.htm">Rechte met gegeven vergelijking herkennen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3rechte2.htm">Vergelijking van een rechte met gegeven grafiek herkennen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3vglrechte_oef.htm">Rechte met gegeven vergelijking tekenen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3puntoprechte.htm">Punt op rechte (of niet)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3puntenoprechte.htm">3 punten door één rechte</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3snijpuntassen.htm">Snijpunten van rechten met de assen bepalen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3vglrechte.htm">Vergelijking van een rechte bepalen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3coeffbep.htm">Coëfficiënten in de vergelijking van een rechte bepalen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3evenwrechte.htm">Evenwijdige rechten</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/5tekenv.htm">Tekenverloop van eerstegraadsfuncties </A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3anamtk_vrgst.htm">Vraagstukken analytische meetkunde</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3geheimschrift.htm">Geheimschrift (analytische meetkunde)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3stelsels.htm">Stelsels van 2 eerstegraadsvergelijkingen oplossen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3vectoren.htm">Bewerkingen met vectoren</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3vectoren_coord_rekenen.htm">Rekenen met (coördinaten van) vectoren</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3parametervgl.htm">Parametervergelijkingen van een rechte</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3freqtabel.htm">Frequentietabellen</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3klassentabel.htm">Gegroepeerde frequentietabellen (met klassen)</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3gemiddelde.htm">Rekenkundig gemiddelde</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3mediaan.htm">Mediaan</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3modus.htm">Modus</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3centrum_spreiding.htm">Centrummaten en spreiding</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/3st_afw.htm">Standaardafwijking</A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/vwoj1r.htm">Vlaamse Wiskunde Olympiade Junior 2002 - 1ste ronde </A></TD></TR>
+<TR><TD><A class="keuze" HREF="wiskoef/vwoj2003_1r.htm">Vlaamse Wiskunde Olympiade Junior 2003 - 1ste ronde </A></TD></TR>
+<TR><TD><br><A class="keuze" HREF="stat.htm">Extra oefeningen statistiek</A></TD></TR>
+
+</TABLE></CENTER><BR>
+
+
+<p>
+
+<P>
+<BR>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="wisk1.htm">
+<img src="images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="wisk3.htm">
+<img src="images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="wisk4.htm">
+<img src="images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="wisk5.htm">
+<img src="images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="wiskunde.htm">
+<img src="images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

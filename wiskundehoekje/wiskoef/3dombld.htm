@@ -1,0 +1,164 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<script src="3dombld.js"></script>
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Domein en beeld van een functie bepalen</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+KLik op de knop "Nieuwe grafiek" en wacht tot de functie op je scherm verschijnt. Kies dan uit de eerste keuzelijst het domein (dom f) en uit de tweede keuzelijst het beeld (bld f) van de functie. Kijk je antwoord goed na en klik dan op "Controle" om je gevonden waarden voor domein en beeld te controleren.
+Goede antwoorden worden beloond met een lachend groen gezichtje (smiley), foutieve antwoorden geven een nors rood gezichtje als resultaat.<p>
+<table>
+    <tr>
+      <td><img src="images/3dombld00.png" name="functie" border=0 width=281 height=281></td>
+    <td>
+
+<FORM NAME="grafiek">
+<center><input type="button" value="Nieuwe grafiek" onClick="veranderafbeelding()"><p>
+dom f =  
+<SELECT CLASS="formulier" NAME="domf">
+<OPTION VALUE="opnieuw" SELECTED>Domein
+<OPTION VALUE="R">]-oo,+oo[
+<OPTION VALUE="]-oo,-4[">]-oo,-4[
+<OPTION VALUE="]-oo,-4]">]-oo,-4]
+<OPTION VALUE="]-oo,-2[">]-oo,-2[
+<OPTION VALUE="]-oo,-2]">]-oo,-2]
+<OPTION VALUE="]-oo,-1[">]-oo,-1[
+<OPTION VALUE="]-oo,-1]">]-oo,-1]
+<OPTION VALUE="]-oo,0[">]-oo,0[
+<OPTION VALUE="]-oo,0]">]-oo,0]
+<OPTION VALUE="]-oo,1[">]-oo,1[
+<OPTION VALUE="]-oo,1]">]-oo,1]
+<OPTION VALUE="]-oo,2[">]-oo,2[
+<OPTION VALUE="]-oo,2]">]-oo,2]
+<OPTION VALUE="]-oo,4[">]-oo,4[
+<OPTION VALUE="]-oo,4]">]-oo,4]
+<OPTION VALUE="]-4,+oo[">]-4,+oo[
+<OPTION VALUE="[-4,+oo[">[-4,+oo[
+<OPTION VALUE="]-2,+oo[">]-2,+oo[
+<OPTION VALUE="[-2,+oo[">[-2,+oo[
+<OPTION VALUE="]-1,+oo[">]-1,+oo[
+<OPTION VALUE="[-1,+oo[">[-1,+oo[
+<OPTION VALUE="]0,+oo[">]0,+oo[
+<OPTION VALUE="[0,+oo[">[0,+oo[
+<OPTION VALUE="]1,+oo[">]1,+oo[
+<OPTION VALUE="[1,+oo[">[1,+oo[
+<OPTION VALUE="]2,+oo[">]2,+oo[
+<OPTION VALUE="[2,+oo[">[2,+oo[
+<OPTION VALUE="]4,+oo[">]4,+oo[
+<OPTION VALUE="[4,+oo[">[4,+oo[
+</SELECT> 
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 align="middle" name="opldom">
+<p>
+bld f = 
+<SELECT CLASS="formulier" NAME="bldf">
+<OPTION VALUE="opnieuw" SELECTED>Beeld
+<OPTION VALUE="R">]-oo,+oo[
+  <OPTION VALUE="]-oo,-4[">]-oo,-4[
+<OPTION VALUE="]-oo,-4]">]-oo,-4]
+<OPTION VALUE="]-oo,-2[">]-oo,-2[
+<OPTION VALUE="]-oo,-2]">]-oo,-2]
+<OPTION VALUE="]-oo,-1[">]-oo,-1[
+<OPTION VALUE="]-oo,-1]">]-oo,-1]
+<OPTION VALUE="]-oo,0[">]-oo,0[
+<OPTION VALUE="]-oo,0]">]-oo,0]
+<OPTION VALUE="]-oo,1[">]-oo,1[
+<OPTION VALUE="]-oo,1]">]-oo,1]
+<OPTION VALUE="]-oo,2[">]-oo,2[
+<OPTION VALUE="]-oo,2]">]-oo,2]
+<OPTION VALUE="]-oo,4[">]-oo,4[
+<OPTION VALUE="]-oo,4]">]-oo,4]
+<OPTION VALUE="]-4,+oo[">]-4,+oo[
+<OPTION VALUE="[-4,+oo[">[-4,+oo[
+<OPTION VALUE="]-2,+oo[">]-2,+oo[
+<OPTION VALUE="[-2,+oo[">[-2,+oo[
+<OPTION VALUE="]-1,+oo[">]-1,+oo[
+<OPTION VALUE="[-1,+oo[">[-1,+oo[
+<OPTION VALUE="]0,+oo[">]0,+oo[
+<OPTION VALUE="[0,+oo[">[0,+oo[
+<OPTION VALUE="]1,+oo[">]1,+oo[
+<OPTION VALUE="[1,+oo[">[1,+oo[
+<OPTION VALUE="]2,+oo[">]2,+oo[
+<OPTION VALUE="[2,+oo[">[2,+oo[
+<OPTION VALUE="]4,+oo[">]4,+oo[
+<OPTION VALUE="[4,+oo[">[4,+oo[
+</SELECT>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 align="middle" name="oplbld">
+<p>
+<input type="button" value="Controle" onClick="controle()">
+<p>
+
+<p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+</center>
+</FORM>
+	  </td>
+	</tr>
+</table>
+<p>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

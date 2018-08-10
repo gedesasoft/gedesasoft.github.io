@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="utf-8"?>
+<toepassingen>
+<id>SMDM3.00</id>
+<type>SRO</type>
+<menu>Standaardbestand</menu>
+<aantal>50</aantal>
+
+<toepassing1>
+<onderwerp>Hoogte en basis van een gelijkbenige driehoek.</onderwerp>
+<type>rechthoekig</type>
+<graad>6</graad>
+<id>196302993</id>
+<opgave>Bereken de hoogte en de basis van een gelijkbenige driehoek waarvan de benen $EI{AB=24} cm lang zijn en de tophoek $EI{BAC=80°} is.</opgave>
+<oplossing>
+<l1/><c>BAM=BAC/@2</c><le/>
+<l2/><c>AD=cosinus90(AB,BAM)</c><le/>
+<l3/><c>BM=sinus90(AB,BAM)</c><le/>
+<l4/><c>BC=@2*BM</c><le/>
+</oplossing>
+<antwoord>De hoogte is $EI{AD} cm lang en de basis meet $EI{BC} cm.</antwoord>
+<figuur><oplossing>GELBENDR</oplossing></figuur>
+</toepassing1>
+
+<toepassing2>
+<onderwerp>Hoogte en hoeken van een gelijkbenige driehoek.</onderwerp>
+<type>rechthoekig</type>
+<graad>6</graad>
+<id>-1860220371</id>
+<opgave>Bereken de hoogte en de hoeken van een gelijkbenige driehoek $~DABC met als basis |BC|$°=$°$EI{BC=3,,,,,9} en zijde |AB|$°=$°$EI{AB=4,,,,,41}.</opgave>
+<oplossing>
+<l1/><t>|AM| is de hoogte van $~DABC en |BM| = </t><c>CM=BC/@2</c><vc>BM=CM</vc><br/>
+<c>AM=pythagorasRZ(AB,BM)</c><le/>
+<l2/><c>B=cosinus90(BM,AB)</c><t> (= $aC)</t><le/>
+<l3/><c>A=tophoek(B)</c><le/>
+</oplossing>
+<antwoord>De hoogte is $EI{AM}, de basishoeken meten $EI{B} en de tophoek $EI{A}.</antwoord>
+<figuur><oplossing>GELBENDR</oplossing></figuur>
+</toepassing2>
+
+<toepassing3>
+<onderwerp>Zwaartelijn van een driehoek.</onderwerp>
+<type>willekeurig</type>
+<graad>6</graad>
+<id>-1312061143</id>
+<opgave>Bepaal de lengte van de zwaartelijn |AE| (E $e BC) van een driehoek $~DABC, als $aA = $EI{A=50°}, |AB| = $EI{AB=10} en |AC| = $EI{AC=11}.</opgave>
+<oplossing>
+<l1/><c>BC=cosinusregel(AB,AC,A)</c><t> ${=>} </t><c>BE=BC/@2</c><le/>
+<l2/><c>B=cosinusregel(AC,AB,BC)</c><le/>
+<l3/><c>AE=cosinusregel(AB,BE,B)</c><le/>
+</oplossing>
+<antwoord>De zwaartelijn |AE| is $EI{AE}.</antwoord>
+<figuur><oplossing>OPLOS3</oplossing></figuur>
+</toepassing3>
+
+<toepassing4>
+<onderwerp>Zwaartelijnen van een driehoek.</onderwerp>
+<type>willekeurig</type>
+<graad>6</graad>
+<id>-1222670053</id>
+<opgave>Bepaal de lengte van de zwaartelijnen in een driehoek ABC als $één van de zijden $EI{AB=12} cm meet en de aanliggende hoeken van deze zijde
+$EI{A=42°,,,0°,65°} en $EI{B=76°,,,0°,115°} meten.</opgave>
+<oplossing>
+<l1/><c>C=hoekensom(A,B)</c><br/>
+<c>BC=sinusregel(A,AB,C)</c><br/>
+<c>AC=sinusregel(B,AB,C)</c><le/>
+<l2/><c>AO=AC/@2</c><br/>
+<c>BO=cosinusregel(AB,AO,A)</c><le/>
+<l3/><c>BM=AB/@2</c><br/>
+<c>CM=cosinusregel(BC,BM,B)</c><le/>
+<l4/><c>CN=BC/@2</c><br/>
+<c>AN=cosinusregel(AC,CN,C)</c><le/>
+</oplossing>
+<antwoord>De zwaartelijnen meten $EI{BO}; $EI{CM,1} en $EI{AN,1} cm.</antwoord>
+<figuur><oplossing>OPLOS4</oplossing></figuur>
+</toepassing4>
+
+<toepassing5>
+<onderwerp>Bissectrice van een driehoek.</onderwerp>
+<type>willekeurig</type>
+<graad>6</graad>
+<id>-1861203414</id>
+<opgave>Bepaal de lengte van de bissectrice |AE| (E $e BC) van een driehoek $~DABC, als |AB| = $EI{AB=6,,,,,25} , |BC| = $EI{BC=7,,,,,25} en |AC| = $EI{AC=10,,,,,25}.</opgave>
+<oplossing>
+<l1/><c>A=cosinusregel(BC,AB,AC)</c><br/>
+<t>${=>} </t><c>BAE=A/@2</c><le/>
+<l2/><c>B=cosinusregel(AC,AB,BC)</c><le/>
+<l3/><c>AEB=hoekensom(BAE,B)</c><le/>
+<l4/><c>AE=sinusregel(B,AB,AEB)</c><le/>
+</oplossing>
+<antwoord>De bissectrice |AE| is $EI{AE}.</antwoord>
+<figuur><oplossing>OPLOS5</oplossing></figuur>
+</toepassing5>
+
+<toepassing6>
+<onderwerp>Zijden van een rechthoekige driehoek.</onderwerp>
+<type>rechthoekig</type>
+<graad>6</graad>
+<id>151865889</id>
+<opgave>Bereken de zijden van een rechthoekige driehoek, waarvan een hoek $EI{BAC=50°,0°,90°} meet en de bissectrice van die hoek $EI{AD=30} cm lang is.</opgave>
+<oplossing>
+<l1/><c>CAD=BAC/@2</c><le/>
+<l2/><c>AC=cosinus90(AD,CAD)</c><le/>
+<l3/><c>AB=cosinus90(BAC,AC)</c><le/>
+<l4/><c>BC=pythagorasRZ(AB,AC)</c><le/>
+</oplossing>
+<antwoord>De zijden meten $EI{AC,1}, $EI{AB,1} en $EI{BC,1} cm.</antwoord>
+<figuur><oplossing>OPLOS6</oplossing></figuur>
+</toepassing6>
+
+<toepassing7>
+<onderwerp>Zijden van een rechthoekige driehoek. (2)</onderwerp>
+<type>rechthoekig</type>
+<graad>6</graad>
+<id>-1329034974</id>
+<opgave>De schuine zijde van een rechthoekige driehoek wordt door haar hoogtelijn verdeeld in stukken die gelijk zijn aan $EI{AD=10} cm en $EI{BD=15} cm. Bereken de zijden van die driehoek.</opgave>
+<oplossing>
+<l1/><c>AB=AD+BD</c><le/>
+<l2/><c>CD=middelevenredige(AD,BD)</c><le/>
+<l3/><c>AC=pythagorasSZ(AD,CD)</c><le/>
+<l4/><c>BC=pythagorasSZ(BD,CD)</c><le/>
+</oplossing>
+<antwoord>De schuine zijde is $EI{AB} cm lang, en de rechthoekszijden meten $EI{AC,1} cm en $EI{BC,1} cm.</antwoord>
+<figuur><opgave>OPGAV7</opgave></figuur>
+</toepassing7>
+
+<toepassing8>
+<onderwerp>Oppervlakte van een rechthoekige driehoek.</onderwerp>
+<type>rechthoekig</type>
+<graad>3</graad>
+<id>162747554</id>
+<opgave>Bereken de oppervlakte van een driehoek waarvan een rechthoekszijde $EI{BC=3,,,,,9} cm en de schuine zijde $EI{AB=7,,,,,41} cm meet.</opgave>
+<oplossing>
+<l1/><c>AC=pythagorasRZ(AB,BC)</c><le/>
+<l2/><c>#opp. $~DABC=oppervlakte(BC,AC)</c><le/>
+</oplossing>
+<antwoord>De oppervlakte bedraagt $EI{#opp. $~DABC} cm$^2.</antwoord>
+<figuur><oplossing>OPLOS8</oplossing></figuur>
+</toepassing8>
+
+<toepassing9>
+<onderwerp>Oppervlakte van een driehoek.</onderwerp>
+<type>willekeurig</type>
+<graad>3</graad>
+<id>95640675</id>
+<opgave>Bereken de oppervlakte van een driehoek waarvan de zijden $EI{b=5} cm en $EI{c=4} cm lang zijn. De ingesloten hoek meet $EI{$a=30°}.</opgave>
+<oplossing>
+<c>#opp. $~DABC=oppervlakte(b,c,$a)</c><br/>
+</oplossing>
+<antwoord>De oppervlakte bedraagt $EI{#opp. $~DABC} cm$^2.</antwoord>
+<figuur><oplossing>OPLOS9</oplossing></figuur>
+</toepassing9>
+
+<toepassing10>
+<onderwerp>Oppervlakte van een driehoek (2).</onderwerp>
+<type>willekeurig</type>
+<graad>6</graad>
+<id>11754548</id>
+<opgave>Bereken de oppervlakte van een driehoek waarvan de zijden $EI{a=7,,,,,25} cm, $EI{b=9,,,,,25} cm en $EI{c=11,,,,,25} cm lang zijn.</opgave>
+<oplossing>
+<als>Heroon</als>
+ <c>#opp. $~D=oppervlakte(a,b,c,*p)</c><br/>
+<anders/>
+ <l1/><c>$a=cosinusregel(a,b,c)</c><le/>
+ <l2/><c>#opp. $~D=oppervlakte(b,c,$a)</c><le/>
+<als_einde/>
+</oplossing>
+<antwoord>De oppervlakte bedraagt $EI{#opp. $~D} cm$^2.</antwoord>
+<figuur><oplossing>OPLOS10</oplossing></figuur>
+</toepassing10>
+
+<toepassing11>
+<onderwerp>Hoek tussen de diagonalen van een rechthoek.</onderwerp>
+<type>rechthoekig</type>
+<graad>6</graad>
+<id>185633067</id>
+<opgave>Bereken de scherpe hoek tussen de diagonalen van een rechthoek met lengte $EI{AB=6,,,,,41} en breedte $EI{BC=4,,,,,9}.</opgave>
+<oplossing>
+<t>M is het snijpunt van de diagonalen.</t>
+<als>BC>AB</als><wissel>AB,BC</wissel><als_einde/>
+<l1/><c>ACB=tangens90(AB,BC)</c><t> (= C$aBD)</t><le/>
+<l2/><c>M=tophoek(ACB)</c><le/>
+</oplossing>
+<antwoord>De scherpe hoek tussen de diagonalen is $EI{M}.</antwoord>
+<figuur><oplossing>OPLOS11</oplossing></figuur>
+</toepassing11>
+
+<toepassing12>
+<onderwerp>Hoogte en hoeken van een gelijkbenig trapezium.</onderwerp>
+<type>rechthoekig</type>
+<graad>6</graad>
+<id>229858149</id>
+<opgave>Van een gelijkbenig trapezium zijn de evenwijdige zijden $EI{AB=40,,,,,25} cm en $EI{CD=78,,,,,25} cm lang. De benen zijn $EI{AD=32,,,,,25} cm. Bereken de hoeken en de hoogte.</opgave>
+<oplossing>
+<als>AB>CD</als><wissel>AB,CD</wissel><als_einde/>
+<l1/><c>DE=CD-AB/@2</c><le/>
+<l2/><c>AE=pythagorasRZ(AD,DE)</c><le/>
+<l3/><c>ADE=cosinus90(DE,AD)</c><br/>
+<c>DAB=supplement(ADE)</c><le/>
+</oplossing>
+<antwoord>De hoogte is $EI{AE} cm en de hoeken zijn $EI{ADE,1} en $EI{DAB,1} groot.</antwoord>
+<figuur><oplossing>OPLOS12</oplossing></figuur>
+</toepassing12>
+
+<toepassing13>
+<onderwerp>Kleine en grote basis van een gelijkbenig trapezium.</onderwerp>
+<type>willekeurig</type>
+<graad>6</graad>
+<id>28530342</id>
+<opgave>De opstaande zijde van een gelijkbenig trapezium meet $EI{AD=12,,,,,9} cm. De diagonalen zijn $EI{AC=19,,,,,41} cm lang en de hoek tussen de grote basis en de opstaande zijde bedraagt $EI{ADC=67°,,,10°,90°}. Bereken de kleine en grote basis.</opgave>
+<oplossing>
+<l1/><c>ACD=sinusregel(AD,ADC,AC)</c><le/>
+<l2/><c>CAD=hoekensom(ADC,ACD)</c><br/>
+<c>CD=cosinusregel(AD,AC,CAD)</c><le/>
+<l3/><c>BCD=ADC</c><en/><c>ACB=BCD-ACD</c><br />
+<c>BC=AD</c><br/><c>AB=cosinusregel(BC,AC,ACB)</c><le/>
+</oplossing>
+<antwoord>De grote basis meet $EI{CD,1} cm, de kleine basis $EI{AB,1} cm.</antwoord>
+<figuur><oplossing>OPLOS13</oplossing></figuur>
+</toepassing13>
+
+<toepassing14>
+<onderwerp>Diagonalen van een rechthoek.</onderwerp>
+<type>rechthoekig</type>
+<graad>1</graad>
+<id>-1315993300</id>
+<opgave>Bereken de lengte van de diagonalen van een rechthoek met lengte $EI{AB=7,,,,,41} en breedte $EI{BC=5,,,,,9}.</opgave>
+<oplossing>
+<c>AC=pythagorasSZ(BC,AB)</c><t> (= |BD|)</t><br/>
+</oplossing>
+<antwoord>De lengte van de diagonalen bedraagt $EI{AC}.</antwoord>
+<figuur><oplossing>OPLOS14</oplossing></figuur>
+</toepassing14>
+
+<toepassing15>
+<onderwerp>Diagonalen van een gelijkbenig trapezium.</onderwerp>
+<type>rechthoekig</type>
+<graad>6</graad>
+<id>246639783</id>
+<opgave>In een gelijkbenig trapezium ABCD zijn de evenwijdige zijden |AB| = $EI{AB=6,,,,,9} cm en |CD| = $EI{CD=9,,,,,41} cm. De basishoek A$aDC is $EI{ADC=70°,,89°59'59",5°,85°}. Bepaal de lengte van de diagonalen.</opgave>
+<oplossing>
+<als>AB>=CD</als><t>De grote basis moet groter zijn dan de kleine basis!</t><stop/><als_einde/>
+<l1/><c>DT=CD-AB/@2</c><br/>
+<c>CT=CD-DT</c><le/>
+<l2/><c>AT=tangens90(DT,ADC)</c><le/>
+<l3/><c>AC=pythagorasSZ(AT,CT)</c><br/>
+<c>BD=AC</c><le/>
+<!--<als>AB>CD</als>
+ <l1/><c>DAT=ADC-_C</c><br/>
+ <c>DT=AB-CD/@2</c><le/>
+<anders/> 
+ <l1/><c>DAT=complement(ADC)</c><br/>
+ <c>DT=CD-AB/@2</c><le/>
+<als_einde/>
+<l2/><c>AD=sinus90(DAT,DT)</c><le/>
+<l3/><c>AC=cosinusregel(CD,AD,ADC)</c><br/>
+<c>BD=AC</c><le/>-->
+</oplossing>
+<antwoord>De lengte van de diagonalen bedraagt $EI{BD} cm.</antwoord>
+<figuur><oplossing>GELTRAPZ</oplossing></figuur>
+</toepassing15>
+
+<toepassing16>
+<onderwerp>Diagonalen van een gelijkbenig trapezium (2).</onderwerp>
+<type>rechthoekig</type>
+<graad>6</graad>
+<id>-1199470307</id>
+<opgave>In een gelijkbenig trapezium meet de grote basis $EI{CD=14,,,,,41} cm, de kleine basis $EI{AB=9,,,,,9} cm en de hoogte $EI{AT=5} cm. Bereken de lengte van de opstaande zijden, de lengte van de diagonalen en de grootte van de hoeken.</opgave>
+<oplossing>
+<als>AB>=CD</als><t>De grote basis moet groter zijn dan de kleine basis!</t><stop/><als_einde/>
+<l1/><c>DT=CD-AB/@2</c><br/>
+<c>AD=pythagorasSZ(AT,DT)</c><le/>
+<l2/><c>CT=CD-DT</c><br/>
+<c>AC=pythagorasSZ(AT,CT)</c><le/>
+<l3/><c>D=tangens90(AT,DT)</c><t> (= $aC)</t><br/>
+<c>A=supplement(D)</c><t> (= $aB)</t><le/>
+</oplossing>
+<antwoord>De opstaande zijden meten $EI{AD} cm, de diagonalen $EI{AC} cm en de hoeken meten $EI{D,1} en $EI{A,1}.</antwoord>
+<figuur><oplossing>GELTRAPZ</oplossing></figuur>
+</toepassing16>
+
+<toepassing17>
+<onderwerp>Diagonalen van een trapezium.</onderwerp>
+<type>willekeurig</type>
+<graad>6</graad>
+<id>112422760</id>
+<opgave>De evenwijdige zijden van een trapezium meten $EI{CD=8,,,2,15,57} cm en $EI{AB=5,,,1,11,25} cm, de opstaande zijden zijn $EI{AD=4,,,3,6.1,25} cm en $EI{BC=3,,,3,6.1,25} cm lang. Bereken de lengte van de diagonalen van dit trapezium.</opgave>
+<oplossing>
+<als>AB>CD</als><wissel>AB,CD</wissel><als_einde/>
+<l1/><c>BE=AD</c><en/><c>CE=CD-AB</c>
+<als>CD=AB</als><onmogelijk/><als_einde/><le/>
+<l2/><c>BCE=cosinusregel(BE,BC,CE)</c><le/>
+<l3/><c>BCD=BCE</c><br/>
+<c>BD=cosinusregel(BC,CD,BCD)</c><le/>
+<l4/><c>ABC=supplement(BCD)</c><br/>
+<c>AC=cosinusregel(AB,BC,ABC)</c><le/>
+</oplossing>
+<antwoord>De diagonalen meten $EI{BD,1} cm en $EI{AC,1} cm.</antwoord>
+<figuur><oplossing>OPLOS17</oplossing></figuur>
+</toepassing17>
+
+<toepassing18>
+<onderwerp>Zijden en hoeken van een parallellogram.</onderwerp>
+<type>willekeurig</type>
+<graad>6</graad>
+<id>15415017</id>
+<opgave>De diagonalen van een parallellogram zijn $EI{AC=2.1} cm en $EI{BD=2.9} cm lang. Ze snijden elkaar onder een hoek van $EI{AMD=73°}. Bepaal de lengte van de zijden en de grootte van de hoeken van het parallellogram.</opgave>
+<oplossing>
+<l1/><c>AM=AC/@2</c><en/><c>DM=BD/@2</c><br/>
+<c>AMB=supplement(AMD)</c><le/>
+<l2/><c>AD=cosinusregel(AM,DM,AMD)</c><le/>
+<l3/><vc>BM=DM</vc><c>AB=cosinusregel(AM,BM,AMB)</c><le/>
+<l4/><c>BAD=cosinusregel(BD,AD,AB)</c><br/>
+<c>ABC=supplement(BAD)</c><le/>
+</oplossing>
+<antwoord>De zijden van het parallellogram meten $EI{AD,1} cm en $EI{AB,1} cm en de hoeken meten $EI{BAD,1} en $EI{ABC,1}.</antwoord>
+<figuur><oplossing>PARALLEL</oplossing></figuur>
+</toepassing18>
+
+<toepassing19>
+<onderwerp>Diagonalen van een parallellogram.</onderwerp>
+<type>willekeurig</type>
+<graad>6</graad>
+<id>263415258</id>
+<opgave>De zijden van een parallellogram meten $EI{AD=5.9} cm en $EI{AB=10.1} cm. Ze vormen een hoek van $EI{BAD=110°}. Bereken de diagonalen van het parallellogram en de hoek tussen de diagonalen.</opgave>
+<oplossing>
+<l1/><c>BD=cosinusregel(AD,AB,BAD)</c><le/>
+<l2/><c>ABC=supplement(BAD)</c><br/>
+<vc>BC=AD</vc><c>AC=cosinusregel(AB,BC,ABC)</c><le/>
+<l3/><c>AM=AC/@2</c><en/><c>BM=BD/@2</c><le/>
+<l4/><c>AMB=cosinusregel(AB,AM,BM)</c><br/>
+<c>AMD=supplement(AMB)</c><le/>
+</oplossing>
+<antwoord>De diagonalen zijn $EI{BD,1} cm en $EI{AC,1} cm lang en de hoek tussen de diagonalen meet $EI{AMB,1} (of $EI{AMD,1}).</antwoord>
+<figuur><oplossing>PARALLEL</oplossing></figuur>
+</toepassing19>
+
+<toepassing20>
+<onderwerp>Zijden en hoeken van een ruit.</onderwerp>
+<type>rechthoekig</type>
+<graad>6</graad>
+<id>145976395</id>
+<opgave>Bereken de zijden en de hoeken van een ruit waarvan de diagonalen respectievelijk $EI{AC=15} cm en $EI{BD=36} cm als lengte hebben.</opgave>
+<oplossing>
+<l1/><c>AM=AC/@2</c><en/><c>BM=BD/@2</c><le/>
+<l2/><c>AB=pythagorasSZ(AM,BM)</c><le/>
+<l3/><c>MAB=tangens90(BM,AM)</c><br/>
+<c>BAD=@2*MAB</c><le/>
+<l4/><c>ABM=tangens90(AM,BM)</c><br/>
+<c>ABC=@2*ABM</c><le/>
+</oplossing>
+<antwoord>De zijden van de ruit meten $EI{AB} cm en de hoeken zijn $EI{BAD,1} en $EI{ABC,1} groot.</antwoord>
+<figuur><oplossing>OPLOS20</oplossing></figuur>
+</toepassing20>
+
+<toepassing21>
+<onderwerp>Middelpuntshoek.</onderwerp>
+<type>rechthoekig</type>
+<graad>11</graad>
+<id>185567520</id>
+<opgave>Bereken de middelpuntshoek in een cirkel met diameter $EI{d=10,,,,,41} cm die op een koorde met lengte $EI{AB=8,,,,,9} cm staat.</opgave>
+<oplossing>
+<l1/><t>|BM| = </t><c>AM=d/@2</c><br/>
+<t>|BN| = </t><c>AN=AB/@2</c><le/>
+<l2/><c>AMN=sinus90(AN,AM)</c><le/>
+<l3/><c>AMB=@2*AMN</c><le/>
+</oplossing>
+<antwoord>De middelpuntshoek is $EI{AMB}.</antwoord>
+<figuur><oplossing>KOORDE</oplossing></figuur>
+</toepassing21>
+
+<toepassing22>
+<onderwerp>Koorde en middelpuntshoek.</onderwerp>
+<type>rechthoekig</type>
+<graad>11</graad>
+<id>129197261</id>
+<opgave>In een cirkel c(M;$EI{AM=3,,,1,31,41} cm) is het apothema van een koorde [AB] $EI{NM=2,,,1,21,9} cm lang. Bereken |AB| en A$aMB.</opgave>
+<oplossing>
+<als>AM=NM</als><t>|NM| = r = |AM| = |BM| ${=>} </t><c>AB=@0</c><en/><c>AMB=@0</c><einde/><als_einde/>
+<l1/><c>AN=pythagorasRZ(AM,NM)</c><br/>
+<c>AB=@2*AN</c><le/>
+<l2/><c>AMN=cosinus90(NM,AM)</c><br/>
+<c>AMB=@2*AMN</c><le/>
+</oplossing>
+<antwoord>|AB| = $EI{AB} cm en A$aMB = $EI{AMB}</antwoord>
+<figuur><oplossing>KOORDE</oplossing></figuur>
+</toepassing22>
+
+<toepassing23>
+<onderwerp>Evenwijdige rechten en rakende cirkel.</onderwerp>
+<type>rechthoekig</type>
+<graad>14</graad>
+<id>179530350</id>
+<opgave>De rechten a en b zijn evenwijdig en liggen op $EI{AN=8,,,1,14} cm van elkaar. De rechte a raakt de cirkel c(M,$EI{AM=7,,,6,31} cm) in A, de rechte b snijdt deze cirkel in B en C. Bereken de zijden en de hoeken van driehoek ABC.</opgave>
+<oplossing>
+<l1/>
+<als>AN=AM</als>
+ <c>CN=AM</c>
+<anders/>
+ <als>AN>AM</als>
+  <c>MN=AN-AM</c>
+ <anders/>
+  <c>MN=AM-AN</c>
+ <als_einde/>
+ <br/><vc>CM=AM</vc><c>CN=pythagorasRZ(CM,MN)</c>
+<als_einde/>
+<br/>
+<c>BC=@2*CN</c><le/>  
+<l2/><c>AC=pythagorasSZ(AN,CN)</c><br/>
+<c>AB=AC</c><le/>
+<l3/><c>ACN=tangens90(AN,CN)</c><br/>
+<c>ABN=ACN</c><le/>
+<l4/><c>CAN=tangens90(CN,AN)</c><br/>
+<c>BAC=@2*CAN</c><le/>
+</oplossing>
+<antwoord>De zijden zijn $EI{BC,1} cm en $EI{AC,1} cm groot en de hoeken meten $EI{ACN,1} en $EI{BAC,1}.</antwoord>
+<figuur><oplossing>OPLOS23</oplossing></figuur>
+</toepassing23>
+
+<toepassing24>
+<onderwerp>Straal van de omgeschreven cirkel.</onderwerp>
+<type>rechthoekig</type>
+<graad>14</graad>
+<id>-1317959388</id>
+<opgave>In een gelijkbenige driehoek ABC met basis |AB| = $EI{AB=4,,,,,9} cm zijn de opstaande zijden $EI{AC=6,,,,,41} cm lang. Bereken de straal van de omgeschreven cirkel.</opgave>
+<oplossing>
+<vc>e=@2*AC</vc><als>AB>=e</als><t>Met de ingevoerde gegevens kan geen driehoek gevormd worden!</t><stop/><als_einde/>
+<l1/><c>AM=AB/@2</c><en/><c>CN=AC/@2</c><le/>
+<l2/><c>ACM=sinus90(AM,AC)</c><le/>
+<l3/><t>r = |CO|</t><br/>
+<c>r=cosinus90(ACM,CN)</c><le/>
+</oplossing>
+<antwoord>De straal van de omgeschreven cirkel is $EI{r} cm.</antwoord>
+<figuur><oplossing>OPLOS24</oplossing></figuur>
+</toepassing24>
+
+<toepassing25>
+<onderwerp>Straal van de omgeschreven cirkel. (2)</onderwerp>
+<type>rechthoekig</type>
+<graad>14</graad>
+<id>-1855043035</id>
+<opgave>Bereken de straal van de omgeschreven cirkel van een gelijkzijdige driehoek ABC met zijde $EI{AB=6} cm.</opgave>
+<oplossing>
+<t>In een gelijkzijdige driehoek vallen de merkwaardige lijnen samen.</t><br/>
+<l1/><c>AM=AB/@2</c><en/><c>BAC=@60°</c><t> ${=>} </t><c>MAO=BAC/@2</c><le/>
+<l2/><t>r = |AO|</t><br/>
+<c>r=cosinus90(MAO,AM)</c><le/>
+</oplossing>
+<antwoord>De straal van de omgeschreven cirkel is $EI{r} cm.</antwoord>
+<figuur><oplossing>OPLOS25</oplossing></figuur>
+</toepassing25>
+
+<toepassing26>
+<onderwerp>Hoek tussen twee raaklijnen.</onderwerp>
+<type>rechthoekig</type>
+<graad>11</graad>
+<id>-1323071197</id>
+<opgave>Bepaal de hoek die twee raaklijnen vormen uit een punt A aan de cirkel c(O;$EI{r=4,,,,,9}) als |AO| = $EI{AO=7,,,,,41}.</opgave>
+<oplossing>
+<als>r>=AO</als><t>Punt A ligt niet buiten de cirkel!</t><stop/><als_einde/>
+<l1/><t>$W$~DABO en $~DACO zijn congruente, rechthoekige driehoeken.$w$r|CO| = </t><c>BO=r</c><le/>
+<l2/><c>BAO=sinus90(BO,AO)</c><le/>
+<l3/><c>BAC=@2*BAO</c><le/>
+</oplossing>
+<antwoord>De hoek tussen de raaklijnen bedraagt $EI{BAC}.</antwoord>
+<figuur><opgave>OPGAV26</opgave></figuur>
+</toepassing26>
+
+<toepassing27>
+<onderwerp>Hoogte van een satelliet.</onderwerp>
+<type>rechthoekig</type>
+<graad>14</graad>
+<id>-1859040730</id>
+<opgave>Een satelliet S bevindt zich boven de Noordpool N. A is $één van de zichtbare plaatsen op aarde met de grootste reikwijdte. Bereken de hoogte |NS| waarop de satelliet zich boven het aardoppervlak bevindt, als A op $EI{AME=28°,0°,90°} NB ligt. De straal van de aarde bedraagt gemiddeld $EV{MN=6370} km.</opgave>
+<oplossing>
+<l1/><c>AM=MN</c><t> = r$_{aarde}</t><br/>
+<c>MAS=@90°</c><en/><c>AMS=complement(AME)</c>
+<als>@0>=AMS</als><onmogelijk/><als_einde/>
+<le/>
+<l2/><c>MS=cosinus90(AMS,AM)</c><le/>
+<l3/><c>NS=MS-MN</c><le/>
+</oplossing>
+<antwoord>De satelliet bevindt zich op een hoogte van $EI{NS} km.</antwoord>
+<figuur><opgave>OPGAV27</opgave></figuur>
+</toepassing27>
+
+<toepassing28>
+<onderwerp>Grootte waarnemingsveld vanop een toren.</onderwerp>
+<type>rechthoekig</type>
+<graad>11</graad>
+<id>-1087796943</id>
+<opgave>Hoe ver kan men kijken (afstand tot de horizon) vanop een toren met een hoogte van $EI{h=302,,,10,350} m? (De aardstraal bedraagt $EV{EM=6378} km.)</opgave>
+<oplossing>
+<t>HT is een raaklijn ${=>} HT $L HM</t><br/>
+<l2/><c>HM=EM</c><t> = r$_{aarde}</t><br/>
+<c>ET=h/@1000</c><t> km</t><br/>
+<c>MT=ET+EM</c><le/>
+<l3/><c>HT=pythagorasRZ(MT,HM)</c><le/>
+</oplossing>
+<antwoord>Men kan $EI{HT} km ver kijken.</antwoord>
+<figuur><oplossing>OPLOS28</oplossing></figuur>
+</toepassing28>
+
+<toepassing29>
+<onderwerp>Afstand van een schip tot een vuurtoren.</onderwerp>
+<type>rechthoekig</type>
+<graad>3</graad>
+<id>-1325627106</id>
+<opgave>Van op een schip, dat in de richting van een vuurtoren vaart, ziet men de top onder een hoek van $EI{A=3°,,89°,1°,10°}. Op welke afstand van de toren bevindt zich het schip als de toren $EI{BC=40,,,30,80} m hoog is?</opgave>
+<oplossing>
+<c>AC=tangens90(A,BC)</c><br/>
+</oplossing>
+<antwoord>Het schip bevindt zich op $EI{AC} m van de vuurtoren.</antwoord>
+<figuur><opgave>OPGAV29</opgave></figuur>
+</toepassing29>
+
+<toepassing30>
+<onderwerp>Afstand van een vliegtuig tot de grond.</onderwerp>
+<type>rechthoekig</type>
+<graad>3</graad>
+<id>-1877259745</id>
+<opgave>Een vliegtuig heeft een daalhoek van $EI{A=23°,,89°,5°,30°}. De horizontale afstand tot het vliegveld is $EI{AC=3,,,1,10} km. Op welke hoogte is het vliegtuig?</opgave>
+<oplossing>
+<t>$aA = $EV{A}</t><br/>
+<c>BC=tangens90(AC,A)</c><br/>
+</oplossing>
+<antwoord>Het vliegtuig bevindt zich op een hoogte van $EI{BC} km.</antwoord>
+<figuur><opgave>OPGAV30</opgave></figuur>
+</toepassing30>
+
+<toepassing31>
+<onderwerp>Hoogte van een bliksemflits.</onderwerp>
+<type>rechthoekig</type>
+<graad>3</graad>
+<id>162810414</id>
+<opgave>Een bliksemflits wordt onder een hoek van $EI{BAC=15°,,90°,10°,25°} waargenomen. Op welke hoogte ontstond de bliksemflits als je de donder na $EI{h=5,1,,2,15} s waarneemt? (De snelheid van het geluid bedraagt 340 m/s.)</opgave>
+<oplossing>
+<l1/><c>AB=@340*h</c><le/>
+<l2/><c>BC=sinus90(AB,BAC)</c><le/>
+</oplossing>
+<antwoord>De bliksem ontstond op een hoogte van $EI{BC} m.</antwoord>
+<figuur><opgave>OPGAV31</opgave></figuur>
+</toepassing31>
+
+<toepassing32>
+<onderwerp>Hoogte van een beeld op een sokkel.</onderwerp>
+<type>rechthoekig</type>
+<graad>3</graad>
+<id>1534772783</id>
+<opgave>Bereken de hoogte van een beeld op een sokkel als je vanuit een punt, dat zich op een afstand van $EI{AC=25,,,15,30} m van de sokkel bevindt, de top van het beeld onder een hoek van $EI{BAC=25°,,89°,22°,40°,41} ziet. Vanuit datzelfde punt zie je de top van de sokkel onder een hoek van $EI{DAC=15°,,89°,10°,18°,9}.</opgave>
+<oplossing>
+<l1/><c>BC=tangens90(AC,BAC)</c><le/>
+<l2/><c>CD=tangens90(AC,DAC)</c><le/>
+<l3/><c>BD=BC-CD</c><le/>
+</oplossing>
+<antwoord>Het beeld is $EI{BD} m hoog.</antwoord>
+<figuur><opgave>OPGAV32</opgave></figuur>
+</toepassing32>
+
+<toepassing33>
+<onderwerp>Hoogte van een toren.</onderwerp>
+<type>rechthoekig</type>
+<graad>3</graad>
+<id>78865551</id>
+<opgave>Hoe hoog is een toren waarvan men de top ziet onder een hoek van $EI{A=52°38',,89°,20°,61°}, als men op een afstand van $EI{AC=50,,,25,100} m van zijn voetpunt staat?</opgave>
+<oplossing>
+<c>BC=tangens90(AC,A)</c><br/>
+</oplossing>
+<antwoord>De toren is $EI{BC} m hoog.</antwoord>
+<figuur><opgave>OPGAV33</opgave></figuur>
+</toepassing33>
+
+<toepassing34>
+<onderwerp>Hoogte van een toren (2).</onderwerp>
+<type>rechthoekig</type>
+<graad>3</graad>
+<id>-617164016</id>
+<opgave>Bereken de hoogte van een toren waarvan het onderste deel, vanaf de top van een andere toren, onder een hoek van $EI{EAD=15°,,89°,5°,30°} wordt gezien en het bovenste deel onder een hoek van $EI{CAE=31°,,89°,0°,30°}. De andere toren is $EI{AB=24,,,10,50} m hoog.</opgave>
+<oplossing>
+<l1/><c>DE=AB</c><br/>
+<c>AE=tangens90(EAD,DE)</c><le/>
+<l2/><c>CE=tangens90(AE,CAE)</c><le/>
+<l3/><c>CD=DE+CE</c><le/>
+</oplossing>
+<antwoord>De toren is $EI{CD} m hoog.</antwoord>
+<figuur><opgave>OPGAV34</opgave></figuur>
+</toepassing34>
+
+<toepassing35>
+<onderwerp>Hoogte van een toren (3).</onderwerp>
+<type>willekeurig</type>
+<graad>3</graad>
+<id>-1616164312</id>
+<opgave>Vanuit twee waarnemingspunten P en Q die $EI{PQ=540,,,100,600} m uit elkaar liggen, ziet men een onbereikbare toren. Hoe hoog is de toren als A$aPQ = $EI{APQ=24°,,,15°,55°}, A$aQP = $EI{AQP=35°,,,15°,55°} en A$aQB = $EI{AQB=32°,,89°,15°,30°}?</opgave>
+<oplossing>
+<l1/><c>PAQ=hoekensom(APQ,AQP)</c><le/>
+<l2/><c>AQ=sinusregel(APQ,PQ,PAQ)</c><le/>
+<l3/><c>AB=tangens90(AQ,AQB)</c><le/>
+</oplossing>
+<antwoord>De toren is $EI{AB} m hoog.</antwoord>
+<figuur><opgave>OPGAV35</opgave></figuur>
+</toepassing35>
+
+<toepassing36>
+<onderwerp>Hoogte van een heuvel.</onderwerp>
+<type>willekeurig</type>
+<graad>3</graad>
+<id>-1690895343</id>
+<opgave>Om de hoogte van een heuvel te bepalen, doet men twee hoekmetingen. Uit punt C ziet men de top A onder een hoek van $EI{ACB=20°,,,5°,25°,41} en vanuit punt D, dat $EI{CD=200,,,100,250} m verder ligt, ziet men A onder een hoek van $EI{ADC=15°,,,5°,15°,9}. Bereken de hoogte van de heuvel.</opgave>
+<oplossing>
+<l1/><c>CAD=ACB-ADC</c><als>@0>=CAD</als><onmogelijk/><als_einde/><le/>
+<l2/><c>AC=sinusregel(ADC,CD,CAD)</c><le/>
+<l3/><c>AB=sinus90(AC,ACB)</c><le/>
+</oplossing>
+<antwoord>De hoogte van de heuvel bedraagt $EI{AB} m.</antwoord>
+<figuur><opgave>OPGAV36</opgave></figuur>
+</toepassing36>
+
+<toepassing37>
+<onderwerp>Afstand van een punt tot een niet-toegankelijk punt.</onderwerp>
+<type>willekeurig</type>
+<graad>3</graad>
+<id>-1250588396</id>
+<opgave>Om de afstand van een toegankelijk punt A tot een niet-toegankelijk punt B te bepalen kun je een derde punt C kiezen dat ook toegankelijk is. Meet dan de afstand tussen A en C en de hoeken A en C van driehoek ABC. Bereken de afstand |AB| als |AC| = $EI{AC=140} m, $aA = $EI{A=34°15',,,5°,90°} en $aC = $EI{C=71°20',,,5°,90°}.</opgave>
+<oplossing>
+<l1/><c>B=hoekensom(A,C)</c><le/>
+<l2/><c>AB=sinusregel(C,AC,B)</c><le/>
+</oplossing>
+<antwoord>De afstand bedraagt $EI{AB} m.</antwoord>
+<figuur><opgave>OPGAV37</opgave></figuur>
+</toepassing37>
+
+<toepassing38>
+<onderwerp>Afstand tussen twee ontoegankelijke punten.</onderwerp>
+<type>willekeurig</type>
+<graad>6</graad>
+<id>-80332270</id>
+<opgave>Om de afstand tussen twee ontoegankelijke punten A en B te bepalen kun je twee toegankelijke punten C en D kiezen en de afstand |CD| en de hoeken A$aCD,B$aCD, B$aDC en A$aDC meten. Bereken de afstand |AB| als |CD| = $EI{CD=1703,1,5000} m, A$aCD = $EI{ACD=64°20',,,5°,105°,41}, B$aCD = $EI{BCD=35°45',,,5°,75°,9}, B$aDC = $EI{BDC=84°15',,,5°,105°,42} en A$aDC = $EI{ADC=21°18',,,5°,75°,10}.</opgave>
+<oplossing>
+<l1/><c>CAD=hoekensom(ACD,ADC)</c><le/>
+<l2/><c>AD=sinusregel(ACD,CD,CAD)</c><le/>
+<l3/><c>CBD=hoekensom(BCD,BDC)</c><le/>
+<l4/><c>BD=sinusregel(BCD,CD,CBD)</c><le/>
+<l5/><c>ADB=BDC-ADC</c><le/>
+<l6/><c>AB=cosinusregel(AD,BD,ADB)</c><le/>
+</oplossing>
+<antwoord>De afstand tussen de twee punten bedraagt $EI{AB} m.</antwoord>
+<figuur><opgave>OPGAV38</opgave></figuur>
+</toepassing38>
+
+<toepassing39>
+<onderwerp>Resultante van twee krachten.</onderwerp>
+<type>willekeurig</type>
+<graad>6</graad>
+<id>-1154024685</id>
+<opgave>Bereken de grootte en de richting van de resultante F van de krachten F$_1 en F$_2. F$_1 heeft een grootte van $EI{AB=400} N en F$_2 heeft een grootte van $EI{AD=600} N. De richting van beide krachten vormen een hoek van $EI{BAD=30°}.</opgave>
+<oplossing>
+<l1/><c>ABC=supplement(BAD)</c><en/><c>BC=AD</c><le/>
+<l2/><c>AC=cosinusregel(AB,BC,ABC)</c><le/>
+<l3/><c>BAC=cosinusregel(BC,AB,AC)</c><le/>
+<l4/><c>CAD=BAD-BAC</c><le/>
+</oplossing>
+<antwoord>De resultante heeft een grootte van $EI{AC} N, vormt een hoek van $EI{BAC} met F$_1 en een hoek van $EI{CAD} met F$_2.</antwoord>
+<figuur><oplossing>OPLOS39</oplossing></figuur>
+</toepassing39>
+
+<toepassing40>
+<onderwerp>Afstand aarde-maan.</onderwerp>
+<type>willekeurig</type>
+<graad>64</graad>
+<id>-1255306987</id>
+<opgave>Rond 1750 bepaalden twee Franse astronomen Lalande en Lacaille de afstand tussen de aarde en de maan. Zij voerden tegelijk metingen uit, Lalande in Berlijn (B) en Lacaille in Kaapstad (K), een plaats die op dezelfde meridiaan ligt als Berlijn. In beide steden werd de hoek gemeten tussen de richting van de maan en de richting van de middellijn van de aarde. Bereken de afstand tussen het middelpunt van de aarde (A) en het middelpunt van de maan (M). (r$_A = $EV{AK=6378} km, Berlijn ligt op $EV{EAB=52°31'13"} NB en Kaapstad op $EV{EAK=33°55'15"} ZB.)</opgave>
+<oplossing>
+<c>AB=AK</c><t> (= r$_A)</t><br/>
+<c>$a=@41°15'44"</c><en/><c>$b=@46°33'37"</c><br/>
+<c>EAB</c><t> (=NB)</t><en/><c>EAK</c><t> (=ZB)</t><br/>
+<br/>
+<l1/><c>BAK=EAB+EAK</c><br/>
+<c>BK=cosinusregel(AB,AK,BAK)</c><le/>
+<l2/><t>$~DABK is een gelijkbenige driehoek met tophoek B$aAK.</t><br/>
+<c>ABK=basishoek(BAK)</c><br/>
+<c>AKB=ABK</c><br/>
+<c>KBM=hoekensom($a,ABK)</c><br/>
+<c>BKM=hoekensom($b,AKB)</c><br/>
+<c>BMK=hoekensom(KBM,BKM)</c><br/>
+<c>ABM=supplement($a)</c><le/>
+<l3/><c>BM=sinusregel(BKM,BK,BMK)</c><br/>
+<c>AM=cosinusregel(AB,BM,ABM)</c><le/>
+</oplossing>
+<antwoord>De afstand van de aarde tot de maan bedraagt $EI{AM} km</antwoord>
+<figuur><opgave>OPGAV40</opgave><oplossing>OPLOS40</oplossing></figuur>
+</toepassing40>
+
+<toepassing41>
+<onderwerp>Afstand van de aarde tot een dichtbijzijnde ster.</onderwerp>
+<type>willekeurig</type>
+<graad>64</graad>
+<id>196985648</id>
+<opgave>Wanneer de aarde om de zon draait, lijken bepaalde nabije sterren te bewegen ten opzicht van de achtergrond van verder afgelegen sterren (='stellaire parallax'). Bepaal de afstand in lichtjaar (1 lj = 9461$*10$^9 km) van de aarde tot de een dichtbijzijnde ster als de hoek $EI{ASB=0°0'1.54"} bedraagt. De afstand tussen de aarde en de zon in de winter bedraagt 147,1$*10$^6 km en in de zomer 151,1$*10$^6 km. Het verschil tussen |AS| en |BS| is verwaarloosbaar klein.</opgave>
+<oplossing>
+<c>AZ=@147100000</c><en/><c>BZ=@151100000</c><br/>
+<t>$WAls het verschil tussen |AS| en |BS| verwaarloosbaar klein is dan is $~DASB nagenoeg gelijkbenig.$w</t><br/>
+<br/>
+<l1/><t>B$aAS = </t><c>ABS=basishoek(ASB)</c><le/>
+<l2/><c>AB=AZ+BZ</c><le/>
+<l3/><c>AS=sinusregel(ABS,AB,ASB)</c><t> km$r${=>} </t><c>a=AS/@9461000000000</c><t> lj</t><le/>
+</oplossing>
+<antwoord>De ster bevindt zich op een afstand van $EI{a} lichtjaar.</antwoord>
+<figuur><opgave>OPGAV41</opgave></figuur>
+</toepassing41>
+
+<toepassing42>
+<onderwerp>Diagonaal van een balk.</onderwerp>
+<type>rechthoekig</type>
+<graad>19</graad>
+<id>28535180</id>
+<opgave>Bereken een diagonaal van een balk met lengte $EI{AB=4} cm, breedte $EI{BC=3} cm en hoogte $EI{CG=2} cm.</opgave>
+<oplossing>
+<l1/><c>AC=pythagorasSZ(AB,BC)</c><le/>
+<l2/><c>AG=pythagorasSZ(CG,AC)</c><le/>
+</oplossing>
+<antwoord>Een diagonaal van de balk is $EI{AG} cm lang.</antwoord>
+<figuur><opgave>OPGAV42</opgave></figuur>
+</toepassing42>
+
+<toepassing43>
+<onderwerp>Hoek tussen diagonalen van een balk.</onderwerp>
+<type>willekeurig</type>
+<graad>22</graad>
+<id>-1230796521</id>
+<opgave>Bepaal de hoek tussen de diagonalen AG en BH van een balk met lengte |AB| = $EI{AB=7,,,,,41} cm, breedte |AD| = $EI{AD=5,,,,,9} cm en hoogte |AE| = $EI{AE=4} cm.</opgave>
+<oplossing>
+<l1/><c>BD=pythagorasSZ(AB,AD)</c><br/>
+<c>DH=AE</c><br/>
+<c>BH=pythagorasSZ(DH,BD)</c><le/>
+<l2/><c>AG=BH</c><br/>
+<t>M is het snijpunt van AG en BH.</t><br/>
+<c>AM=AG/@2</c><en/><c>BM=AM</c><le/>
+<l3/><c>AMB=cosinusregel(AB,AM,BM)</c><br/>
+<c>AMH=supplement(AMB)</c><le/>
+</oplossing>
+<antwoord>De hoek tussen de diagonalen bedraagt $EI{AMB,1} (of $EI{AMH,1}).</antwoord>
+<figuur><opgave>OPGAV43</opgave></figuur>
+</toepassing43>
+
+<toepassing44>
+<onderwerp>Hoek tussen twee snijdende rechten in een balk.</onderwerp>
+<type>rechthoekig</type>
+<graad>19</graad>
+<id>-1222538983</id>
+<opgave>Bepaal de hoek tussen de snijdende rechten AH en BH in een balk met lengte |AB| = $EI{AB=8,,,,,41} cm, breedte |AD| = $EI{AD=6,,,,,9} cm en hoogte |AE| = $EI{AE=4} cm.</opgave>
+<oplossing>
+<l1/><c>DH=AE</c><br/>
+<c>AH=pythagorasSZ(AD,DH)</c><le/>
+<!--<l2/><c>BH=pythagorasSZ(AB,AH)</c><le/>
+<l3/><c>AHB=cosinusregel(AB,AH,BH)</c><le/>-->
+<l2/><t>AB $L vl(A,E,H) ${=>} AB $L AH</t><br/>
+<c>AHB=tangens90(AB,AH)</c><le/>
+</oplossing>
+<antwoord>De hoek tussen de rechten bedraagt $EI{AHB}.</antwoord>
+<figuur><opgave>OPGAV44</opgave></figuur>
+</toepassing44>
+
+<toepassing45>
+<onderwerp>Hoek tussen twee kruisende rechten in een kubus.</onderwerp>
+<type>willekeurig</type>
+<graad>22</graad>
+<id>-1096775385</id>
+<opgave>Een kubus heeft een ribbe met lengte $EI{AB=7,,,,,41} cm. N is het middelpunt van het bovenvlak, M het middelpunt van het ondervlak. O ligt op de ribbe AE en |EO| =$EI{EO=3,,,,,9} cm. Bepaal de hoek tussen de rechten HM en NO.</opgave>
+<oplossing>
+<t>De hoek tussen de kruisende rechten HM en NO is gelijk aan B$aNO (NB // HM).</t><br/>
+<l1/>
+<als>AB=EO</als>
+ <t>O = A ${=>} </t><c>BO=AB</c>
+<anders/>
+ <c>AE=AB</c><en/>
+ <als>EO>AB</als>
+  <c>AO=EO-AE</c>
+ <anders/>
+  <c>AO=AE-EO</c>
+ <als_einde/>
+ <br/><c>BO=pythagorasSZ(AB,AO)</c>
+<als_einde/>
+<le/>
+<l2/><c>EH=AB</c><en/><c>GH=AB</c><br/>
+<c>EG=pythagorasSZ(EH,GH)</c><t> ${=>} </t><c>EN=EG/@2</c><br/>
+<c>NO=pythagorasSZ(EO,EN)</c><le/>
+<l3/><c>FN=EN</c><en/><c>BF=AB</c><br/>
+<c>BN=pythagorasSZ(FN,BF)</c><le/>
+<l4/><c>BNO=cosinusregel(BO,NO,BN)</c><le/>
+</oplossing>
+<antwoord>De hoek tussen HM en NO bedraagt $EI{BNO}.</antwoord>
+<figuur><opgave>OPGAV45</opgave><oplossing>OPLOS45</oplossing></figuur>
+</toepassing45>
+
+<toepassing46>
+<onderwerp>Doorsnede van een vlak met een kubus.</onderwerp>
+<type>willekeurig</type>
+<graad>22</graad>
+<id>190744854</id>
+<opgave>Bepaal de oppervlakte van de doorsnede van een vlak met een kubus (zoals aangegeven op de figuur) als |AE| = $EI{AE=5} cm, |BE| = $EI{BE=6} cm en |CE| = $EI{CE=7} cm.</opgave>
+<oplossing>
+<l1/><c>AB=pythagorasSZ(AE,BE)</c><br/>
+<c>BC=pythagorasSZ(BE,CE)</c><br/>
+<c>AC=pythagorasSZ(AE,CE)</c><le/>
+<l2/>
+<als>Heroon</als>
+  <c>#opp. $~DABC=oppervlakte(AB,BC,AC,*p)</c>
+ <anders/>
+  <c>BAC=cosinusregel(BC,AB,AC)</c><br/>
+  <c>#opp. $~DABC=oppervlakte(AB,AC,BAC)</c>
+ <als_einde/>
+<le/>
+</oplossing>
+<antwoord>De oppervlakte van de doorsnede bedraagt $EI{#opp. $~DABC} cm$^2.</antwoord>
+<figuur><opgave>OPGAV46</opgave></figuur>
+</toepassing46>
+
+<toepassing47>
+<onderwerp>Doorsnede van een vlak met een balk.</onderwerp>
+<type>willekeurig</type>
+<graad>22</graad>
+<id>-1217296100</id>
+<opgave>Bepaal de omtrek en de oppervlakte van de doorsnede van een balk met lengte |AB| = $EI{AB=5,,,,,41} cm, breedte |AD| = $EI{AD=4,,,,,9} cm en hoogte |AE| = $EI{AE=3} cm met het vlak vl(B,E,G).</opgave>
+<oplossing>
+<l1/><c>BE=pythagorasSZ(AB,AE)</c><br/>
+<c>BC=AD</c><en/><c>CG=AE</c><en/><c>BG=pythagorasSZ(BC,CG)</c><br/>
+<c>EF=AB</c><en/><c>FG=AD</c><en/><c>EG=pythagorasSZ(EF,FG)</c><le/>
+<l2/><c>#omtr. $~DBEG=omtrek(BE,BG,EG)</c><le/>
+<l3/>
+<als>Heroon</als>
+ <c>#opp. $~DBEG=oppervlakte(BE,BG,EG,*p)</c>
+<anders/> 
+ <c>EBG=cosinusregel(EG,BE,BG)</c><br/>
+ <c>#opp. $~DBEG=oppervlakte(BE,BG,EBG)</c>
+<als_einde/>
+<le/>
+</oplossing>
+<antwoord>De omtrek is $EI{#omtr. $~DBEG} cm en de oppervlakte is $EI{#opp. $~DBEG} cm$^2.</antwoord>
+<figuur><opgave>OPGAV47</opgave></figuur>
+</toepassing47>
+
+<toepassing48>
+<onderwerp>Hoeken en ribben van een piramide.</onderwerp>
+<type>willekeurig</type>
+<graad>22</graad>
+<id>91342362</id>
+<opgave>De afgebeelde figuur is een voorbeeld van een regelmatige piramide. Het grondvlak ABCD is een vierkant en MT staat loodrecht op het grondvlak. De zijde |AB| is $EI{AB=230} m en de hoogte |MT| bedraagt $EI{MT=146} m. Bereken de lengte van de opstaande ribben, de hoeken van een zijvlak en de hoek A$aTC.</opgave>
+<oplossing>
+<l1/><c>BC=AB</c><en/><c>AC=pythagorasSZ(AB,BC)</c><br/>
+<c>AM=AC/@2</c><en/><c>AT=pythagorasSZ(AM,MT)</c><le/>
+<l2/><c>BT=AT</c><en/><c>ATB=cosinusregel(AB,AT,BT)</c><br/>
+<t>B$aAT = </t><c>ABT=basishoek(ATB)</c><le/>
+<l3/><c>CT=AT</c><en/><c>ATC=cosinusregel(AC,AT,CT)</c><le/>
+</oplossing>
+<antwoord>De ribben zijn $EI{AT} m lang, de tophoek van een zijvlak is $EI{ATB}, de basishoeken $EI{ABT} en A$aTC = $EI{ATC}.</antwoord>
+<figuur><opgave>OPGAV48</opgave></figuur>
+</toepassing48>
+
+<toepassing49>
+<onderwerp>Omtrek van een breedtecirkel.</onderwerp>
+<type>willekeurig</type>
+<graad>22</graad>
+<id>-1227323112</id>
+<opgave>Bepaal de omtrek van een breedtecirkel die door het punt A gaat. Het punt A ligt op $EI{AOE=51°13',0°,89°59'59",0°,89°59'59"} NB. De (gemiddelde) aardstraal bedraagt $EV{r=6378} km.</opgave>
+<oplossing>
+<l1/><c>AMB=tophoek(AOE)</c><le/>
+<l2/><c>AB=cosinusregel(r,r,AMB)</c><le/>
+<l3/><vc>#$~p=pi()</vc><c>#O$_c=#$~p*AB</c><le/>
+</oplossing>
+<antwoord>De omtrek van de breedtecirkel bedraagt $EI{#O$_c} km.</antwoord>
+<figuur><opgave>OPGAV49</opgave></figuur>
+</toepassing49>
+
+<toepassing50>
+<onderwerp>Bindingshoek van een methaangasmolecule.</onderwerp>
+<type>willekeurig</type>
+<graad>16</graad>
+<id>-1614722510</id>
+<opgave>De vier waterstof atomen van een molecule methaangas vormen de hoekpunten van een tetra$ëder (=regelmatig viervlak) en vormen tevens de hoekpunten van een kubus waarbij geen twee hoekpunten op een zelfde ribbe liggen. Het koolstofatoom bevindt zich precies in het midden van de kubus. Bepaal de bindingshoek A$aMC (= de hoek waaronder men de waterstofatomen ziet vanuit het koolstofatoom).</opgave>
+<oplossing>
+<t>$WAangezien de grootte van de kubus geen invloed heeft op de grootte van de hoek A$aMC kan men de ribbe van de kubus gelijkstellen aan 1.$w</t><br/>
+<vc>AB=@1</vc><vc>BC=@1</vc><t>Bijgevolg is |AB| = |BC| = </t><c>CG=@1</c><t>.</t><br/><br/>
+<l1/><c>AC=pythagorasSZ(AB,BC)</c><le/>
+<l2/><c>AG=pythagorasSZ(AC,CG)</c><br/>
+<c>AM=AG/@2</c><en/><c>CM=AM</c><le/>
+<l3/><c>AMC=cosinusregel(AC,AM,CM)</c><le/>
+</oplossing>
+<antwoord>De grootte van de bindingshoek is $EI{AMC}.</antwoord>
+<figuur><opgave>OPGAV50</opgave></figuur>
+</toepassing50>
+
+</toepassingen>
+

@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+Wiskundehoekje: werkruimte
+</TITLE>
+
+<link rel=stylesheet href="tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script language="JavaScript">
+<!-- 
+
+function voegtoe(x) 
+{
+rekenmachine.venster.value += x
+}
+
+function bereken() 
+{
+rekenmachine.venster.value = eval(rekenmachine.venster.value)
+}
+
+function wis() 
+{
+rekenmachine.venster.value = ""
+}
+
+//  -->
+</script>
+
+
+</HEAD>
+<BODY TOPMARGIN=0 LEFTMARGIN=8 TEXT="000000" BACKGROUND="bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Wiskundehoekje: werkruimte</FONT></A></CENTER></TD>
+</TR>
+</TABLE>
+<BR>
+
+
+Op deze pagina vind je een kladblok en een (eenvoudige) rekenmachine zodat je tijdens het maken van oefeningen niet steeds naar pen en papier moet terug grijpen.
+<P>
+<form name="rekenmachine">
+<table>
+    <tr>
+      <td><textarea name="kladblok" cols=45 rows=15></textarea></td>
+      <td align="center">
+	  
+	  <table bgcolor="#30B0BF" cellpadding="2" cellspacing="2">
+    <tr>
+      <td colspan=5><input type="text" name="venster" size=25 maxlength=50><p></td>
+    </tr>
+    <tr align="center">
+      <td><input type="button" value=" 7 " onClick="voegtoe(7)"></td>
+      <td><input type="button" value=" 8 " onClick="voegtoe(8)"></td>
+      <td><input type="button" value=" 9 " onClick="voegtoe(9)"></td>
+      <td><input type="button" value=" ( " onClick="voegtoe('(')"></td>
+      <td><input type="button" value=" ) " onClick="voegtoe(')')"><p></td>
+    </tr>
+    <tr align="center">
+      <td><input type="button" value=" 4 " onClick="voegtoe(4)"></td>
+      <td><input type="button" value=" 5 " onClick="voegtoe(5)"></td>
+      <td><input type="button" value=" 6 " onClick="voegtoe(6)"></td>
+      <td><input type="button" value=" x " onClick="voegtoe('*')"></td>
+      <td><input type="button" value=" : " onClick="voegtoe('/')"><p></td>
+    </tr>
+    <tr align="center">
+      <td><input type="button" value=" 1 " onClick="voegtoe(1)"></td>
+      <td><input type="button" value=" 2 " onClick="voegtoe(2)"></td>
+      <td><input type="button" value=" 3 " onClick="voegtoe(3)"></td>
+      <td><input type="button" value=" + " onClick="voegtoe('+')"></td>
+      <td><input type="button" value=" - " onClick="voegtoe('-')"><p></td>
+    </tr>
+    <tr align="center">
+      <td><input type="button" value=" 0 " onClick="voegtoe(0)"></td>
+      <td><input type="button" value=" . " onClick="voegtoe('.')"></td>
+      <td></td>
+      <td><input type="button" value=" = " onClick="bereken()"></td>
+      <td><input type="button" value="wis" onClick="wis()"><p></td>
+    </tr>
+</table> 
+	  
+	  </td>
+    </tr>
+    <tr>
+      <td align="center"><input type="button" value="Kladblok wissen" onClick="rekenmachine.kladblok.value=''"> <input type="button" value="Rekenmachine -> Kladblok" onClick="rekenmachine.kladblok.value += rekenmachine.venster.value"></td>
+	<td align="center"></td>
+    </tr>
+</table>
+<p>
+Opmerkingen: 
+<li>je kan omschakelen tussen de oefeningen en deze werkruimte via de taakbalk of met de toetsencombinatie "Alt" + "Tab". 
+<li>met de knop "Rekenmachine -> Kladblok" kan je de inhoud van het scherm van de rekenmachine plakken in de kladblok.
+<li>in de rekenmachine kan je een volledige berekening ingeven, die pas uitgerekend wordt op het ogenblik dat je op de knop " = " drukt.
+<p>
+<CENTER><input type="button" value="Sluit dit venster" onClick="self.close()">
+</CENTER>
+</form>
+<br>
+</B>
+</BODY>
+</HTML>

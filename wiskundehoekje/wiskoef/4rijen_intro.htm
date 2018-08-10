@@ -1,0 +1,295 @@
+<HTML>
+<HEAD><BASEFONT SIZE="2" FACE="arial, helvetica">
+<TITLE>
+</TITLE>
+<link rel="stylesheet" href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<SCRIPT LANGUAGE= "JavaScript">
+<!--
+var keuze = ""
+
+function keuze1()
+{
+keuze = document.quiz.keuze_1.options[document.quiz.keuze_1.selectedIndex].value;
+if (keuze == "??") 
+	{
+	document.all.eerste_keuze_MR.style.display='none'	
+	document.all.eerste_keuze_RR.style.display='none'	
+	document.all.eerste_keuze_verder.style.display='none'	
+	}
+if (keuze == "RR") 
+	{
+	document.all.eerste_keuze_MR.style.display='none'	
+	document.all.eerste_keuze_RR.style.display=''	
+	document.all.eerste_keuze_verder.style.display=''	
+	}
+if (keuze == "MR") 
+	{
+	document.all.eerste_keuze_MR.style.display=''	
+	document.all.eerste_keuze_RR.style.display='none'	
+	document.all.eerste_keuze_verder.style.display=''	
+	}
+}
+
+function controleerrijen()
+{
+teller = 0
+if (quiz.txtcrack5.value == "1500") teller++
+else quiz.txtcrack5.value = ""
+if (quiz.txtcrack6.value == "1750") teller++
+else quiz.txtcrack6.value = ""
+if (quiz.txtcrack7.value == "2000") teller++
+else quiz.txtcrack7.value = ""
+if (quiz.txtcrack8.value == "2250") teller++
+else quiz.txtcrack8.value = ""
+if (quiz.txtcrack9.value == "2500") teller++
+else quiz.txtcrack9.value = ""
+if (quiz.txtcrack10.value == "2750") teller++
+else quiz.txtcrack10.value = ""
+if (quiz.txtgenie5.value == "800") teller++
+else quiz.txtgenie5.value = ""
+if (quiz.txtgenie6.value == "1600") teller++
+else quiz.txtgenie6.value = ""
+if (quiz.txtgenie7.value == "3200") teller++
+else quiz.txtgenie7.value = ""
+if (quiz.txtgenie8.value == "6400") teller++
+else quiz.txtgenie8.value = ""
+if (quiz.txtgenie9.value == "12800") teller++
+else quiz.txtgenie9.value = ""
+if (quiz.txtgenie10.value == "25600") teller++
+else quiz.txtgenie10.value = ""
+if (teller == 12) 
+	{
+	document.opl1.src = "../images/goed.gif"
+	document.all.verder2.style.display=''	
+	}
+else document.opl1.src = "../images/fout.gif"
+}
+
+function controleer15()
+{
+if ((quiz.txtcrack15.value == "") || (quiz.txtgenie15.value == "")) alert('Vul beide waarden in voor je laat controleren.')
+else
+	{
+	if ((quiz.txtcrack15.value == "4000") && (quiz.txtgenie15.value == "819200"))
+		{
+		document.opl2.src = "../images/goed.gif"
+		document.all.verder4.style.display=''	
+		}
+	else document.opl2.src = "../images/fout.gif"
+	}
+}
+
+function controleersom7()
+{
+if ((quiz.txtcracksom7.value == "") || (quiz.txtgeniesom7.value == "")) alert('Vul beide waarden in voor je laat controleren.')
+else
+	{
+	if ((quiz.txtcracksom7.value == "8750") && (quiz.txtgeniesom7.value == "6350"))
+		{
+		document.opl3.src = "../images/goed.gif"
+		document.all.verder6.style.display=''	
+		}
+	else document.opl3.src = "../images/fout.gif"
+	}
+}
+
+function controleersom15()
+{
+if ((quiz.txtcracksom15.value == "") || (quiz.txtgeniesom15.value == "")) alert('Vul beide waarden in voor je laat controleren.')
+else
+	{
+	if ((quiz.txtcracksom15.value == "33750") && (quiz.txtgeniesom15.value == "1638350"))
+		{
+		document.opl4.src = "../images/goed.gif"
+		if (keuze == "RR") alert('Een heel verschil, vind je ook niet? Misschien had je je aan het begin toch beter ingeschreven voor "het genie".')
+		if (keuze == "MR") alert('Een heel verschil, vind je ook niet? Je hebt er in het begin goed aan gedaan je in te schrijven voor "het genie".')
+		}
+	else document.opl4.src = "../images/fout.gif"
+	}
+}
+-->
+</script>
+<BODY TOPMARGIN="0" LEFTMARGIN="0" TEXT="000000" BACKGROUND="../bck.gif">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD WIDTH="28" VALIGN="top">
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER="0" WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD><!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Rekenkundige en meetkundige rij<br>Prijzengeld bij een quiz</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+Aan de hand van onderstaande voorbeelden proberen we de begrippen rekenkundige en meetkundige rijen wat te verduidelijken. Je moet wel alles juist invullen voor de uitleg verder gaat...<p>
+Twee concurrerende tv-zenders pakken elk uit met een quiz, waarin heel wat geld te verdienen is. In het programma "de crack" valt er de eerste uitzending al 500 euro te verdienen. De tweede uitzending verdien je nog eens 750 euro, na de derde overwinning komt er 1000 euro bij, na de vierde nog eens 1250 euro. De andere zender geeft de overwinnaar van hun quiz "het genie" na de eerste aflevering een magere 50 euro mee naar huis. Komen die deelnemers terug om nog een tweede keer te winnen, dan verdienen ze in de volgende uitzending 100 euro, de derde aflevering staat er 200 euro en de vierde keer zelfs 400 euro op het spel. Voor beide spellen geldt dat je maximaal 10 afleveringen kan meespelen. 
+<p>
+<form name="quiz">
+Om te beginnen een eenvoudig vraagje: voor welke quiz zou jij je inschrijven (aan welke quiz zou jij het liefst meedoen)? <select name="keuze_1" onChange="keuze1()">
+	<option value="??" selected> ????
+	<option value="RR"> de crack
+	<option value="MR"> het genie
+</select><p>
+<DIV ID=eerste_keuze_RR STYLE="display:none">
+Dus jij zou je inschrijven voor "de crack". Nochtans valt er met "het genie" meer geld te verdienen... als je lang genoeg in het spel blijft tenminste! Laten we eens wat rekenen ...
+</DIV>
+<DIV ID=eerste_keuze_MR STYLE="display:none">
+Dus jij zou je inschrijven voor "het genie". Geen slechte keuze want met deze quiz kan je het meest verdienen... maar dan moet je wel erg goed zijn en lang genoeg in het spel blijven! Laten we eens wat rekenen ...
+</DIV>
+<DIV ID=eerste_keuze_verder STYLE="display:none">
+<p>
+Bereken eens even wat je in beide programma's per uitzending kunt winnen: vul het rijtje verder aan.<p>
+<table>
+    <tr align="center">
+      <td align="left">uitzending</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+    </tr>
+    <tr align="center">
+      <td align="left">de crack</td>
+      <td><input type="text" name="txtcrack1" size=5 maxlength=8 value="500" onFocus="blur()"></td>
+      <td><input type="text" name="txtcrack2" size=5 maxlength=8 value="750" onFocus="blur()"></td>
+      <td><input type="text" name="txtcrack3" size=5 maxlength=8 value="1000" onFocus="blur()"></td>
+      <td><input type="text" name="txtcrack4" size=5 maxlength=8 value="1250" onFocus="blur()"></td>
+      <td><input type="text" name="txtcrack5" size=5 maxlength=8></td>
+      <td><input type="text" name="txtcrack6" size=5 maxlength=8></td>
+      <td><input type="text" name="txtcrack7" size=5 maxlength=8></td>
+      <td><input type="text" name="txtcrack8" size=5 maxlength=8></td>
+      <td><input type="text" name="txtcrack9" size=5 maxlength=8></td>
+      <td><input type="text" name="txtcrack10" size=5 maxlength=8></td>
+    </tr>
+    <tr align="center">
+      <td align="left">het genie</td>
+      <td><input type="text" name="txtgenie1" size=5 maxlength=8 value="50" onFocus="blur()"></td>
+      <td><input type="text" name="txtgenie2" size=5 maxlength=8 value="100" onFocus="blur()"></td>
+      <td><input type="text" name="txtgenie3" size=5 maxlength=8 value="200" onFocus="blur()"></td>
+      <td><input type="text" name="txtgenie4" size=5 maxlength=8 value="400" onFocus="blur()"></td>
+      <td><input type="text" name="txtgenie5" size=5 maxlength=8></td>
+      <td><input type="text" name="txtgenie6" size=5 maxlength=8></td>
+      <td><input type="text" name="txtgenie7" size=5 maxlength=8></td>
+      <td><input type="text" name="txtgenie8" size=5 maxlength=8></td>
+      <td><input type="text" name="txtgenie9" size=5 maxlength=8></td>
+      <td><input type="text" name="txtgenie10" size=5 maxlength=8></td>
+    </tr>
+</table>
+<br>
+<input type="button" value="Controleer" onClick="controleerrijen()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl1">
+</DIV>
+<DIV ID=verder2 STYLE="display:none">
+<p>Merk vooral op dat beide reeksen een regelmaat vertonen: we noemen dit rijen. Maar er zijn ook overduidelijk verschillen te merken. Zo stijgt de waarde van de getallen sneller bij "het genie".<p>
+Als we op zoek gaan naar de regelmaat, dan stellen we bij "de crack" vast dat elk getal in de rij net 250 meer is dan het voorgaande. Je vindt dus de volgende term uit de rij door een bepaald getal bij het voorgaande te tellen. Zo'n rij noemen we een <font color="#ff0000">rekenkundige rij</font> en dat getal noemen we <font color="#ff0000">het verschil (v)</font>. Bij "het genie" vinden we de nieuwe waardes door telkens het het vorige getal te vermenigvuldigen met een bepaalde getal. Zo'n rij noemen we een <font color="#ff0000">meetkundige rij</font> en dat getal het <font color="#ff0000">quotiënt (q)</font>. <input type="button" value="Verder ->" onClick="document.all.verder3.style.display=''">
+</DIV>
+<DIV ID=verder3 STYLE="display:none">
+<p>
+Om een rij te bepalen moet je proberen de regelmaat in de reeks geordende getallen vast te leggen in een voorschrift. Er zijn twee soorten voorschriften: het recursief en het expliciet voorschrift.<p>
+Bij een <font color="#0000ff">recursief voorschrift</font> krijg je een formule om de zoveelste term te berekenen op basis van één of meer voorgaande termen. Om zo de rij te bepalen moet je uiteraard wel de startwaarde kennen. Voor onze quizprogramma's zou je de volgende recursieve voorschriften kunnen gebruiken.<br><table>
+    <tr>
+      <td>de crack</td>
+      <td>u<sub>1</sub> = 500</td><td> en u<sub>n</sub> = u<sub>n-1</sub> + 250</td>
+    </tr>
+    <tr>
+      <td>het genie</td>
+      <td>u<sub>1</sub> = 50</td><td> en u<sub>n</sub> = 2 . u<sub>n-1</sub></td>
+    </tr>
+</table> 
+<br>
+Bij een <font color="#0000ff">expliciet voorschrift</font> krijg je een formule om de zoveelste term te berekenen op basis zijn plaats in de rij. Voor onze quizprogramma's zou je de volgende expliciete voorschriften kunnen gebruiken.<br><table>
+    <tr>
+      <td>de crack</td>
+      <td>u<sub>n</sub> = 500 + 250 . (n - 1)</td>
+	  <td>voorbeeld: u<sub>7</sub> = 500 + 250 . (7 - 1) = 2000</td>
+    </tr>
+    <tr>
+      <td>het genie</td>
+      <td>u<sub>n</sub> = 50 . 2<sup>n-1</sup></td>
+	  <td>voorbeeld: u<sub>7</sub> = 50 . 2<sup>7-1</sup> = 3200</td>
+    </tr>
+</table> 
+<br>
+Stel dat je 15 keer zou mogen deelnemen aan zo'n quiz, hoeveel zou er dan te verdienen zijn in de 15de aflevering van "de crack"? En bij "het genie"?<br>
+In de 15de uitzending van "de crack" kan je <input type="text" name="txtcrack15" size=8 maxlength=12>
+euro verdienen en bij "het genie" staat er in de 15de aflevering al <input type="text" name="txtgenie15" size=8 maxlength=12> euro op het spel. <input type="button" value="Controleer" onClick="controleer15()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl2"><p>
+Opmerking: het is niet altijd eenvoudig de voorschriften van rijen te vinden.
+</DIV>
+<DIV ID=verder4 STYLE="display:none">
+<p>
+<img src="images/4rijen_intro_RR.gif" border=0 width=224 height=175 align="right">Als je de grafiek tekent van een rekenkundige rij bekom je een rij van punten die op een rechte gelegen zijn. Men spreekt bij rekenkundige rijen dan ook van <font color="#ff00ff">lineaire groei</font>. Het expliciet voorschrift van een RR heeft immers dezelfde vorm van een vergelijking van een rechte. Het expliciet voorschrift van een RR kan altijd geschreven worden in de vorm <font color="#ff0000">u<sub>n</sub> = u<sub>1</sub> + (n-1).v</font><p clear="all">
+<img src="images/4rijen_intro_MR.gif" border=0 width=224 height=175 align="right">Als je de grafiek tekent van een meetkundige rij bekom je een rij van punten die op een kromme gelegen zijn. Deze kromme stijgt steeds sneller. Bij meetkundige rijen spreekt men van <font color="#ff00ff">exponentiële groei</font> (in het expliciet voorschrift vind je "n" terug als exponent). Het expliciet voorschrift van een MR kan altijd geschreven worden in de vorm <font color="#ff0000">u<sub>n</sub> = u<sub>1</sub> . q<sup>n-1</sup></font>
+<p>
+<input type="button" value="Verder ->" onClick="document.all.verder5.style.display=''">
+<p clear="all">
+</DIV>
+<DIV ID=verder5 STYLE="display:none">
+Blijft nog de vraag met welk bedrag onze quizkandidaten uiteindelijk naar huis gaan. Hiertoe moet je de som van de eerste zoveel termen uit de rij bepalen. We gaan hier niet de volledige afleiding, maar wel de uiteindelijke formules geven.<p>
+De som (s<sub>n</sub>) van een RR bereken je als volgt: <img src="images/4rijen_intro_somRR.gif" border=0 width=122 height=40 align="absmiddle"><p>
+De som (s<sub>n</sub>) van een MR bereken je als volgt: <img src="images/4rijen_intro_somMR.gif" border=0 width=116 height=51 align="absmiddle"><br>
+(indien q = 1 dan is <font color="#ff0000">s<sub>n</sub> = u<sub>1</sub> . n</font>)<p>
+Ga nu eens op twee manieren na wat onze kandidaten bij "de crack" en "het genie" in het totaal verdiend  hebben na 7 gewonnen afleveringen. Tel het eerst gewoon manueel op aan de hand van de tabel bovenaan en reken het daarna ook eens uit met behulp van deze formules.<br>
+Na 7 overwinningen heb je bij "de crack" al een totaal van <input type="text" name="txtcracksom7" size=8 maxlength=12> euro verdiend en bij "het genie" zit je dan al aan <input type="text" name="txtgeniesom7" size=8 maxlength=12> euro in het totaal. <input type="button" value="Controleer" onClick="controleersom7()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl3">
+</DIV>
+<DIV ID=verder6 STYLE="display:none">
+<p>
+Bereken nu ook eens hoeveel je (in theorie) na 15 afleveringen aan prijzengeld bij elkaar kan schrapen (gebruik de formules).<br>
+Na 15 overwinningen heb je bij "de crack" al een totaal van <input type="text" name="txtcracksom15" size=8 maxlength=12> euro verdiend en bij "het genie" zit je dan al aan <input type="text" name="txtgeniesom15" size=8 maxlength=12> euro in het totaal. <input type="button" value="Controleer" onClick="controleersom15()"> <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl4"><p>
+<p>
+</DIV>
+</form>
+<br>
+<P>
+<TABLE BORDER="0" CELLPADDING="1" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+</div </B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

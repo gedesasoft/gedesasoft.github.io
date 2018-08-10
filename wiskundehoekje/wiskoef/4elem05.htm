@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+
+<script language= "JavaScript">
+<!--
+	if (top.frames.length == 0)
+	top.location = "4elem.htm";
+// -->
+</script>
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<script language="JavaScript" SRC="4elem01.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<p><br>
+
+
+<A NAME="top"></A>
+Kies in het eerste keuzelijstje een grafiek en wacht tot de functie op je scherm verschijnt. Kies dan uit de tweede keuzelijst (antwoorden) het juiste voorschrift.
+Opmerking: in het lijstje wordt de vierkantswortel uit x geschreven als x~2. Een goed antwoord wordt beloond met :-) , een foutief antwoord geeft :-( als resultaat.<p>
+<table>
+    <tr>
+      <td>
+<table width=365 height=365 cellpadding=0 cellspacing=0 BACKGROUND="images/4elem.gif">
+    <tr>
+      <td><img src="images/4elem00.gif" name="functie" border=0 width=365 height=365></td>
+    </tr>
+</table>
+	  </td>
+      <td>
+<FORM NAME="grafiek">
+<SELECT NAME="selecteer" onChange="veranderafbeelding()">
+<OPTION VALUE="m00" SELECTED>Kies een grafiek
+<OPTION VALUE="m64">Grafiek 1
+<OPTION VALUE="m74">Grafiek 2
+<OPTION VALUE="m69">Grafiek 3
+<OPTION VALUE="m75">Grafiek 4
+<OPTION VALUE="m61">Grafiek 5
+<OPTION VALUE="m70">Grafiek 6
+<OPTION VALUE="m73">Grafiek 7
+<OPTION VALUE="m68">Grafiek 8
+<OPTION VALUE="m63">Grafiek 9
+<OPTION VALUE="m71">Grafiek 10
+<OPTION VALUE="m65">Grafiek 11
+<OPTION VALUE="m62">Grafiek 12
+<OPTION VALUE="m67">Grafiek 13
+<OPTION VALUE="m72">Grafiek 14
+<OPTION VALUE="m66">Grafiek 15
+</SELECT><p>
+
+<SELECT CLASS="formulier" NAME="formulenaam" onChange="controleer()">
+<OPTION VALUE="opnieuw" SELECTED>Antwoorden
+<OPTION VALUE="elem61">y = x~2
+<OPTION VALUE="elem62">y = -x~2
+<OPTION VALUE="elem63">y = (x-1)~2
+<OPTION VALUE="elem64">y = (x-2)~2 + 1
+<OPTION VALUE="elem65">y = (x+1)~2 - 2
+<OPTION VALUE="elem66">y = (x+2)~2
+<OPTION VALUE="elem67">y = -x~2 + 1
+<OPTION VALUE="elem68">y = x~2 - 2
+<OPTION VALUE="elem69">y = x~2 + 1
+<OPTION VALUE="elem70">y = -x~2 - 2
+<OPTION VALUE="elem71">y = -(x-3)~2 - 2
+<OPTION VALUE="elem72">y = (x-3)~2
+<OPTION VALUE="elem73">y = -(x+3)~2 - 2
+<OPTION VALUE="elem74">y = (x-3)~2 + 1
+<OPTION VALUE="elem75">y = -(x-3)~2 + 1
+</SELECT>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="controle"><p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+</FORM>
+	  </td>
+    </tr>
+</table>
+
+<P>
+<BR>
+<CENTER>
+<A HREF="4elem00.htm"><IMG SRC="../images/terug.gif" BORDER=0 ALT="Terug"></A></CENTER>
+<br>
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

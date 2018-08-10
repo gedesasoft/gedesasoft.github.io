@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="4parabool_tekenen_oef.js"></script>
+
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+
+
+<A NAME="top"></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Grafiek van f(x) = a(x-<font face="symbol">a</font>)²+<font face="symbol">b</font> tekenen</FONT>
+</A></CENTER></TD>
+
+</TR>
+</TABLE>
+<img src="../images/goed.gif" border=0 width=1 height=1><img src="../images/fout.gif" border=0 width=1 height=1><img src="../images/vraagteken.gif" border=0 width=1 height=1>
+<br>
+<FORM NAME="fv">
+Als je op de knop "Nieuwe oefening" klikt, verschijnt de vergelijking van een tweedegraadsfunctie in de vorm f(x) = a(x-<font face="symbol">a</font>)²+<font face="symbol">b</font>. Het is de bedoeling dat je bijhorende parabool tekent in het assenstelsel, je kan dit door de instellingen onderaan in het applet te wijzigen. Als je denkt dat je de parabool juist geplaatst hebt, kan je de oplossing opvragen door de waarde bij "Toon parabool" op 1 te zetten.<p>
+<p>
+<center>
+<p><input type="button" value="Nieuwe oefening" onClick="nieuwoef()"></p>
+<p><DIV ID="txtopgave"></DIV></p>
+
+<applet name="apprechte"
+        
+        archive="Descartes.jar"
+        MAYSCRIPT
+        width=600 height=450 code="Descartes.class"
+       >
+   <param name="name" value="apprechte">
+   <param name="Version" value="2.45">
+   <param name="Language" value="english">
+   <param name="Buttons" value="about=no config=no init=no clear=no">
+   <param name="Space" value="background=white net=lightGray net10=no axes=gray text=black numbers=yes x-axis='x' y-axis='y'">
+   <param name="C_00" value="id=escala type=numeric value='30' decimals='4*(escala<10)' incr='0.2*escala' inf='0.001' sup='1000000' name=in- en uitzoomen region=north">
+   <param name="C_01" value="id=Ox type=numeric value='0' decimals='0' incr='100' name=O.x region=external">
+   <param name="C_02" value="id=Oy type=numeric value='0' decimals='0' incr='-50' name=O.y region=external visible=no">
+   <param name="C_03" value="id=s type=numeric value='1' decimals='0' incr='2' inf='-1' sup='1' name=dal/berg visible=no">
+   <param name="C_04" value="id=a type=numeric value='1' decimals='1' incr='0.5' inf='0.5' name=smaller/breder visible=no">
+   <param name="C_05" value="id=alfa type=numeric value='0' decimals='1' incr='0.5' name=links/rechts visible=no">
+   <param name="C_06" value="id=beta type=numeric value='0' decimals='1' incr='0.5' name=omhoog/omlaag visible=no">
+   <param name="C_07" value="id=t type=numeric value='0' decimals='0' incr='1' inf='0' sup='1' name=Toon parabool region=north">
+   <param name="A_00" value="id=opl_a expresion='1' constant=yes evaluate=only-once">
+   <param name="A_01" value="id=opl_alfa expresion='0' constant=yes evaluate=only-once">
+   <param name="A_02" value="id=opl_beta expresion='0' constant=yes evaluate=only-once">
+   <param name="G_00" value="type=equation expresion='y=s*a*(x-alfa)*(x-alfa)+beta' visible=no width=2">
+   <param name="G_01" value="type=equation expresion='y=opl_a*(x-opl_alfa)*(x-opl_alfa)+opl_beta' colour=008000 draw-if='t==1' visible=no width=2">
+</applet>
+</center>
+<p>
+</FORM>
+
+<TABLE BORDER="0" CELLPADDING="1" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

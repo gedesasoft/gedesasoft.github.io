@@ -1,0 +1,97 @@
+<HTML>
+<HEAD><BASEFONT SIZE="2" FACE="arial, helvetica">
+<TITLE>
+</TITLE>
+<link rel="stylesheet" href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<script src="4kansexp_muntstuk.js"></script>
+<BODY TOPMARGIN="0" LEFTMARGIN="0" TEXT="000000" BACKGROUND="../bck.gif" onLoad="wishistogram()">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD WIDTH="28" VALIGN="top"><!-- Tabel voor pijltjes-->
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD><!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Kansrekening: experiment met een muntstuk</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+Vul eerst in hoe vaak je het muntstuk wil opgooien. Probeer eerst een laag aantal (bv 20 of 50 keer) en verhoog daarna het aantal keer dat je wenst te gooien (tot bv 50000 keer) ... Als je het aantal worpen ingegeven hebt, klik dan op de knop "Gooien maar". Je krijgt onderaan te zien hoe vaak elke zijde van het muntstuk gegooid werd (zowel in een tabel als in een grafiek). Ga na wat er wijzigt aan de resultaten naarmate je vaker gooit met het muntstuk.<p>
+Opmerking: hoe groter het aantal worpen, hoe langer het uiteraard duurt eer de resultaten op het scherm komen. <p>
+<form name="exp">
+Aantal worpen: <input type="text" name="txtaantal" size=6 maxlength=6>
+<input type="button" value="Gooien maar" onClick="nieuwoef()"> <p>
+
+<table>
+    <tr>
+      <td><img src="images/munt1.gif" border=0 width=60 height=60></td>
+      <td><br><input type="text" name="aantal1" size=8 maxlength=10 onFocus="blur()"></td>
+      <td><br><img src="images/pijl.gif" border=0 width=18 height=11> <input type="text" name="percent1" size=8 maxlength=12 onFocus="blur()"> %</td>
+	  <td><br><img src="images/3stat_n1.gif" name="hist1" border=0 width=0 height=25 hspace="0"></td>
+    </tr>
+    <tr>
+      <td><img src="images/munt2.gif" border=0 width=60 height=60></td>
+      <td><br><input type="text" name="aantal2" size=8 maxlength=10 onFocus="blur()"></td>
+      <td><br><img src="images/pijl.gif" border=0 width=18 height=11> <input type="text" name="percent2" size=8 maxlength=12 onFocus="blur()"> %</td>
+	  <td><br><img src="images/3stat_n2.gif" name="hist2" border=0 width=0 height=25 hspace="0"></td>
+    </tr>
+</table>
+</form>
+<p>
+Wat kan je hieruit besluiten? Klik <a onClick="document.all.besluit.style.display=''">hier</a> voor wat meer uitleg.<p>
+<DIV ID=besluit STYLE="display:none">
+De kans om kop (of munt) te gooien is uiteraard 1 op 2 (of 50 %). Des te hoger je het aantal worpen instelt bij dit experiment, des te dichter zal de relatieve frequentie (het percentage) in de verdeling de echte kans op kop (of munt) benaderen.<p>
+</DIV>
+Op <a href="4kansexp_4muntstukken.htm">deze pagina</a> kan je een kansexperiment uitvoeren met het gooien van 4 muntstukken.<br>
+Op <a href="4kansexp_1dobbelsteen.htm">deze pagina</a> kan je een kansexperiment uitvoeren met het gooien van een dobbelsteen.<br>
+Op <a href="4kansexp_2dobbelstenen.htm">deze pagina</a> kan je een kansexperiment uitvoeren met het gooien van 2 dobbelstenen.
+<br>
+<P>
+<TABLE BORDER="0" CELLPADDING="1" CELLSPACING="2" WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+</div </B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

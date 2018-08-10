@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script language="JavaScript">
+<!-- 
+	if (top.frames.length == 0)
+	top.location = "4doorsnedes.htm";
+
+function toonbesluit() 
+{
+document.all.besluit.style.display = ""
+}
+
+// -->
+</script>
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+
+
+<A NAME="top"></A>
+<img src="../images/goed.gif" border=0 width=1 height=1><img src="../images/fout.gif" border=0 width=1 height=1><img src="../images/vraagteken.gif" border=0 width=1 height=1>
+<br>
+Bepaal de doorsnede van vlak PQR met de kubus. <p> 
+<applet code="CabriJava.class" archive="CabriJava.jar" width=580 height=400>
+  <param name="bordercolor" value="#30B0BF"
+>
+  <param name="border" value="2">
+  <param name="lang" value="nl">
+  <param name="file" value="doorsnede_kubus_vlak_06.fig">
+</applet>
+<script src="https://www.java.com/js/deployJava.js"></script>
+<script>
+   var dir = location.href.substring(0,location.href.lastIndexOf('/')+1);
+   var url = dir + "kubus_vlak_06.jnlp";
+   deployJava.createWebStartLaunchButton(url,'1.6.0');
+</script>
+<p>
+<input type="button" value="Toon de oplossing in woorden" onClick="toonbesluit()"><p>
+<div id="besluit" STYLE="display:none">
+<li>Breng een hulpvlak aan om het snijpunt van QR met het grondvlak te bepalen. Noem dit punt Z.
+<li>Verbind Z met P : PS is de snijlijn met het grondvlak
+<li>Verbind Q met S : QS is de snijlijn met het achtervlak
+<li>Construeer door R een evenwijdige aan QS : RT is de snijlijn met het bovenvlak (de snijlijnen van vlak PQR met boven- en grondvlak moeten evenwijdig zijn)
+<li>Construeer door R een evenwijdige aan QS : RU is de snijlijn met het voorvlak
+<li>Verbind nog P met U en Q met T om de snijlijnen met de zijvlakken te bekomen
+</div>
+<br>
+<CENTER>
+<A HREF="4doorsnedes00.htm"><IMG SRC="../images/terug.gif" BORDER=0 ALT="Terug"></A></CENTER>
+<br>
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

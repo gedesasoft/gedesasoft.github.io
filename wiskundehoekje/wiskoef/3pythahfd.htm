@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+
+function vindoef() 
+{
+var oef = document.kiesoef.selecteer.options[document.kiesoef.selecteer.selectedIndex].value;
+parent.oefening.location.href ="3pytha" + oef + ".htm";
+}
+</script>
+
+</HEAD>
+
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD WIDTH="420"><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Stelling van Pythagoras</FONT></A></TD>
+<TD WIDTH="180">
+<FORM NAME="kiesoef">
+<SELECT NAME="selecteer" onChange="vindoef()">
+<OPTION VALUE="00" SELECTED>Kies een oefening
+<OPTION VALUE="01">Reeks 1
+<OPTION VALUE="02">Reeks 2
+<OPTION VALUE="03">Reeks 3
+<OPTION VALUE="04">Reeks 4
+<OPTION VALUE="05">Reeks 5
+<OPTION VALUE="06">Reeks 6 (lln)
+<OPTION VALUE="07">Reeks 7 (lln)
+<OPTION VALUE="08">Reeks 8 (lln)
+</SELECT>
+</FORM>
+</CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

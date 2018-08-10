@@ -1,0 +1,322 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<script src="3evenwrechte.js"></script>
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Evenwijdige rechten</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<BR>
+
+
+In het gekleurde vlak vind je de vergelijkingen van zes rechten: a, b, c, d, e en f. Daaronder vind je een lijst met (soms nog te vereenvoudigen) voorschriften. Kies telkens in de keuzelijst met welke rechte (uit het gekleurde vlak) deze evenwijdig is. Een goed antwoord wordt beloond met :-) , een foutief antwoord geeft :-( als resultaat. Let op voor de mintekens want die zijn niet altijd even goed zichtbaar!<p>
+
+<table width="100%" bgcolor="#30B0BF">
+    <tr>
+      <td>a <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> y = <img src="images/tweederde.gif" border=0 width=14 height=37 align="middle">x - 1
+</td>
+      <td>b <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> x = 4 <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+      <td>c <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 2x + 3y - 15 = 0 <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+	</tr>
+	<tr>
+      <td>d <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 4y + 7 = 0 <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+      <td>e <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 4y - 6x - 5 = 0 <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+      <td>f <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> y = - <img src="images/drietweede.gif" border=0 width=14 height=37 align="middle">x - 4</td>
+    </tr>
+</table>
+<p>
+<FORM NAME="rechten"> 
+<table>
+  <tr>
+    <td><li>k <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 9x - 6y + 2 = 0  <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+	<td align="right">k //
+	<select name="vr01">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="f"> a
+	<option value="f"> b
+	<option value="f"> c
+	<option value="f"> d
+	<option value="g"> e
+	<option value="f"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl01">
+	</td>
+	<td rowspan="6"><input type="button" value="Controle" onClick="controle()"></td>
+  </tr>
+  <tr>
+    <td><li>l <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 6y - 2 = 3(x + 2y)  <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+	<td align="right">l //
+	<select name="vr02">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="f"> a
+	<option value="g"> b
+	<option value="f"> c
+	<option value="f"> d
+	<option value="f"> e
+	<option value="f"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl02">
+	</td>
+  </tr>
+  <tr>
+    <td><li>m <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> - 2x + 3y + 7 = 0 <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+	<td align="right">m //
+	<select name="vr03">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="g"> a
+	<option value="f"> b
+	<option value="f"> c
+	<option value="f"> d
+	<option value="f"> e
+	<option value="f"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl03">
+	</td>
+  </tr>
+  <tr>
+    <td><li>n <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> y = - <img src="images/tweederde.gif" border=0 width=14 height=37 align="middle">x + 5</td>
+	<td align="right">n //
+	<select name="vr04">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="f"> a
+	<option value="f"> b
+	<option value="g"> c
+	<option value="f"> d
+	<option value="f"> e
+	<option value="f"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl04">
+	</td>
+  </tr>
+  <tr>
+    <td><li>o <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 3(x + y) = 5 + y  <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+	<td align="right">o //
+	<select name="vr05">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="f"> a
+	<option value="f"> b
+	<option value="f"> c
+	<option value="f"> d
+	<option value="f"> e
+	<option value="g"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl05">
+	</td>
+  </tr>
+  <tr>
+    <td><li>p <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 5(y - x) = 2y - 3x  <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+	<td align="right">p //
+	<select name="vr06">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="g"> a
+	<option value="f"> b
+	<option value="f"> c
+	<option value="f"> d
+	<option value="f"> e
+	<option value="f"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl06">
+	</td>
+  </tr>
+  <tr>
+    <td><li>q <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 2y + 3x = 2(3 + 5x) - 7x <img src="images/4elem00.gif" border=0 width=20 height=37 align="middle"></td>
+	<td align="right">q //
+	<select name="vr07">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="f"> a
+	<option value="f"> b
+	<option value="f"> c
+	<option value="g"> d
+	<option value="f"> e
+	<option value="f"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl07">
+	</td>
+	<td rowspan="6"><input type="button" value="Controle" onClick="controle()"></td>
+  </tr>
+  <tr>
+    <td><li>r <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 9y + 6x - 2 = 0  <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+	<td align="right">r //
+	<select name="vr08">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="f"> a
+	<option value="f"> b
+	<option value="g"> c
+	<option value="f"> d
+	<option value="f"> e
+	<option value="f"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl08">
+	</td>
+  </tr>
+  <tr>
+    <td><li>s <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> x = <img src="images/tweederde.gif" border=0 width=14 height=37 align="middle"></td>
+	<td align="right">s //
+	<select name="vr09">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="f"> a
+	<option value="g"> b
+	<option value="f"> c
+	<option value="f"> d
+	<option value="f"> e
+	<option value="f"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl09">
+	</td>
+  </tr>
+  <tr>
+    <td><li>t <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 4y + 6x - 1 = 0  <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+	<td align="right">t //
+	<select name="vr10">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="f"> a
+	<option value="f"> b
+	<option value="f"> c
+	<option value="f"> d
+	<option value="f"> e
+	<option value="g"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl10">
+	</td>
+  </tr>
+  <tr>
+    <td><li>u <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> y = <img src="images/drietweede.gif" border=0 width=14 height=37 align="middle">x + 30</td>
+	<td align="right">u //
+	<select name="vr11">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="f"> a
+	<option value="f"> b
+	<option value="f"> c
+	<option value="f"> d
+	<option value="g"> e
+	<option value="f"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl11">
+	</td>
+  </tr>
+  <tr>
+    <td><li>u <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> y = <img src="images/drietweede.gif" border=0 width=14 height=37 align="middle"></td>
+	<td align="right">u //
+	<select name="vr12">
+	<OPTION VALUE="n" SELECTED>?
+	<option value="f"> a
+	<option value="f"> b
+	<option value="f"> c
+	<option value="g"> d
+	<option value="f"> e
+	<option value="f"> f
+</select>
+	</td>
+    <td>
+ <img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl12">
+	</td>
+  </tr>
+</table> 
+<p> 
+<table width="100%" bgcolor="#30B0BF">
+    <tr>
+      <td>a <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> y = <img src="images/tweederde.gif" border=0 width=14 height=37 align="middle">x - 1
+</td>
+      <td>b <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> x = 4 <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+      <td>c <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 2x + 3y - 15 = 0 <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+	</tr>
+	<tr>
+      <td>d <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 4y + 7 = 0 <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+      <td>e <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> 4y - 6x - 5 = 0 <img src="images/4elem00.gif" border=0 width=3 height=37 align="middle"></td>
+      <td>f <img src="images/heeft_als_vgl.gif" border=0 width=28 height=25 align="middle"> y = - <img src="images/drietweede.gif" border=0 width=14 height=37 align="middle">x - 4</td>
+    </tr>
+</table>
+<p>
+Je hebt <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+
+  
+</FORM>
+<p>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

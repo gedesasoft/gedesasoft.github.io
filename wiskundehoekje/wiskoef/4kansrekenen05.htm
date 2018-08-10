@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+
+<script src="4kansrekenen.js"></script>
+<script language= "JavaScript">
+<!--
+	if (top.frames.length == 0)
+	top.location = "4kansrekenen.htm";
+
+var aantalopgaven = 5
+var antw01 = "1/9"
+var antw02 = "11/54"
+var antw03 = "65/1296"
+var antw04 = "65/324"
+var antw05 = "49/324"
+
+// -->
+</script>
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<p><br>
+
+
+<A NAME="top"></A>
+<form name="telpr">
+Men gooit met twee vervalste dobbelstenen. De dobbelstenen zijn aan één zijde verzwaard zodat je vaker een zes gooit en minder snel een één. In onderstaand tabelletje vind je de kans op het gooien van een 1, 2, 3, ...<p>
+<table border="1" bordercolor="#30B0BF" cellpadding="3" cellspacing="0">
+    <tr align="center">
+      <td>u<sub>i</sub></td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr align="center">
+      <td>P(u<sub>i</sub>)</td>
+      <td>1/9</td>
+      <td>5/36</td>
+      <td>5/36</td>
+      <td>5/36</td>
+      <td>5/36</td>
+      <td>1/3</td>
+    </tr>
+</table>
+<p>
+<table>
+    <tr>
+      <td>a)</td>
+      <td>Wat is de kans dat je twee keer een zes gooit? (ingeven als een breuk)</td>
+      <td width="120"><input type="text" name="vr01" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl01"></td>
+    </tr>
+    <tr>
+      <td>b)</td>
+      <td>Wat is de kans dat de som van het aantal ogen hoger is dan 10? (ingeven als een breuk) </td>
+      <td><input type="text" name="vr02" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl02"></td>
+    </tr>
+    <tr>
+      <td>c)</td>
+      <td>Wat is de kans dat het product van het aantal ogen gelijk is aan 4? (ingeven als een breuk)</td>
+      <td><input type="text" name="vr03" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl03"></td>
+    </tr>
+    <tr>
+      <td>d)</td>
+      <td>Wat is de kans dat je een dubbel gooit (dat beide dobbelstenen op hetzelfde aantal ogen uitkomen)? (ingeven als een breuk)</td>
+      <td><input type="text" name="vr04" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl04"></td>
+    </tr>
+    <tr>
+      <td>e)</td>
+      <td>Wat is de kans om twee oneven cijfers te gooien? (ingeven als breuk)</td>
+      <td><input type="text" name="vr05" size=10 maxlength=12>
+<img src="../images/vraagteken.gif" border=0 width=22 height=22 name="opl05"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><input type=button value="Controle" onClick="controle()"><p><input type=button value="Oplossing?" onClick="document.all.oplossing.style.display=''"></td>
+    </tr>
+</table>
+<p>
+
+</form>
+<DIV ID=oplossing STYLE="display:none">
+<table>
+    <tr>
+      <td>a)</td>
+      <td>Een weggevertje: 1/3 . 1/3 = 1/9</td>
+    </tr>
+    <tr>
+      <td>b)</td>
+      <td>Om meer dan een 10 te gooien moet je een 11 of een 12 gooien. Dat kan met de volgende worpen (6,6) met kans 1/3 . 1/3 = 1/9 ; (5,6) met kans 5/36 . 1/3 = 5/108 en (6,5) ook met kans 5/108. De kans om hoger dan 10 te gooien is dus 1/9 + 5/108 + 5/108 = 22/108 = 11/54<br>
+</td>
+    </tr>
+    <tr>
+      <td>c)</td>
+      <td>Als product 4 gooien kan op de volgende wijzen: (1,4) met kans 1/9 . 5/36 = 5/324 ; (4,1) met dezelfde kans 5/324 en (2,2) met kans 5/36 . 5/36 = 25/1296. De kans om als product 4 te krijgen is dan 5/324 + 5/324 + 25/1296 = 65/1296</td>
+    </tr>
+    <tr>
+      <td>d)</td>
+      <td>De kans op dubbel 1 = 1/9 . 1/9 = 1/81 . De kans op dubbel 2,3,4 of 5 is telkens 5/36 . 5/36 = 25/1296. De kans op dubbel 6 = 1/3 . 1/3 = 1/9. De kans om een dubbel te gooien is dus 1/81 + 4 . 25/1296 + 1/9 = 260/1296 = 65/324 </td>
+    </tr>
+    <tr>
+      <td>e)</td>
+      <td>Bij elke dobbelsteen is de kans om een oneven cijfer te gooien gelijk aan 1/9 + 5/36 + 5/36 = 14/36 = 7/18. De kans dat je op beide dobbelstenen een oneven cijfer werpt is dus 7/18 . 7/18 = 49/324</td>
+    </tr>
+</table>
+
+</DIV>
+<P>
+<BR>
+<CENTER>
+<A HREF="4kansrekenen00.htm"><IMG SRC="../images/terug.gif" BORDER=0 ALT="Terug"></A></CENTER>
+<br>
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

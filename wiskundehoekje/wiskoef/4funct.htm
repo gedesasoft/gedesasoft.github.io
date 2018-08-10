@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<script language="JavaScript" SRC="4funct.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+<TR>
+<TD CLASS="omhoog"  HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><CENTER><A class="titel" NAME="top"><FONT SIZE="5" COLOR="#000000"
+>Parabool met gegeven vergelijking herkennen</FONT></A></CENTER></TD>
+
+</TR>
+</TABLE>
+<img src="../images/goed.gif" border=0 width=1 height=1><img src="../images/fout.gif" border=0 width=1 height=1><br>
+<BR>
+
+
+Als je op de knop "Nieuwe oefening" klikt, dan krijg je de vergelijking van een tweedegraadsfunctie (parabool) en zes verschillende grafieken. Aan jou om te kiezen welke grafiek bij de gegeven vergelijking hoort. Denk goed na, want eens gekozen, kan je het antwoord niet meer wijzigen. Goede antwoorden worden beloond met een lachend groen gezichtje (smiley), foutieve antwoorden geven een nors rood gezichtje als resultaat.
+ 
+<form name="functies">
+<input type="button" value="Nieuwe oefening" onClick="nieuwoef()"><p> De parabool met vgl  
+<input type="text" name="txtvoorschrift" size=20 maxlength=30>
+is getekend in 
+<SELECT NAME="keuze1" onChange="controle()">
+<OPTION VALUE="?" SELECTED>Maak je keuze
+<OPTION VALUE="A">grafiek A
+<OPTION VALUE="B">grafiek B
+<OPTION VALUE="C">grafiek C
+<OPTION VALUE="D">grafiek D
+<OPTION VALUE="E">grafiek E
+<OPTION VALUE="F">grafiek F
+</select>
+<img src="../images/vraagteken.gif" name="opl1" border=0 width=22 height=22>
+<table cellpadding=2 cellspacing=2>
+    <tr>
+      <td><table width=281 height=337 cellpadding=0 cellspacing=0 BACKGROUND="images/4funct0.gif">
+    <tr>
+      <td><img src="images/leeg.gif" border=0 width=1 height=1 name="fig1boven"><br>
+	  <img src="images/leeg.gif" border=0 width=1 height=1 name="fig1links"><img src="images/leeg.gif" border=0 width=112 height=112 name="fig1"></td>
+    </tr>
+</table></td>
+      <td><table width=281 height=337 cellpadding=0 cellspacing=0 BACKGROUND="images/4funct0.gif">
+    <tr>
+      <td><img src="images/leeg.gif" border=0 width=1 height=1 name="fig2boven"><br>
+	  <img src="images/leeg.gif" border=0 width=1 height=1 name="fig2links"><img src="images/leeg.gif" border=0 width=112 height=112 name="fig2"></td>
+    </tr>
+</table></td>
+    </tr>
+    <tr align="center">
+      <td>A</td>
+      <td>B</td>
+    </tr>
+</table>
+<hr color="#30B0BF">
+<table cellpadding=2 cellspacing=2>
+    <tr>
+      <td><table width=281 height=337 cellpadding=0 cellspacing=0 BACKGROUND="images/4funct0.gif">
+    <tr>
+      <td><img src="images/leeg.gif" border=0 width=1 height=1 name="fig3boven"><br>
+	  <img src="images/leeg.gif" border=0 width=1 height=1 name="fig3links"><img src="images/leeg.gif" border=0 width=112 height=112 name="fig3"></td>
+    </tr>
+</table></td>
+      <td><table width=281 height=337 cellpadding=0 cellspacing=0 BACKGROUND="images/4funct0.gif">
+    <tr>
+      <td><img src="images/leeg.gif" border=0 width=1 height=1 name="fig4boven"><br>
+	  <img src="images/leeg.gif" border=0 width=1 height=1 name="fig4links"><img src="images/leeg.gif" border=0 width=112 height=112 name="fig4"></td>
+    </tr>
+</table></td>
+
+    </tr>
+    <tr align="center">
+      <td>C</td>
+      <td>D</td>
+    </tr>
+</table>
+<hr color="#30B0BF">
+<table cellpadding=2 cellspacing=2>
+    <tr>
+      <td><table width=281 height=337 cellpadding=0 cellspacing=0 BACKGROUND="images/4funct0.gif">
+    <tr>
+      <td><img src="images/leeg.gif" border=0 width=1 height=1 name="fig5boven"><br>
+	  <img src="images/leeg.gif" border=0 width=1 height=1 name="fig5links"><img src="images/leeg.gif" border=0 width=112 height=112 name="fig5"></td>
+    </tr>
+</table></td>
+      <td><table width=281 height=337 cellpadding=0 cellspacing=0 BACKGROUND="images/4funct0.gif">
+    <tr>
+      <td><img src="images/leeg.gif" border=0 width=1 height=1 name="fig6boven"><br>
+	  <img src="images/leeg.gif" border=0 width=1 height=1 name="fig6links"><img src="images/leeg.gif" border=0 width=112 height=112 name="fig6"></td>
+    </tr>
+</table></td>
+
+    </tr>
+    <tr align="center">
+      <td>E</td>
+      <td>F</td>
+    </tr>
+</table>
+<hr color="#30B0BF">
+<p>
+Je hebt nu <input type="text" name="aantaljuist" size=5 maxlength=5 onFocus="blur()"> goede antwoorden op
+<input type="text" name="aantalpogingen" size=5 maxlength=5 onFocus="blur()"> pogingen.<br>
+Dat stemt overeen met <input type="text" name="percentage" size=5 maxlength=5 onFocus="blur()"> %.
+
+</form>
+<p>
+<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=2 WIDTH="100%" BGCOLOR="#30B0BF">
+
+<TR>
+<TD><FONT SIZE="3" COLOR="#000000"
+>Terug naar ...</FONT></TD>
+</TR>
+</TABLE>
+<br>
+
+<CENTER><TABLE BORDER="0" CELLPADDING="2" CELLSPACING="2">
+<TR>
+<TD><A HREF="../wisk1.htm">
+<img src="../images/wisk1.gif" border=0 height=70 alt="Wiskundehoekje 1ste graad"></a>
+</TD>
+<TD><A HREF="../wisk3.htm">
+<img src="../images/wisk3.gif" border=0 height=70 alt="Wiskundehoekje 3de jaar"></a>
+</TD>
+<TD><A HREF="../wisk4.htm">
+<img src="../images/wisk4.gif" border=0 height=70 alt="Wiskundehoekje 4de jaar"></a>
+</TD>
+<TD><A HREF="../wisk5.htm">
+<img src="../images/wisk5.gif" border=0 height=70 alt="Wiskundehoekje 3de graad"></a>
+</TD>
+<TD><A HREF="../wiskunde.htm">
+<img src="../images/wiskinh.gif" border=0 height=70 alt="Wiskundehoekje inhoud"></a>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

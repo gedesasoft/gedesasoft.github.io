@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+
+<TITLE>
+</TITLE>
+<link rel=stylesheet href="../tabel.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script language="JavaScript">
+<!-- 
+	if (top.frames.length == 0)
+	top.location = "4doorsnedes.htm";
+
+function toonbesluit() 
+{
+document.all.besluit.style.display = ""
+}
+
+// -->
+</script>
+<script src="pienter.js"></script></HEAD>
+
+<BODY TOPMARGIN=0 LEFTMARGIN=0 TEXT="000000" BACKGROUND="../bck.gif" >
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD WIDTH="28" VALIGN="top">
+
+<!-- Tabel voor pijltjes-->
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+<TD CLASS="omhoog" HEIGHT="420" VALIGN="bottom"><A HREF="#top"><IMG SRC="../pijlen/omhoog.gif" BORDER=0 WIDTH="28" ALT=""></A></TD>
+</TR>
+</TABLE>
+</TD>
+
+<!-- Cel met eigenlijke inhoud van de pagina -->
+<TD VALIGN="top">
+
+
+<A NAME="top"></A>
+<img src="../images/goed.gif" border=0 width=1 height=1><img src="../images/fout.gif" border=0 width=1 height=1><img src="../images/vraagteken.gif" border=0 width=1 height=1>
+<br>
+Bepaal de doorsnede van vlak PQR met het prisma. <p> 
+<applet code="CabriJava.class" archive="CabriJava.jar" width=580 height=400>
+  <param name="bordercolor" value="#30B0BF"
+>
+  <param name="border" value="2">
+  <param name="lang" value="nl">
+  <param name="file" value="doorsnede_prisma_vlak_01.fig">
+</applet>
+<script src="https://www.java.com/js/deployJava.js"></script>
+<script>
+   var dir = location.href.substring(0,location.href.lastIndexOf('/')+1);
+   var url = dir + "prisma_vlak_01.jnlp";
+   deployJava.createWebStartLaunchButton(url,'1.6.0');
+</script>
+<p>
+<input type="button" value="Toon de oplossing in woorden" onClick="toonbesluit()"><p>
+<div id="besluit" STYLE="display:none">
+<li>Verbind P met Q : PQ is de snijlijn met het achtervlak 
+<li>Verleng PQ en DF om te bepalen waar PQ het grondvlak snijdt. Noem dit punt Z
+<li>Verbind Z met R : RS is de snijlijn met het grondvlak
+<li>Verbind Q met S : QS is de snijlijn met het linkerzijvlak
+<li>Teken door P een evenwijdige aan RS : PT is de snijlijn met het bovenvlak (aangezien grond- en bovenvlak evenwijdig zijn moeten de snijlijnen ook evenwijdig lopen)
+<li>Verbind R met T : RT is de snijlijn met het rechterzijvlak 
+</div>
+<br>
+<CENTER>
+<A HREF="4doorsnedes00.htm"><IMG SRC="../images/terug.gif" BORDER=0 ALT="Terug"></A></CENTER>
+<br>
+
+</B>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
