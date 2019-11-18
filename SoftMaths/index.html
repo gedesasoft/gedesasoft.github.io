@@ -3,16 +3,32 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="format-detection" content="telephone=no"/>
-<meta name="apple-mobile-web-app-capable" content="yes"/>
-<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-<meta name="viewport" content = "initial-scale=1,user-scalable=no"/>
-<link rel="apple-touch-icon" sizes="120x120" href="Icon-120.png"/>
-<link rel="apple-touch-icon" sizes="152x152" href="Icon-152.png"/>
-<link rel="apple-touch-icon" sizes="167x167" href="Icon-167.png"/>
-<link rel="apple-touch-icon" sizes="180x180" href="Icon-180.png"/>
+
+<link rel="manifest" href="manifest/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="SoftMaths.Net">
+<meta name="apple-mobile-web-app-title" content="SoftMaths.Net">
+<meta name="theme-color" content="black">
+<meta name="msapplication-navbutton-color" content="black">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="msapplication-starturl" content="https://softmaths.net/index.html">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+<link rel="icon" type="image/png" sizes="120x120" href="manifest/Icon-120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="manifest/Icon-120.png">
+<link rel="icon" type="image/png" sizes="152x152" href="manifest/Icon-152.png">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="manifest/Icon-152.png">
+<link rel="icon" type="image/png" sizes="167x167" href="manifest/Icon-167.png">
+<link rel="apple-touch-icon" type="image/png" sizes="167x167" href="manifest/Icon-167.png">
+<link rel="icon" type="image/png" sizes="180x180" href="manifest/Icon-180.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="manifest/Icon-180.png">
+<link rel="icon" type="image/png" sizes="512x512" href="manifest/Icon-512.png">
+<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="manifest/Icon-512.png">
+
 <style>
 body {font-family:arial,helvetica,sans-serif;font-size:1.5em;}
-.logo {position:absolute;left:5%;cursor:pointer;}
+.logo {position:absolute;left:5%;cursor:pointer;text-align:center;font-size:0.5em;}
 .button {font-size:1em;cursor:pointer;}
 .popup {text-align:center;
         background-color:gray;
@@ -41,34 +57,98 @@ function hidePopup(){
 function showPopup(){
  var html;   
  html='<div id="popup" class="popup"><span onclick="hidePopup()"><b>&otimes;</b></span>';
- html+='Voeg SoftMaths Web toe aan het beginscherm van je iPad/iPhone. ';
+ html+='Voeg SoftMaths&#8226;Net toe aan het beginscherm van je iPad/iPhone. ';
  html+='Zo kun je SoftMaths als een gewone app opstarten, zonder dat de adressenbalk wordt weergegeven.<br/>';
  html+='Hoe? Tik, in Safari(!), op het icoontje met het vierkant met pijl naar boven. ';
  html+='Tik daarna op de optie "Zet op beginscherm" en vervolgens op "Voeg toe".';
  html+='</div>';
  document.body.innerHTML+=html;
 }
-function CheckIOS(){
- var ua = navigator.userAgent,html;
- var ios = ~ua.indexOf('iPhone') || ~ua.indexOf('iPod') || ~ua.indexOf('iPad');
- if(ios){
-  if(("standalone" in window.navigator) && !window.navigator.standalone){
-   setTimeout(function(){showPopup();},1500);
+function showPopup2(){
+ var html;   
+ html='<div id="popup" class="popup"><span onclick="hidePopup()"><b>&otimes;</b></span>';
+ html+='Voeg SoftMaths&#8226;Net toe aan het beginscherm van je Android toestel. ';
+ html+='Zo kun je SoftMaths als een gewone app opstarten, zonder dat de adressenbalk wordt weergegeven.<br/>';
+ html+='Hoe? Tik, in Chrome(!), op <b>&#8942;</b><br/> ';
+ html+='Tik daarna op de optie "Voeg toe aan het startscherm" en vervolgens op "Voeg toe".';
+ html+='</div>';
+ document.body.innerHTML+=html;
+}
+function isStandalone(){
+ if("standalone" in window.navigator){
+  return window.navigator.standalone;
+ }else{
+  if("matchMedia" in window){
+   return window.matchMedia('(display-mode: standalone)').matches;
+  }else{
+   return false;
   }
  }
 }
+function CheckIOS(){
+ var ios = /iPad|iPhone|iPod|MacIntel/.test(navigator.platform) && ("standalone" in window.navigator);
+ if(ios){
+  if(!window.navigator.standalone){
+   setTimeout(function(){showPopup();},1500);
+  }
+  return true;
+ }
+ return false;
+}
+function CheckAndroid(){
+ var a = /Android|Linux/.test(navigator.platform) && /Android/i.test(window.navigator.userAgent);
+ if(a){
+  if(!isStandalone()){
+   setTimeout(function(){showPopup2();},1500);
+  }
+  return true;
+ }
+ return false;
+}
+function CheckMobile(){
+ if(!CheckIOS()){CheckAndroid();}
+}
+function runApp(app){
+ if(isStandalone()){
+  window.location.href=app+'?onclose=index.html';
+  //window.open(app+'?onclose=index.html','_parent');
+ }else{
+  window.open(app,'_blank');
+ }
+}
 </script>
-<title>SoftMaths Web 3.0.0.1</title>
+<title>SoftMaths&#8226;Net 3.0.2</title>
 </head>
-<body onload="CheckIOS()"><img class="logo" src="Icon-120.png" onclick="window.open('http://www.softmaths.be');"><p style="text-align:center;font-size:1.2em;"><b>SoftMaths Web</b> <small><small>v3.0.0.1&alpha;</small></small></p>
+<body onload="CheckMobile()"><div class="logo" onclick="window.open('http://www.softmaths.be');"><img src="manifest/Icon-152.png"/><br/>
+<i>Download de desktopversie,<br/>alleen voor Windows-pc's.</i></div><p style="text-align:center;font-size:1.2em;"><b>SoftMaths&#8226;Net</b> <small><small>v3.0.2&alpha;</small></small></p>
 <hr/>
 <p style="text-align:center;">
-<button type="button" class="button" onclick="window.open('Deelbaarheid in Z.html');">Deelbaarheid in Z</button><br/><br/>
-<button type="button" class="button" onclick="window.open('Vierkantsvergelijkingen.html');">Vierkantsvergelijkingen</button><br/><br/>
-<button type="button" class="button" onclick="window.open('Elementaire%20functies.html');">Elementaire functies</button><br/><br/>
-<button type="button" class="button" onclick="window.open('Oplossen%20van%20driehoeken.html');">Oplossen van driehoeken</button>
+<button type="button" class="button" onclick="runApp('Deelbaarheid%20in%20Z.html');">Deelbaarheid in Z</button><br/><br/>
+<button type="button" class="button" onclick="runApp('Vierkantsvergelijkingen.html');">Vierkantsvergelijkingen</button><br/><br/>
+<button type="button" class="button" onclick="runApp('Elementaire%20functies.html');">Elementaire functies</button><br/><br/>
+<button type="button" class="button" onclick="runApp('Oplossen%20van%20driehoeken.html');">Oplossen van driehoeken</button>
 </p>
 <hr/>
-<p style="text-align:center;font-size:0.67em;">&copy; 1995-2018 Geert De Saegher</p>
+<p><div style="position:relative;text-align:center;font-size:0.67em;">&copy; 1995-2019 Geert De Saegher<div style="position:absolute;right:2em;top:0.33em;text-align:right;font-size:0.67em;"><b>Bezoekers:
+<!-- Default Statcounter code for SoftMaths.Net
+https://softmaths.net -->
+<script type="text/javascript">
+var sc_project=12141037; 
+var sc_invisible=0; 
+var sc_security="7a773759"; 
+var sc_text=5; 
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - StatCounter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/12141037/0/7a773759/0/"
+alt="Web Analytics Made Easy -
+StatCounter"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</b></div></div></p>
 </body>
 </html>

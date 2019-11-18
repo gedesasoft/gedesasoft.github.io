@@ -1,0 +1,38 @@
+{
+  "name": "SoftMaths.Net",
+  "short_name": "SoftMaths.Net",
+  "description": "SoftMaths.Net versie 3.0.2a",
+  "lang": "nl",
+  "start_url": "https://softmaths.net/index.html",
+  "scope": "https://softmaths.net/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "black",
+  "icons": [
+    {
+      "src": "Icon-120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "Icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "Icon-167.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "Icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Vierkantsvergelijkingen",
+  "short_name": "Vierkantsvergelijkingen",
+  "description": "Vierkantsvergelijkingen - SoftMaths.Net versie 3.0.2a:",
+  "lang": "nl",
+  "start_url": "https://softmaths.net/Vierkantsvergelijkingen.html",
+  "scope": "https://softmaths.net/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "black",
+  "icons": [
+    {
+      "src": "V-120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "V-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "V-167.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "V-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

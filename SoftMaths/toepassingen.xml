@@ -238,7 +238,7 @@ $EI{A=42°,,,0°,65°} en $EI{B=76°,,,0°,115°} meten.</opgave>
 <id>246639783</id>
 <opgave>In een gelijkbenig trapezium ABCD zijn de evenwijdige zijden |AB| = $EI{AB=6,,,,,9} cm en |CD| = $EI{CD=9,,,,,41} cm. De basishoek A$aDC is $EI{ADC=70°,,89°59'59",5°,85°}. Bepaal de lengte van de diagonalen.</opgave>
 <oplossing>
-<als>AB>=CD</als><t>De grote basis moet groter zijn dan de kleine basis!</t><stop/><als_einde/>
+<als>AB>=CD</als><t>De grote basis |CD| moet groter zijn dan de kleine basis |AB|!</t><stop/><als_einde/>
 <l1/><c>DT=CD-AB/@2</c><br/>
 <c>CT=CD-DT</c><le/>
 <l2/><c>AT=tangens90(DT,ADC)</c><le/>
@@ -375,6 +375,7 @@ $EI{A=42°,,,0°,65°} en $EI{B=76°,,,0°,115°} meten.</opgave>
 <id>129197261</id>
 <opgave>In een cirkel c(M;$EI{AM=3,,,1,31,41} cm) is het apothema van een koorde [AB] $EI{NM=2,,,1,21,9} cm lang. Bereken |AB| en A$aMB.</opgave>
 <oplossing>
+<als>NM>AM</als><t>Het apothema van een koorde mag niet groter zijn dan de straal van de cirkel!</t><stop/><als_einde/>
 <als>AM=NM</als><t>|NM| = r = |AM| = |BM| ${=>} </t><c>AB=@0</c><en/><c>AMB=@0</c><einde/><als_einde/>
 <l1/><c>AN=pythagorasRZ(AM,NM)</c><br/>
 <c>AB=@2*AN</c><le/>
